@@ -1,0 +1,1225 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	tanto/m_math.h	/^    Vec2 A;$/;"	m	struct:__anon16
+B	tanto/m_math.h	/^    Vec2 B;$/;"	m	struct:__anon16
+BIN	Makefile	/^BIN = bin$/;"	m
+BIN	tanto/Makefile	/^BIN = bin$/;"	m
+BlockChain	tanto/v_memory.c	/^struct BlockChain {$/;"	s	file:
+Brush	common.h	/^} Brush;$/;"	t	typeref:struct:__anon3
+CC	Makefile	/^CC = gcc$/;"	m
+CC	tanto/Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wno-missing-braces -Wno-attributes -fPIC$/;"	m
+CFLAGS	tanto/Makefile	/^CFLAGS = -Wall -Wno-missing-braces -Wno-attributes -fPIC$/;"	m
+CROSS	tanto/m_math.c	7;"	d	file:
+CW	tanto/r_geo.c	/^const int CW = 1;$/;"	v
+DEPS	Makefile	/^DEPS =  \\$/;"	m
+DEPS	tanto/Makefile	/^DEPS =  \\$/;"	m
+DOT	tanto/m_math.c	12;"	d	file:
+EPSILON	tanto/m_math.c	505;"	d	file:
+FAST_BITS	tanto/thirdparty/stb_image.h	1875;"	d
+FRAG	tanto/r_pipeline.c	/^enum shaderStageType { VERT, FRAG };$/;"	e	enum:shaderStageType	file:
+FRAGS	Makefile	/^FRAGS := $(patsubst %.frag,$(SPV)\/%-frag.spv,$(notdir $(wildcard $(GLSL)\/*.frag)))$/;"	m
+GLC	Makefile	/^GLC = glslc$/;"	m
+GLC	tanto/Makefile	/^GLC = glslc$/;"	m
+GLFLAGS	Makefile	/^GLFLAGS = --target-env=vulkan1.2$/;"	m
+GLFLAGS	tanto/Makefile	/^GLFLAGS = --target-env=vulkan1.2$/;"	m
+GLSL	Makefile	/^GLSL = shaders$/;"	m
+GLSL	tanto/Makefile	/^GLSL = shaders$/;"	m
+G_GAME_H	game.h	2;"	d
+G_GameState	game.h	/^} G_GameState;$/;"	t	typeref:struct:__anon63
+INCLUDE_STB_IMAGE_WRITE_H	tanto/thirdparty/stb_image_write.h	151;"	d
+INFLAGS	Makefile	/^INFLAGS = -I\/opt\/hfs18.0\/toolkit\/include\/HAPI -I\/home\/michaelb\/dev$/;"	m
+INFLAGS	tanto/Makefile	/^INFLAGS = -I\/opt\/hfs18.0\/toolkit\/include\/HAPI$/;"	m
+InitPipelines	render.c	/^static void InitPipelines(void)$/;"	f	file:
+LDFLAGS	Makefile	/^LDFLAGS = -L\/opt\/hfs18.0\/dsolib -L\/home\/michaelb\/lib$/;"	m
+LDFLAGS	tanto/Makefile	/^LDFLAGS = -L\/opt\/hfs18.0\/dsolib$/;"	m
+LIB	Makefile	/^LIB = \/home\/michaelb\/lib$/;"	m
+LIB	tanto/Makefile	/^LIB  = \/home\/michaelb\/lib$/;"	m
+LIBNAME	Makefile	/^LIBNAME = template$/;"	m
+LIBNAME	tanto/Makefile	/^LIBNAME = tanto$/;"	m
+LIBS	Makefile	/^LIBS = -lm -ltanto -lvulkan -lxcb -lxcb-keysyms -lHAPIL$/;"	m
+LIBS	tanto/Makefile	/^LIBS = -lm -lvulkan -lxcb -lxcb-keysyms -lHAPIL$/;"	m
+MAX_BLOCKS	tanto/v_memory.c	17;"	d	file:
+MAX_EVENTS	tanto/i_input.c	12;"	d	file:
+MAX_SUBSCRIBERS	tanto/i_input.c	13;"	d	file:
+MEMORY_SIZE_DEV_BUFFER	tanto/v_memory.c	14;"	d	file:
+MEMORY_SIZE_DEV_IMAGE	tanto/v_memory.c	15;"	d	file:
+MEMORY_SIZE_HOST	tanto/v_memory.c	13;"	d	file:
+MEMORY_SIZE_HOST_TRANSFER	tanto/v_memory.c	16;"	d	file:
+MODE_RASTER	common.h	/^    MODE_RASTER,$/;"	e	enum:__anon1
+MODE_RAY	common.h	/^    MODE_RAY,$/;"	e	enum:__anon1
+M_MATH_H	tanto/m_math.h	2;"	d
+Mat2	tanto/m_math.h	/^} Mat2;$/;"	t	typeref:struct:__anon12
+Mat3	tanto/m_math.h	/^} Mat3;$/;"	t	typeref:struct:__anon13
+Mat4	tanto/m_math.h	/^} Mat4;$/;"	t	typeref:struct:__anon14
+ModeID	common.h	/^} ModeID;$/;"	t	typeref:enum:__anon1
+NAME	Makefile	/^NAME = template$/;"	m
+NAME	tanto/Makefile	/^NAME = viewer$/;"	m
+NS_TARGET	template.c	19;"	d	file:
+O	Makefile	/^O = build$/;"	m
+O	tanto/Makefile	/^O = build$/;"	m
+OBJS	Makefile	/^OBJS =  \\$/;"	m
+OBJS	tanto/Makefile	/^OBJS =  \\$/;"	m
+Parms	common.h	/^} Parms;$/;"	t	typeref:struct:__anon2
+PushConstants	render.h	/^} PushConstants;$/;"	t	typeref:struct:__anon7
+R_DESC_SET_MAIN	render.c	/^    R_DESC_SET_MAIN,$/;"	e	enum:__anon6	file:
+R_DESC_SET_POST	render.c	/^    R_DESC_SET_POST$/;"	e	enum:__anon6	file:
+R_DescriptorSetId	render.c	/^} R_DescriptorSetId;$/;"	t	typeref:enum:__anon6	file:
+R_PIPE_LAYOUT_MAIN	render.c	/^    R_PIPE_LAYOUT_MAIN,$/;"	e	enum:__anon5	file:
+R_PIPE_LAYOUT_POST	render.c	/^    R_PIPE_LAYOUT_POST$/;"	e	enum:__anon5	file:
+R_PIPE_MAIN	render.c	/^    R_PIPE_MAIN,$/;"	e	enum:__anon4	file:
+R_PIPE_POST	render.c	/^    R_PIPE_POST$/;"	e	enum:__anon4	file:
+R_PipelineId	render.c	/^} R_PipelineId;$/;"	t	typeref:enum:__anon4	file:
+R_PipelineLayoutId	render.c	/^} R_PipelineLayoutId;$/;"	t	typeref:enum:__anon5	file:
+R_RAYTRACE_H	tanto/r_raytrace.h	2;"	d
+Ray	tanto/m_math.h	/^} Ray;$/;"	t	typeref:struct:__anon15
+SHADERS	tanto/Makefile	/^SHADERS =                         \\$/;"	m
+SPV	Makefile	/^SPV  = shaders\/spv$/;"	m
+SPV	tanto/Makefile	/^SPV  = shaders\/spv$/;"	m
+SPVDIR	render.c	18;"	d	file:
+STBIDEF	tanto/thirdparty/stb_image.h	365;"	d
+STBIDEF	tanto/thirdparty/stb_image.h	367;"	d
+STBIWDEF	tanto/thirdparty/stb_image_write.h	158;"	d
+STBIWDEF	tanto/thirdparty/stb_image_write.h	161;"	d
+STBIWDEF	tanto/thirdparty/stb_image_write.h	163;"	d
+STBIW_ASSERT	tanto/thirdparty/stb_image_write.h	244;"	d
+STBIW_EXTERN	tanto/thirdparty/stb_image_write.h	290;"	d
+STBIW_EXTERN	tanto/thirdparty/stb_image_write.h	292;"	d
+STBIW_FREE	tanto/thirdparty/stb_image_write.h	229;"	d
+STBIW_MALLOC	tanto/thirdparty/stb_image_write.h	227;"	d
+STBIW_MEMMOVE	tanto/thirdparty/stb_image_write.h	238;"	d
+STBIW_REALLOC	tanto/thirdparty/stb_image_write.h	228;"	d
+STBIW_REALLOC_SIZED	tanto/thirdparty/stb_image_write.h	233;"	d
+STBIW_UCHAR	tanto/thirdparty/stb_image_write.h	247;"	d
+STBI_ASSERT	tanto/thirdparty/stb_image.h	570;"	d
+STBI_EXTERN	tanto/thirdparty/stb_image.h	574;"	d
+STBI_EXTERN	tanto/thirdparty/stb_image.h	576;"	d
+STBI_FREE	tanto/thirdparty/stb_image.h	651;"	d
+STBI_HAS_LROTL	tanto/thirdparty/stb_image.h	631;"	d
+STBI_INCLUDE_STB_IMAGE_H	tanto/thirdparty/stb_image.h	124;"	d
+STBI_MALLOC	tanto/thirdparty/stb_image.h	649;"	d
+STBI_MAX_DIMENSIONS	tanto/thirdparty/stb_image.h	760;"	d
+STBI_NEON	tanto/thirdparty/stb_image.h	746;"	d
+STBI_NOTUSED	tanto/thirdparty/stb_image.h	625;"	d
+STBI_NOTUSED	tanto/thirdparty/stb_image.h	627;"	d
+STBI_NO_BMP	tanto/thirdparty/stb_image.h	527;"	d
+STBI_NO_GIF	tanto/thirdparty/stb_image.h	536;"	d
+STBI_NO_HDR	tanto/thirdparty/stb_image.h	539;"	d
+STBI_NO_JPEG	tanto/thirdparty/stb_image.h	521;"	d
+STBI_NO_PIC	tanto/thirdparty/stb_image.h	542;"	d
+STBI_NO_PNG	tanto/thirdparty/stb_image.h	524;"	d
+STBI_NO_PNM	tanto/thirdparty/stb_image.h	545;"	d
+STBI_NO_PSD	tanto/thirdparty/stb_image.h	530;"	d
+STBI_NO_SIMD	tanto/thirdparty/stb_image.h	673;"	d
+STBI_NO_SIMD	tanto/thirdparty/stb_image.h	688;"	d
+STBI_NO_TGA	tanto/thirdparty/stb_image.h	533;"	d
+STBI_NO_ZLIB	tanto/thirdparty/stb_image.h	550;"	d
+STBI_ORDER_BGR	tanto/thirdparty/stb_image.h	/^   STBI_ORDER_BGR$/;"	e	enum:__anon43
+STBI_ORDER_RGB	tanto/thirdparty/stb_image.h	/^   STBI_ORDER_RGB,$/;"	e	enum:__anon43
+STBI_REALLOC	tanto/thirdparty/stb_image.h	650;"	d
+STBI_REALLOC_SIZED	tanto/thirdparty/stb_image.h	655;"	d
+STBI_SIMD_ALIGN	tanto/thirdparty/stb_image.h	718;"	d
+STBI_SIMD_ALIGN	tanto/thirdparty/stb_image.h	729;"	d
+STBI_SIMD_ALIGN	tanto/thirdparty/stb_image.h	752;"	d
+STBI_SIMD_ALIGN	tanto/thirdparty/stb_image.h	756;"	d
+STBI_SSE2	tanto/thirdparty/stb_image.h	692;"	d
+STBI_THREAD_LOCAL	tanto/thirdparty/stb_image.h	592;"	d
+STBI_THREAD_LOCAL	tanto/thirdparty/stb_image.h	594;"	d
+STBI_THREAD_LOCAL	tanto/thirdparty/stb_image.h	596;"	d
+STBI_THREAD_LOCAL	tanto/thirdparty/stb_image.h	598;"	d
+STBI_THREAD_LOCAL	tanto/thirdparty/stb_image.h	603;"	d
+STBI_VERSION	tanto/thirdparty/stb_image.h	343;"	d
+STBI__BYTECAST	tanto/thirdparty/stb_image.h	1669;"	d
+STBI__CASE	tanto/thirdparty/stb_image.h	1713;"	d
+STBI__CASE	tanto/thirdparty/stb_image.h	1731;"	d
+STBI__CASE	tanto/thirdparty/stb_image.h	1770;"	d
+STBI__CASE	tanto/thirdparty/stb_image.h	1788;"	d
+STBI__CASE	tanto/thirdparty/stb_image.h	4620;"	d
+STBI__CASE	tanto/thirdparty/stb_image.h	4633;"	d
+STBI__CASE	tanto/thirdparty/stb_image.h	4637;"	d
+STBI__CASE	tanto/thirdparty/stb_image.h	4650;"	d
+STBI__COMBO	tanto/thirdparty/stb_image.h	1712;"	d
+STBI__COMBO	tanto/thirdparty/stb_image.h	1769;"	d
+STBI__F_avg	tanto/thirdparty/stb_image.h	/^   STBI__F_avg=3,$/;"	e	enum:__anon54
+STBI__F_avg_first	tanto/thirdparty/stb_image.h	/^   STBI__F_avg_first,$/;"	e	enum:__anon54
+STBI__F_none	tanto/thirdparty/stb_image.h	/^   STBI__F_none=0,$/;"	e	enum:__anon54
+STBI__F_paeth	tanto/thirdparty/stb_image.h	/^   STBI__F_paeth=4,$/;"	e	enum:__anon54
+STBI__F_paeth_first	tanto/thirdparty/stb_image.h	/^   STBI__F_paeth_first$/;"	e	enum:__anon54
+STBI__F_sub	tanto/thirdparty/stb_image.h	/^   STBI__F_sub=1,$/;"	e	enum:__anon54
+STBI__F_up	tanto/thirdparty/stb_image.h	/^   STBI__F_up=2,$/;"	e	enum:__anon54
+STBI__HDR_BUFLEN	tanto/thirdparty/stb_image.h	6907;"	d
+STBI__IDCT_1D	tanto/thirdparty/stb_image.h	2356;"	d
+STBI__MARKER_none	tanto/thirdparty/stb_image.h	2841;"	d
+STBI__PNG_TYPE	tanto/thirdparty/stb_image.h	4938;"	d
+STBI__RESTART	tanto/thirdparty/stb_image.h	2858;"	d
+STBI__SCAN_header	tanto/thirdparty/stb_image.h	/^   STBI__SCAN_header$/;"	e	enum:__anon45
+STBI__SCAN_load	tanto/thirdparty/stb_image.h	/^   STBI__SCAN_load=0,$/;"	e	enum:__anon45
+STBI__SCAN_type	tanto/thirdparty/stb_image.h	/^   STBI__SCAN_type,$/;"	e	enum:__anon45
+STBI__X64_TARGET	tanto/thirdparty/stb_image.h	660;"	d
+STBI__X86_TARGET	tanto/thirdparty/stb_image.h	662;"	d
+STBI__ZFAST_BITS	tanto/thirdparty/stb_image.h	3980;"	d
+STBI__ZFAST_MASK	tanto/thirdparty/stb_image.h	3981;"	d
+STBI_default	tanto/thirdparty/stb_image.h	/^   STBI_default = 0, \/\/ only used for desired_channels$/;"	e	enum:__anon40
+STBI_grey	tanto/thirdparty/stb_image.h	/^   STBI_grey       = 1,$/;"	e	enum:__anon40
+STBI_grey_alpha	tanto/thirdparty/stb_image.h	/^   STBI_grey_alpha = 2,$/;"	e	enum:__anon40
+STBI_rgb	tanto/thirdparty/stb_image.h	/^   STBI_rgb        = 3,$/;"	e	enum:__anon40
+STBI_rgb_alpha	tanto/thirdparty/stb_image.h	/^   STBI_rgb_alpha  = 4$/;"	e	enum:__anon40
+STB_IMAGE_IMPLEMENTATION	tanto/v_image.c	6;"	d	file:
+STB_IMAGE_WRITE_IMPLEMENTATION	tanto/v_image.c	7;"	d	file:
+SUB	tanto/m_math.c	14;"	d	file:
+ScratchBuffer	tanto/r_raytrace.c	/^} ScratchBuffer;$/;"	t	typeref:struct:__anon31	file:
+Segment	tanto/m_math.h	/^} Segment;$/;"	t	typeref:struct:__anon16
+TANTO_ARRAY_SIZE	tanto/t_def.h	38;"	d
+TANTO_D_INIT_H	tanto/d_display.h	2;"	d
+TANTO_FRAME_COUNT	tanto/v_def.h	7;"	d
+TANTO_G_QUEUE_COUNT	tanto/v_def.h	8;"	d
+TANTO_H	tanto/tanto.h	2;"	d
+TANTO_I_INPUT_H	tanto/i_input.h	2;"	d
+TANTO_I_KEYDOWN	tanto/i_input.h	/^    TANTO_I_KEYDOWN,$/;"	e	enum:__anon62
+TANTO_I_KEYUP	tanto/i_input.h	/^    TANTO_I_KEYUP,$/;"	e	enum:__anon62
+TANTO_I_MOTION	tanto/i_input.h	/^    TANTO_I_MOTION$/;"	e	enum:__anon62
+TANTO_I_MOUSEDOWN	tanto/i_input.h	/^    TANTO_I_MOUSEDOWN,$/;"	e	enum:__anon62
+TANTO_I_MOUSEUP	tanto/i_input.h	/^    TANTO_I_MOUSEUP,$/;"	e	enum:__anon62
+TANTO_KEY_A	tanto/t_def.h	20;"	d
+TANTO_KEY_C	tanto/t_def.h	29;"	d
+TANTO_KEY_CTRL	tanto/t_def.h	30;"	d
+TANTO_KEY_D	tanto/t_def.h	22;"	d
+TANTO_KEY_E	tanto/t_def.h	25;"	d
+TANTO_KEY_ESC	tanto/t_def.h	31;"	d
+TANTO_KEY_I	tanto/t_def.h	28;"	d
+TANTO_KEY_P	tanto/t_def.h	27;"	d
+TANTO_KEY_Q	tanto/t_def.h	26;"	d
+TANTO_KEY_R	tanto/t_def.h	32;"	d
+TANTO_KEY_S	tanto/t_def.h	21;"	d
+TANTO_KEY_SPACE	tanto/t_def.h	23;"	d
+TANTO_KEY_W	tanto/t_def.h	19;"	d
+TANTO_MAX_BINDINGS	tanto/r_pipeline.h	9;"	d
+TANTO_MAX_DESCRIPTOR_SETS	tanto/r_pipeline.h	8;"	d
+TANTO_MAX_PIPELINES	tanto/r_pipeline.h	7;"	d
+TANTO_MAX_PUSH_CONSTANTS	tanto/r_pipeline.h	10;"	d
+TANTO_MOUSE_LEFT	tanto/t_def.h	34;"	d
+TANTO_MOUSE_MID	tanto/t_def.h	36;"	d
+TANTO_MOUSE_RIGHT	tanto/t_def.h	35;"	d
+TANTO_R_GEO_H	tanto/r_geo.h	2;"	d
+TANTO_R_INIT_H	tanto/r_render.h	2;"	d
+TANTO_R_MAX_VERT_ATTRIBUTES	tanto/r_geo.h	8;"	d
+TANTO_R_PIPELINE_H	tanto/r_pipeline.h	2;"	d
+TANTO_R_PIPELINE_POSTPROC_TYPE	tanto/r_pipeline.h	/^    TANTO_R_PIPELINE_POSTPROC_TYPE$/;"	e	enum:__anon22
+TANTO_R_PIPELINE_RASTER_TYPE	tanto/r_pipeline.h	/^    TANTO_R_PIPELINE_RASTER_TYPE,$/;"	e	enum:__anon22
+TANTO_R_PIPELINE_RAYTRACE_TYPE	tanto/r_pipeline.h	/^    TANTO_R_PIPELINE_RAYTRACE_TYPE,$/;"	e	enum:__anon22
+TANTO_R_RENDER_PASS_OFFSCREEN_TYPE	tanto/r_pipeline.h	/^    TANTO_R_RENDER_PASS_OFFSCREEN_TYPE$/;"	e	enum:__anon23
+TANTO_R_RENDER_PASS_SWAPCHAIN_TYPE	tanto/r_pipeline.h	/^    TANTO_R_RENDER_PASS_SWAPCHAIN_TYPE,$/;"	e	enum:__anon23
+TANTO_SPVDIR	tanto/r_pipeline.h	12;"	d
+TANTO_T_DEF_H	tanto/t_def.h	2;"	d
+TANTO_VERT_INDEX_TYPE	tanto/r_render.h	9;"	d
+TANTO_VERT_POS_FORMAT	tanto/r_render.h	8;"	d
+TANTO_V_COMMAND_H	tanto/v_command.h	2;"	d
+TANTO_V_DEF_H	tanto/v_def.h	2;"	d
+TANTO_V_IMAGE_FILE_PNG_TYPE	tanto/v_image.h	/^    TANTO_V_IMAGE_FILE_PNG_TYPE$/;"	e	enum:__anon32
+TANTO_V_IMAGE_H	tanto/v_image.h	2;"	d
+TANTO_V_MEMORY_DEVICE_TYPE	tanto/v_memory.h	/^    TANTO_V_MEMORY_DEVICE_TYPE,$/;"	e	enum:__anon28
+TANTO_V_MEMORY_H	tanto/v_memory.h	2;"	d
+TANTO_V_MEMORY_HOST_GRAPHICS_TYPE	tanto/v_memory.h	/^    TANTO_V_MEMORY_HOST_GRAPHICS_TYPE,$/;"	e	enum:__anon28
+TANTO_V_MEMORY_HOST_TRANSFER_TYPE	tanto/v_memory.h	/^    TANTO_V_MEMORY_HOST_TRANSFER_TYPE,$/;"	e	enum:__anon28
+TANTO_V_QUEUE_COMPUTE_TYPE	tanto/v_video.h	/^    TANTO_V_QUEUE_COMPUTE_TYPE,$/;"	e	enum:__anon27
+TANTO_V_QUEUE_GRAPHICS_TYPE	tanto/v_video.h	/^    TANTO_V_QUEUE_GRAPHICS_TYPE,$/;"	e	enum:__anon27
+TANTO_V_VIDEO_H	tanto/v_video.h	5;"	d
+TANTO_V_VULKAN_H	tanto/v_vulkan.h	2;"	d
+TANTO_WINDOW_HEIGHT	tanto/v_vulkan.h	17;"	d
+TANTO_WINDOW_WIDTH	tanto/v_vulkan.h	16;"	d
+TEMPLATE_H	template.h	2;"	d
+T_UTILS_H	tanto/t_utils.h	2;"	d
+Tanto_D_XcbWindow	tanto/d_display.h	/^} Tanto_D_XcbWindow;$/;"	t	typeref:struct:__anon38
+Tanto_I_Event	tanto/i_input.h	/^typedef struct Tanto_I_Event {$/;"	s
+Tanto_I_Event	tanto/i_input.h	/^} Tanto_I_Event;$/;"	t	typeref:struct:Tanto_I_Event
+Tanto_I_EventData	tanto/i_input.h	/^} Tanto_I_EventData;$/;"	t	typeref:union:__anon61
+Tanto_I_EventType	tanto/i_input.h	/^} Tanto_I_EventType;$/;"	t	typeref:enum:__anon62
+Tanto_I_MouseData	tanto/i_input.h	/^} Tanto_I_MouseData;$/;"	t	typeref:struct:__anon60
+Tanto_I_SubscriberFn	tanto/i_input.h	/^typedef void (*Tanto_I_SubscriberFn)(const Tanto_I_Event*);$/;"	t
+Tanto_LoopStats	tanto/t_utils.h	/^struct Tanto_LoopStats {$/;"	s
+Tanto_LoopStats	tanto/t_utils.h	/^typedef struct Tanto_LoopStats Tanto_LoopStats;$/;"	t	typeref:struct:Tanto_LoopStats
+Tanto_R_Attribute	tanto/r_geo.h	/^typedef Vec3 Tanto_R_Attribute;$/;"	t
+Tanto_R_DescriptorBinding	tanto/r_pipeline.h	/^} Tanto_R_DescriptorBinding;$/;"	t	typeref:struct:__anon19
+Tanto_R_DescriptorSet	tanto/r_pipeline.h	/^} Tanto_R_DescriptorSet;$/;"	t	typeref:struct:__anon20
+Tanto_R_Frame	tanto/r_render.h	/^} Tanto_R_Frame;$/;"	t	typeref:struct:frame
+Tanto_R_FrameBuffer	tanto/r_render.h	/^} Tanto_R_FrameBuffer;$/;"	t	typeref:struct:__anon18
+Tanto_R_Image	tanto/r_render.h	/^typedef Tanto_V_Image Tanto_R_Image; \/\/for now $/;"	t
+Tanto_R_Index	tanto/r_geo.h	/^typedef uint32_t Tanto_R_Index;$/;"	t
+Tanto_R_Mesh	tanto/r_geo.h	/^} Tanto_R_Mesh;$/;"	t	typeref:struct:__anon33
+Tanto_R_PipelineInfo	tanto/r_pipeline.h	/^} Tanto_R_PipelineInfo;$/;"	t	typeref:struct:__anon26
+Tanto_R_PipelineInfoPayload	tanto/r_pipeline.h	/^union Tanto_R_PipelineInfoPayload {$/;"	u
+Tanto_R_PipelineLayout	tanto/r_pipeline.h	/^} Tanto_R_PipelineLayout;$/;"	t	typeref:struct:__anon21
+Tanto_R_PipelineRasterInfo	tanto/r_pipeline.h	/^} Tanto_R_PipelineRasterInfo;$/;"	t	typeref:struct:__anon24
+Tanto_R_PipelineRayTraceInfo	tanto/r_pipeline.h	/^} Tanto_R_PipelineRayTraceInfo;$/;"	t	typeref:struct:__anon25
+Tanto_R_PipelineType	tanto/r_pipeline.h	/^} Tanto_R_PipelineType;$/;"	t	typeref:enum:__anon22
+Tanto_R_PreMesh	tanto/r_geo.h	/^} Tanto_R_PreMesh;$/;"	t	typeref:struct:__anon34
+Tanto_R_Primitive	tanto/r_geo.h	/^} Tanto_R_Primitive;$/;"	t	typeref:struct:__anon36
+Tanto_R_RenderPassType	tanto/r_pipeline.h	/^} Tanto_R_RenderPassType;$/;"	t	typeref:enum:__anon23
+Tanto_R_Vertex	tanto/r_geo.h	/^} Tanto_R_Vertex;$/;"	t	typeref:struct:__anon35
+Tanto_R_VertexDescription	tanto/r_geo.h	/^} Tanto_R_VertexDescription;$/;"	t	typeref:struct:__anon37
+Tanto_Timer	tanto/t_utils.h	/^struct Tanto_Timer {$/;"	s
+Tanto_Timer	tanto/t_utils.h	/^typedef struct Tanto_Timer Tanto_Timer;$/;"	t	typeref:struct:Tanto_Timer
+Tanto_V_BlockId	tanto/v_memory.h	/^typedef uint32_t Tanto_V_BlockId;$/;"	t
+Tanto_V_BufferRegion	tanto/v_memory.h	/^} Tanto_V_BufferRegion;$/;"	t	typeref:struct:__anon29
+Tanto_V_CommandPool	tanto/v_command.h	/^} Tanto_V_CommandPool;$/;"	t	typeref:struct:__anon17
+Tanto_V_Config	tanto/v_def.h	/^} Tanto_V_Config;$/;"	t	typeref:struct:__anon39
+Tanto_V_Image	tanto/v_memory.h	/^} Tanto_V_Image;$/;"	t	typeref:struct:__anon30
+Tanto_V_ImageFileType	tanto/v_image.h	/^} Tanto_V_ImageFileType;$/;"	t	typeref:enum:__anon32
+Tanto_V_MemBlock	tanto/v_memory.c	/^} Tanto_V_MemBlock;$/;"	t	typeref:struct:tanto_V_MemBlock	file:
+Tanto_V_MemoryType	tanto/v_memory.h	/^} Tanto_V_MemoryType;$/;"	t	typeref:enum:__anon28
+Tanto_V_QueueType	tanto/v_video.h	/^} Tanto_V_QueueType;$/;"	t	typeref:enum:__anon27
+UniformBuffer	render.h	/^} UniformBuffer;$/;"	t	typeref:struct:__anon8
+V1_PRINT	tanto/t_def.h	13;"	d
+V1_PRINT	tanto/t_def.h	15;"	d
+VERBOSE	tanto/t_def.h	9;"	d
+VERT	tanto/r_pipeline.c	/^enum shaderStageType { VERT, FRAG };$/;"	e	enum:shaderStageType	file:
+VERTS	Makefile	/^VERTS := $(patsubst %.frag,$(SPV)\/%-vert.spv,$(notdir $(wildcard $(GLSL)\/*.vert)))$/;"	m
+VIEWER_COMMON_H	common.h	2;"	d
+VIEWER_R_COMMANDS_H	render.h	2;"	d
+VK_ENABLE_BETA_EXTENSIONS	tanto/v_vulkan.h	4;"	d
+VK_USE_PLATFORM_XCB_KHR	tanto/v_vulkan.h	5;"	d
+V_ASSERT	tanto/v_vulkan.h	10;"	d
+V_ASSERT	tanto/v_vulkan.h	12;"	d
+V_UTILS_H	tanto/v_utils.h	2;"	d
+Vec2	tanto/m_math.h	/^} Vec2;$/;"	t	typeref:struct:__anon9
+Vec3	tanto/m_math.h	/^} Vec3;$/;"	t	typeref:struct:__anon10
+Vec4	tanto/m_math.h	/^} Vec4;$/;"	t	typeref:struct:__anon11
+YCbCr_to_RGB_kernel	tanto/thirdparty/stb_image.h	/^   void (*YCbCr_to_RGB_kernel)(stbi_uc *out, const stbi_uc *y, const stbi_uc *pcb, const stbi_uc *pcr, int count, int step);$/;"	m	struct:__anon47
+_CRT_NONSTDC_NO_DEPRECATE	tanto/thirdparty/stb_image_write.h	205;"	d
+_CRT_SECURE_NO_WARNINGS	tanto/thirdparty/stb_image_write.h	202;"	d
+address	tanto/r_raytrace.c	/^    VkDeviceAddress address;$/;"	m	struct:__anon31	file:
+all_a	tanto/thirdparty/stb_image.h	/^   unsigned int mr,mg,mb,ma, all_a;$/;"	m	struct:__anon55
+allocObjectMemory	tanto/r_raytrace.c	/^static void allocObjectMemory(const VkAccelerationStructureKHR* accelStruct, VkDeviceMemory* memory)$/;"	f	file:
+app14_color_transform	tanto/thirdparty/stb_image.h	/^   int            app14_color_transform; \/\/ Adobe APP14 tag$/;"	m	struct:__anon47
+attrCount	tanto/r_geo.h	/^    uint8_t      attrCount;$/;"	m	struct:__anon36
+attrOffsets	tanto/r_geo.h	/^    VkDeviceSize attrOffsets[TANTO_R_MAX_VERT_ATTRIBUTES];$/;"	m	struct:__anon36
+attributeCount	tanto/r_geo.h	/^    uint32_t attributeCount;$/;"	m	struct:__anon37
+attributeDescriptions	tanto/r_geo.h	/^    const VkVertexInputAttributeDescription attributeDescriptions[TANTO_R_MAX_VERT_ATTRIBUTES];$/;"	m	struct:__anon37
+b	common.h	/^    float b;$/;"	m	struct:__anon3
+background	tanto/thirdparty/stb_image.h	/^   stbi_uc *background;          \/\/ The current "background" as far as a gif is concerned$/;"	m	struct:__anon58
+bar	render.h	/^    int bar;$/;"	m	struct:__anon7
+bgindex	tanto/thirdparty/stb_image.h	/^   int flags, bgindex, ratio, transparent, eflags;$/;"	m	struct:__anon58
+bindingCount	tanto/r_geo.h	/^    uint32_t bindingCount;$/;"	m	struct:__anon37
+bindingCount	tanto/r_pipeline.h	/^    size_t bindingCount;$/;"	m	struct:__anon20
+bindingDescriptions	tanto/r_geo.h	/^    const VkVertexInputBindingDescription   bindingDescriptions[TANTO_R_MAX_VERT_ATTRIBUTES];$/;"	m	struct:__anon37
+bindings	tanto/r_pipeline.h	/^    Tanto_R_DescriptorBinding bindings[TANTO_MAX_BINDINGS];$/;"	m	struct:__anon20
+bitprint	tanto/t_utils.c	/^void bitprint(const void* const thing, const size_t bitcount)$/;"	f
+bits_per_channel	tanto/thirdparty/stb_image.h	/^   int bits_per_channel;$/;"	m	struct:__anon44
+blockChainDeviceGraphics	tanto/v_memory.c	/^static struct BlockChain blockChainDeviceGraphics;$/;"	v	typeref:struct:BlockChain	file:
+blockChainDeviceImage	tanto/v_memory.c	/^static struct BlockChain blockChainDeviceImage;$/;"	v	typeref:struct:BlockChain	file:
+blockChainHostGraphics	tanto/v_memory.c	/^static struct BlockChain blockChainHostGraphics;$/;"	v	typeref:struct:BlockChain	file:
+blockChainHostTransfer	tanto/v_memory.c	/^static struct BlockChain blockChainHostTransfer;$/;"	v	typeref:struct:BlockChain	file:
+blocks	tanto/v_memory.c	/^    Tanto_V_MemBlock   blocks[MAX_BLOCKS];$/;"	m	struct:BlockChain	file:
+bottomLevelAS	tanto/r_raytrace.c	/^VkAccelerationStructureKHR bottomLevelAS;$/;"	v
+bpp	tanto/thirdparty/stb_image.h	/^   int bpp, offset, hsz;$/;"	m	struct:__anon55
+buf_used	tanto/thirdparty/stb_image_write.h	/^   int buf_used;$/;"	m	struct:__anon59
+buffer	tanto/r_raytrace.c	/^    VkBuffer        buffer;$/;"	m	struct:__anon31	file:
+buffer	tanto/thirdparty/stb_image_write.h	/^   unsigned char buffer[64];$/;"	m	struct:__anon59
+buffer	tanto/v_command.h	/^    VkCommandBuffer buffer;$/;"	m	struct:__anon17
+buffer	tanto/v_memory.c	/^    VkBuffer           buffer;$/;"	m	struct:BlockChain	file:
+buffer	tanto/v_memory.h	/^    VkBuffer               buffer;$/;"	m	struct:__anon29
+bufferFlags	tanto/v_memory.c	/^    VkBufferUsageFlags bufferFlags;$/;"	m	struct:BlockChain	file:
+buffer_start	tanto/thirdparty/stb_image.h	/^   stbi_uc buffer_start[128];$/;"	m	struct:__anon42
+buflen	tanto/thirdparty/stb_image.h	/^   int buflen;$/;"	m	struct:__anon42
+buttonCode	tanto/i_input.h	/^    uint8_t  buttonCode;$/;"	m	struct:__anon60
+bytePrint	tanto/t_utils.c	/^void bytePrint(const void* const thing, const size_t byteCount)$/;"	f
+callback_already_read	tanto/thirdparty/stb_image.h	/^   int callback_already_read;$/;"	m	struct:__anon42
+channel	tanto/thirdparty/stb_image.h	/^   stbi_uc size,type,channel;$/;"	m	struct:__anon56
+channel_order	tanto/thirdparty/stb_image.h	/^   int channel_order;$/;"	m	struct:__anon44
+chitCount	tanto/r_pipeline.h	/^    uint8_t chitCount;$/;"	m	struct:__anon25
+chitShaders	tanto/r_pipeline.h	/^    char**  chitShaders;$/;"	m	struct:__anon25
+clockId	tanto/t_utils.h	/^    clockid_t clockId;$/;"	m	struct:Tanto_Timer
+code	tanto/thirdparty/stb_image.h	/^   stbi__uint16 code[256];$/;"	m	struct:__anon46
+code_bits	tanto/thirdparty/stb_image.h	/^   int            code_bits;   \/\/ number of valid bits$/;"	m	struct:__anon47
+code_buffer	tanto/thirdparty/stb_image.h	/^   stbi__uint32   code_buffer; \/\/ jpeg entropy-coded buffer$/;"	m	struct:__anon47
+code_buffer	tanto/thirdparty/stb_image.h	/^   stbi__uint32 code_buffer;$/;"	m	struct:__anon51
+codes	tanto/thirdparty/stb_image.h	/^   stbi__gif_lzw codes[8192];$/;"	m	struct:__anon58
+coeff	tanto/thirdparty/stb_image.h	/^      short   *coeff;   \/\/ progressive only$/;"	m	struct:__anon47::__anon48
+coeff_h	tanto/thirdparty/stb_image.h	/^      int      coeff_w, coeff_h; \/\/ number of 8x8 coefficient blocks$/;"	m	struct:__anon47::__anon48
+coeff_w	tanto/thirdparty/stb_image.h	/^      int      coeff_w, coeff_h; \/\/ number of 8x8 coefficient blocks$/;"	m	struct:__anon47::__anon48
+colData	tanto/r_geo.h	/^    Tanto_R_Attribute* colData;$/;"	m	struct:__anon34
+colOffset	tanto/r_geo.h	/^    VkDeviceSize colOffset;$/;"	m	struct:__anon33
+color	tanto/r_geo.h	/^    Vec3 color;$/;"	m	struct:__anon35
+colorAttachment	tanto/r_render.h	/^    Tanto_V_Image   colorAttachment;$/;"	m	struct:__anon18
+color_table	tanto/thirdparty/stb_image.h	/^   stbi_uc *color_table;$/;"	m	struct:__anon58
+commandBuffer	tanto/r_render.h	/^    VkCommandBuffer commandBuffer;$/;"	m	struct:frame
+commandPool	tanto/r_render.h	/^    VkCommandPool   commandPool;$/;"	m	struct:frame
+connection	tanto/d_display.h	/^    xcb_connection_t* connection;$/;"	m	struct:__anon38
+context	tanto/thirdparty/stb_image_write.h	/^   void *context;$/;"	m	struct:__anon59
+count	tanto/v_memory.c	/^    uint32_t           count;$/;"	m	struct:BlockChain	file:
+createPipelinePostProcess	tanto/r_pipeline.c	/^static void createPipelinePostProcess(const Tanto_R_PipelineInfo* plInfo)$/;"	f	file:
+createPipelineRasterization	tanto/r_pipeline.c	/^static void createPipelineRasterization(const Tanto_R_PipelineInfo* plInfo)$/;"	f	file:
+createPipelineRayTrace	tanto/r_pipeline.c	/^static void createPipelineRayTrace(const Tanto_R_PipelineInfo* plInfo)$/;"	f	file:
+createScratchBuffer	tanto/r_raytrace.c	/^static void createScratchBuffer(const VkAccelerationStructureKHR* accelStruct, ScratchBuffer* scratchBuffer)$/;"	f	file:
+cur	tanto/v_memory.c	/^    uint32_t           cur;$/;"	m	struct:BlockChain	file:
+curFrameIndex	tanto/r_render.c	/^uint32_t       curFrameIndex;$/;"	v
+cur_x	tanto/thirdparty/stb_image.h	/^   int cur_x, cur_y;$/;"	m	struct:__anon58
+cur_y	tanto/thirdparty/stb_image.h	/^   int cur_x, cur_y;$/;"	m	struct:__anon58
+d_XcbWindow	tanto/d_display.c	/^Tanto_D_XcbWindow d_XcbWindow;$/;"	v
+data	tanto/i_input.h	/^    Tanto_I_EventData data;$/;"	m	struct:Tanto_I_Event
+data	tanto/thirdparty/stb_image.h	/^      stbi_uc *data;$/;"	m	struct:__anon47::__anon48
+dc_pred	tanto/thirdparty/stb_image.h	/^      int dc_pred;$/;"	m	struct:__anon47::__anon48
+dct_bfly32o	tanto/thirdparty/stb_image.h	2491;"	d
+dct_bfly32o	tanto/thirdparty/stb_image.h	2625;"	d
+dct_bfly32o	tanto/thirdparty/stb_image.h	2677;"	d
+dct_bfly32o	tanto/thirdparty/stb_image.h	2835;"	d
+dct_const	tanto/thirdparty/stb_image.h	2463;"	d
+dct_const	tanto/thirdparty/stb_image.h	2620;"	d
+dct_interleave16	tanto/thirdparty/stb_image.h	2508;"	d
+dct_interleave16	tanto/thirdparty/stb_image.h	2627;"	d
+dct_interleave8	tanto/thirdparty/stb_image.h	2502;"	d
+dct_interleave8	tanto/thirdparty/stb_image.h	2626;"	d
+dct_long_mac	tanto/thirdparty/stb_image.h	2658;"	d
+dct_long_mac	tanto/thirdparty/stb_image.h	2831;"	d
+dct_long_mul	tanto/thirdparty/stb_image.h	2654;"	d
+dct_long_mul	tanto/thirdparty/stb_image.h	2830;"	d
+dct_pass	tanto/thirdparty/stb_image.h	2513;"	d
+dct_pass	tanto/thirdparty/stb_image.h	2628;"	d
+dct_pass	tanto/thirdparty/stb_image.h	2685;"	d
+dct_pass	tanto/thirdparty/stb_image.h	2836;"	d
+dct_rot	tanto/thirdparty/stb_image.h	2467;"	d
+dct_rot	tanto/thirdparty/stb_image.h	2621;"	d
+dct_trn16	tanto/thirdparty/stb_image.h	2745;"	d
+dct_trn16	tanto/thirdparty/stb_image.h	2767;"	d
+dct_trn32	tanto/thirdparty/stb_image.h	2746;"	d
+dct_trn32	tanto/thirdparty/stb_image.h	2768;"	d
+dct_trn64	tanto/thirdparty/stb_image.h	2747;"	d
+dct_trn64	tanto/thirdparty/stb_image.h	2769;"	d
+dct_trn8_16	tanto/thirdparty/stb_image.h	2791;"	d
+dct_trn8_16	tanto/thirdparty/stb_image.h	2826;"	d
+dct_trn8_32	tanto/thirdparty/stb_image.h	2792;"	d
+dct_trn8_32	tanto/thirdparty/stb_image.h	2827;"	d
+dct_trn8_8	tanto/thirdparty/stb_image.h	2790;"	d
+dct_trn8_8	tanto/thirdparty/stb_image.h	2825;"	d
+dct_wadd	tanto/thirdparty/stb_image.h	2481;"	d
+dct_wadd	tanto/thirdparty/stb_image.h	2623;"	d
+dct_wadd	tanto/thirdparty/stb_image.h	2667;"	d
+dct_wadd	tanto/thirdparty/stb_image.h	2833;"	d
+dct_widen	tanto/thirdparty/stb_image.h	2476;"	d
+dct_widen	tanto/thirdparty/stb_image.h	2622;"	d
+dct_widen	tanto/thirdparty/stb_image.h	2662;"	d
+dct_widen	tanto/thirdparty/stb_image.h	2832;"	d
+dct_wsub	tanto/thirdparty/stb_image.h	2486;"	d
+dct_wsub	tanto/thirdparty/stb_image.h	2624;"	d
+dct_wsub	tanto/thirdparty/stb_image.h	2672;"	d
+dct_wsub	tanto/thirdparty/stb_image.h	2834;"	d
+debugCallback	tanto/v_video.c	/^VkBool32 debugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity,$/;"	f
+debugMessenger	tanto/v_video.c	/^static VkDebugUtilsMessengerEXT debugMessenger;$/;"	v	file:
+defaultAlignment	tanto/v_memory.c	/^    VkDeviceSize       defaultAlignment;$/;"	m	struct:BlockChain	file:
+delay	tanto/thirdparty/stb_image.h	/^   int delay;$/;"	m	struct:__anon58
+delta	tanto/thirdparty/stb_image.h	/^   int    delta[17];   \/\/ old 'firstsymbol' - old 'firstcode'$/;"	m	struct:__anon46
+depth	tanto/thirdparty/stb_image.h	/^   int depth;$/;"	m	struct:__anon53
+depthAttachment	tanto/r_render.h	/^    Tanto_V_Image   depthAttachment;$/;"	m	struct:__anon18
+depthFormat	tanto/r_render.c	/^const VkFormat depthFormat = VK_FORMAT_D32_SFLOAT;$/;"	v
+dequant	tanto/thirdparty/stb_image.h	/^   stbi__uint16 dequant[4][64];$/;"	m	struct:__anon47
+descriptorCount	tanto/r_pipeline.h	/^    uint32_t           descriptorCount;$/;"	m	struct:__anon19
+descriptorPool	tanto/r_pipeline.c	/^static VkDescriptorPool      descriptorPool;$/;"	v	file:
+descriptorSetCount	tanto/r_pipeline.h	/^    size_t descriptorSetCount;$/;"	m	struct:__anon21
+descriptorSetIds	tanto/r_pipeline.h	/^    int    descriptorSetIds[TANTO_MAX_DESCRIPTOR_SETS];$/;"	m	struct:__anon21
+descriptorSetLayouts	tanto/r_pipeline.c	/^static VkDescriptorSetLayout descriptorSetLayouts[TANTO_MAX_DESCRIPTOR_SETS]; $/;"	v	file:
+descriptorSets	tanto/r_pipeline.c	/^VkDescriptorSet  descriptorSets[TANTO_MAX_DESCRIPTOR_SETS];$/;"	v
+device	tanto/v_video.c	/^VkDevice          device;$/;"	v
+dir	tanto/m_math.h	/^    Vec2 dir;$/;"	m	struct:__anon15
+eflags	tanto/thirdparty/stb_image.h	/^   int flags, bgindex, ratio, transparent, eflags;$/;"	m	struct:__anon58
+endTime	tanto/t_utils.h	/^    struct timespec endTime;$/;"	m	struct:Tanto_Timer	typeref:struct:Tanto_Timer::timespec
+eob_run	tanto/thirdparty/stb_image.h	/^   int            eob_run;$/;"	m	struct:__anon47
+eof	tanto/thirdparty/stb_image.h	/^   int      (*eof)   (void *user);                       \/\/ returns nonzero if we are at end of file\/data$/;"	m	struct:__anon41
+eventHead	tanto/i_input.c	/^static int     eventHead;$/;"	v	file:
+eventTail	tanto/i_input.c	/^static int     eventTail;$/;"	v	file:
+events	tanto/i_input.c	/^static Tanto_I_Event events[MAX_EVENTS];$/;"	v	file:
+expanded	tanto/thirdparty/stb_image.h	/^   stbi_uc *idata, *expanded, *out;$/;"	m	struct:__anon53
+extent	tanto/v_memory.h	/^    VkExtent3D        extent;$/;"	m	struct:__anon30
+extra_read	tanto/thirdparty/stb_image.h	/^   int extra_read;$/;"	m	struct:__anon55
+fast	tanto/thirdparty/stb_image.h	/^   stbi__uint16 fast[1 << STBI__ZFAST_BITS];$/;"	m	struct:__anon50
+fast	tanto/thirdparty/stb_image.h	/^   stbi_uc  fast[1 << FAST_BITS];$/;"	m	struct:__anon46
+fast_ac	tanto/thirdparty/stb_image.h	/^   stbi__int16 fast_ac[4][1 << FAST_BITS];$/;"	m	struct:__anon47
+fence	tanto/r_render.h	/^    VkFence         fence;$/;"	m	struct:frame
+first	tanto/thirdparty/stb_image.h	/^   stbi_uc first;$/;"	m	struct:__anon57
+first_row_filter	tanto/thirdparty/stb_image.h	/^static stbi_uc first_row_filter[5] =$/;"	v
+firstcode	tanto/thirdparty/stb_image.h	/^   stbi__uint16 firstcode[16];$/;"	m	struct:__anon50
+firstsymbol	tanto/thirdparty/stb_image.h	/^   stbi__uint16 firstsymbol[16];$/;"	m	struct:__anon50
+flags	tanto/thirdparty/stb_image.h	/^   int flags, bgindex, ratio, transparent, eflags;$/;"	m	struct:__anon58
+foo	render.h	/^    int foo;$/;"	m	struct:__anon7
+fragShader	tanto/r_pipeline.h	/^    char* fragShader;$/;"	m	struct:__anon24
+frame	tanto/r_render.h	/^typedef struct frame {$/;"	s
+frameBuffer	tanto/r_render.h	/^    VkFramebuffer   frameBuffer;$/;"	m	struct:frame
+frameCount	tanto/t_utils.h	/^    uint64_t frameCount;$/;"	m	struct:Tanto_LoopStats
+frameCounter	tanto/v_video.c	/^uint64_t       frameCounter;$/;"	v
+frames	tanto/r_render.c	/^Tanto_R_Frame  frames[TANTO_FRAME_COUNT];$/;"	v
+freeBlock	tanto/v_memory.c	/^static void freeBlock(struct BlockChain* chain, const Tanto_V_BlockId id)$/;"	f	file:
+freeBlockChain	tanto/v_memory.c	/^static void freeBlockChain(struct BlockChain* chain)$/;"	f	file:
+func	tanto/thirdparty/stb_image_write.h	/^   stbi_write_func *func;$/;"	m	struct:__anon59
+g	common.h	/^    float g;$/;"	m	struct:__anon3
+g_Init	game.c	/^void g_Init(void)$/;"	f
+g_Responder	game.c	/^void g_Responder(const Tanto_I_Event *event)$/;"	f
+g_Update	game.c	/^void g_Update(void)$/;"	f
+getKeyData	tanto/i_input.c	/^static Tanto_I_EventData getKeyData(xcb_key_press_event_t* event)$/;"	f	file:
+getMouseData	tanto/i_input.c	/^static Tanto_I_EventData getMouseData(const xcb_generic_event_t* event)$/;"	f	file:
+getVkVersionAvailable	tanto/v_video.c	/^static uint32_t getVkVersionAvailable(void)$/;"	f	file:
+graphicsQueueFamilyIndex	tanto/v_video.c	/^uint32_t graphicsQueueFamilyIndex = UINT32_MAX; \/\/hopefully this causes obvious errors$/;"	v
+graphicsQueues	tanto/v_video.c	/^VkQueue  graphicsQueues[TANTO_G_QUEUE_COUNT];$/;"	v
+h	tanto/thirdparty/stb_image.h	/^      int h,v;$/;"	m	struct:__anon47::__anon48
+h	tanto/thirdparty/stb_image.h	/^   int w,h;$/;"	m	struct:__anon58
+h2	tanto/thirdparty/stb_image.h	/^      int x,y,w2,h2;$/;"	m	struct:__anon47::__anon48
+ha	tanto/thirdparty/stb_image.h	/^      int hd,ha;$/;"	m	struct:__anon47::__anon48
+handle	tanto/r_render.h	/^    VkFramebuffer   handle;$/;"	m	struct:__anon18
+handle	tanto/v_command.h	/^    VkCommandPool   handle;$/;"	m	struct:__anon17
+handle	tanto/v_memory.h	/^    VkImage           handle;$/;"	m	struct:__anon30
+hd	tanto/thirdparty/stb_image.h	/^      int hd,ha;$/;"	m	struct:__anon47::__anon48
+history	tanto/thirdparty/stb_image.h	/^   stbi_uc *history;$/;"	m	struct:__anon58
+hostData	tanto/v_memory.c	/^    uint8_t*           hostData;$/;"	m	struct:BlockChain	file:
+hostData	tanto/v_memory.h	/^    uint8_t*               hostData; \/\/ if hostData not null, its mapped$/;"	m	struct:__anon29
+hs	tanto/thirdparty/stb_image.h	/^   int hs,vs;   \/\/ expansion factor in each axis$/;"	m	struct:__anon49
+hsz	tanto/thirdparty/stb_image.h	/^   int bpp, offset, hsz;$/;"	m	struct:__anon55
+huff_ac	tanto/thirdparty/stb_image.h	/^   stbi__huffman huff_ac[4];$/;"	m	struct:__anon47
+huff_dc	tanto/thirdparty/stb_image.h	/^   stbi__huffman huff_dc[4];$/;"	m	struct:__anon47
+id	tanto/r_pipeline.h	/^    int    id;$/;"	m	struct:__anon20
+id	tanto/r_pipeline.h	/^    int   id;$/;"	m	struct:__anon26
+id	tanto/r_pipeline.h	/^    int id;$/;"	m	struct:__anon21
+id	tanto/thirdparty/stb_image.h	/^      int id;$/;"	m	struct:__anon47::__anon48
+id	tanto/v_memory.c	/^    Tanto_V_BlockId id; \/\/ global unique identifier$/;"	m	struct:tanto_V_MemBlock	file:
+idata	tanto/thirdparty/stb_image.h	/^   stbi_uc *idata, *expanded, *out;$/;"	m	struct:__anon53
+idct_block_kernel	tanto/thirdparty/stb_image.h	/^   void (*idct_block_kernel)(stbi_uc *out, int out_stride, short data[64]);$/;"	m	struct:__anon47
+imageAcquiredSemaphores	tanto/v_video.c	/^VkSemaphore    imageAcquiredSemaphores[TANTO_FRAME_COUNT];$/;"	v
+imageView	tanto/r_render.h	/^    VkImageView     imageView;$/;"	m	struct:frame
+img_buffer	tanto/thirdparty/stb_image.h	/^   stbi_uc *img_buffer, *img_buffer_end;$/;"	m	struct:__anon42
+img_buffer_end	tanto/thirdparty/stb_image.h	/^   stbi_uc *img_buffer, *img_buffer_end;$/;"	m	struct:__anon42
+img_buffer_original	tanto/thirdparty/stb_image.h	/^   stbi_uc *img_buffer_original, *img_buffer_original_end;$/;"	m	struct:__anon42
+img_buffer_original_end	tanto/thirdparty/stb_image.h	/^   stbi_uc *img_buffer_original, *img_buffer_original_end;$/;"	m	struct:__anon42
+img_comp	tanto/thirdparty/stb_image.h	/^   } img_comp[4];$/;"	m	struct:__anon47	typeref:struct:__anon47::__anon48
+img_h_max	tanto/thirdparty/stb_image.h	/^   int img_h_max, img_v_max;$/;"	m	struct:__anon47
+img_mcu_h	tanto/thirdparty/stb_image.h	/^   int img_mcu_w, img_mcu_h;$/;"	m	struct:__anon47
+img_mcu_w	tanto/thirdparty/stb_image.h	/^   int img_mcu_w, img_mcu_h;$/;"	m	struct:__anon47
+img_mcu_x	tanto/thirdparty/stb_image.h	/^   int img_mcu_x, img_mcu_y;$/;"	m	struct:__anon47
+img_mcu_y	tanto/thirdparty/stb_image.h	/^   int img_mcu_x, img_mcu_y;$/;"	m	struct:__anon47
+img_n	tanto/thirdparty/stb_image.h	/^   int img_n, img_out_n;$/;"	m	struct:__anon42
+img_out_n	tanto/thirdparty/stb_image.h	/^   int img_n, img_out_n;$/;"	m	struct:__anon42
+img_v_max	tanto/thirdparty/stb_image.h	/^   int img_h_max, img_v_max;$/;"	m	struct:__anon47
+img_x	tanto/thirdparty/stb_image.h	/^   stbi__uint32 img_x, img_y;$/;"	m	struct:__anon42
+img_y	tanto/thirdparty/stb_image.h	/^   stbi__uint32 img_x, img_y;$/;"	m	struct:__anon42
+inUse	tanto/v_memory.c	/^    bool            inUse;$/;"	m	struct:tanto_V_MemBlock	file:
+index	tanto/r_render.h	/^    uint32_t        index;$/;"	m	struct:frame
+indexBlock	tanto/r_geo.h	/^    Tanto_V_BufferRegion indexBlock;$/;"	m	struct:__anon33
+indexCount	tanto/r_geo.h	/^    uint32_t     indexCount;$/;"	m	struct:__anon36
+indexCount	tanto/r_geo.h	/^    uint32_t  indexCount;$/;"	m	struct:__anon33
+indexData	tanto/r_geo.h	/^    Tanto_R_Index*     indexData;$/;"	m	struct:__anon34
+indexRegion	tanto/r_geo.h	/^    Tanto_V_BufferRegion indexRegion;$/;"	m	struct:__anon36
+initBlockChain	tanto/v_memory.c	/^static void initBlockChain($/;"	f	file:
+initCmdPool	tanto/r_raytrace.c	/^static void initCmdPool(void)$/;"	f	file:
+initDebugMessenger	tanto/v_video.c	/^static void initDebugMessenger(void)$/;"	f	file:
+initDevice	tanto/v_video.c	/^static void initDevice(void)$/;"	f	file:
+initFrameBuffers	tanto/r_render.c	/^static void initFrameBuffers(void)$/;"	f	file:
+initFrames	tanto/r_render.c	/^static void initFrames(void)$/;"	f	file:
+initOffscreenFrameBuffer	render.c	/^static void initOffscreenFrameBuffer(void)$/;"	f	file:
+initQueues	tanto/v_video.c	/^static void initQueues(void)$/;"	f	file:
+initRenderPasses	tanto/r_render.c	/^static void initRenderPasses(void)$/;"	f	file:
+initShaderModule	tanto/r_pipeline.c	/^static void initShaderModule(const char* filepath, VkShaderModule* module)$/;"	f	file:
+initSwapchain	tanto/v_video.c	/^static void initSwapchain(void)$/;"	f	file:
+initVkInstance	tanto/v_video.c	/^static void initVkInstance(void)$/;"	f	file:
+inspectAvailableExtensions	tanto/v_video.c	/^static void inspectAvailableExtensions(void)$/;"	f	file:
+inspectAvailableLayers	tanto/v_video.c	/^static void inspectAvailableLayers(void)$/;"	f	file:
+instance	tanto/v_video.c	/^static VkInstance instance;$/;"	v	file:
+io	tanto/thirdparty/stb_image.h	/^   stbi_io_callbacks io;$/;"	m	struct:__anon42
+io_user_data	tanto/thirdparty/stb_image.h	/^   void *io_user_data;$/;"	m	struct:__anon42
+jfif	tanto/thirdparty/stb_image.h	/^   int            jfif;$/;"	m	struct:__anon47
+keyCode	tanto/i_input.h	/^    uint32_t          keyCode;$/;"	m	union:__anon61
+layout	tanto/v_memory.h	/^    VkImageLayout     layout;$/;"	m	struct:__anon30
+layoutId	tanto/r_pipeline.h	/^    int   layoutId;$/;"	m	struct:__anon26
+length	tanto/thirdparty/stb_image.h	/^   stbi__uint32 length;$/;"	m	struct:__anon52
+lflags	tanto/thirdparty/stb_image.h	/^   int lflags;$/;"	m	struct:__anon58
+line0	tanto/thirdparty/stb_image.h	/^   stbi_uc *line0,*line1;$/;"	m	struct:__anon49
+line1	tanto/thirdparty/stb_image.h	/^   stbi_uc *line0,*line1;$/;"	m	struct:__anon49
+line_size	tanto/thirdparty/stb_image.h	/^   int line_size;$/;"	m	struct:__anon58
+linebuf	tanto/thirdparty/stb_image.h	/^      stbi_uc *linebuf;$/;"	m	struct:__anon47::__anon48
+load_jpeg_image	tanto/thirdparty/stb_image.h	/^static stbi_uc *load_jpeg_image(stbi__jpeg *z, int *out_x, int *out_y, int *comp, int req_comp)$/;"	f
+longestFrame	tanto/t_utils.h	/^    uint32_t longestFrame;$/;"	m	struct:Tanto_LoopStats
+lpal	tanto/thirdparty/stb_image.h	/^   stbi_uc lpal[256][4];$/;"	m	struct:__anon58
+m_Add	tanto/m_math.c	/^void m_Add(const Vec2 v1, Vec2* v2)$/;"	f
+m_Add_Vec3	tanto/m_math.c	/^Vec3 m_Add_Vec3(const Vec3* a, const Vec3* b)$/;"	f
+m_BuildFromBasis_Mat4	tanto/m_math.c	/^Mat4 m_BuildFromBasis_Mat4(const float x[3], const float y[3], const float z[3])$/;"	f
+m_BuildPerspective	tanto/m_math.c	/^Mat4 m_BuildPerspective(const float nearDist, const float farDist)$/;"	f
+m_BuildRotate	tanto/m_math.c	/^Mat4 m_BuildRotate(const float angle, const Vec3* axis)$/;"	f
+m_Cross	tanto/m_math.c	/^Vec3 m_Cross(const Vec3 *a, const Vec3 *b)$/;"	f
+m_Det2x2	tanto/m_math.c	/^float m_Det2x2(const Mat2 m)$/;"	f
+m_Dot	tanto/m_math.c	/^float m_Dot(const Vec3* a, const Vec3* b)$/;"	f
+m_GetLocalZ_Mat4	tanto/m_math.c	/^Vec3 m_GetLocalZ_Mat4(const Mat4 *m)$/;"	f
+m_GetTranslation_Mat4	tanto/m_math.c	/^Vec3 m_GetTranslation_Mat4(const Mat4* m)$/;"	f
+m_Ident_Mat4	tanto/m_math.c	/^Mat4 m_Ident_Mat4(void)$/;"	f
+m_IntersectTriangle	tanto/m_math.c	/^int m_IntersectTriangle(const Vec3* orig, const Vec3* dir, $/;"	f
+m_Invert4x4	tanto/m_math.c	/^Mat4 m_Invert4x4(const Mat4* const mat)$/;"	f
+m_Length	tanto/m_math.c	/^float m_Length(const Vec2 v)$/;"	f
+m_Length2	tanto/m_math.c	/^float m_Length2(const Vec2 v)$/;"	f
+m_Length_Vec3	tanto/m_math.c	/^float m_Length_Vec3(const Vec3* v)$/;"	f
+m_Length_Vec4	tanto/m_math.c	/^float m_Length_Vec4(const Vec4* v)$/;"	f
+m_Lerp_Vec3	tanto/m_math.c	/^Vec3 m_Lerp_Vec3(const Vec3* a, const Vec3* b, const float t)$/;"	f
+m_LookAt	tanto/m_math.c	/^Mat4 m_LookAt(const Vec3* pos, const Vec3* target, const Vec3* up)$/;"	f
+m_Mult_Mat2Vec2	tanto/m_math.c	/^static void m_Mult_Mat2Vec2(const Mat2* m, Vec2* v)$/;"	f	file:
+m_Mult_Mat4	tanto/m_math.c	/^Mat4 m_Mult_Mat4(const Mat4* a, const Mat4* b)$/;"	f
+m_Mult_Mat4Vec3	tanto/m_math.c	/^Vec3 m_Mult_Mat4Vec3(const Mat4* m, const Vec3* v)$/;"	f
+m_Mult_Mat4Vec4	tanto/m_math.c	/^Vec4 m_Mult_Mat4Vec4(const Mat4* m, const Vec4* v)$/;"	f
+m_Normalize_Vec3	tanto/m_math.c	/^Vec3 m_Normalize_Vec3(const Vec3* v)$/;"	f
+m_Normalize_Vec4	tanto/m_math.c	/^Vec4 m_Normalize_Vec4(const Vec4* v)$/;"	f
+m_PolarToCart	tanto/m_math.c	/^Vec2 m_PolarToCart(const float angle, const float radius)$/;"	f
+m_Rand	tanto/m_math.c	/^float m_Rand(void)$/;"	f
+m_RandNeg	tanto/m_math.c	/^float m_RandNeg(void)$/;"	f
+m_RotateY_Mat4	tanto/m_math.c	/^Mat4 m_RotateY_Mat4(const float angle, const Mat4* m)$/;"	f
+m_RotateY_Vec3	tanto/m_math.c	/^Vec3 m_RotateY_Vec3(const float angle, const Vec3 *v)$/;"	f
+m_RotateZ_Mat4	tanto/m_math.c	/^Mat4 m_RotateZ_Mat4(const float angle, const Mat4* m)$/;"	f
+m_Rotate_Vec2	tanto/m_math.c	/^void m_Rotate_Vec2(const float angle, Vec2* v)$/;"	f
+m_Scale	tanto/m_math.c	/^void m_Scale(const float s, Vec2* v)$/;"	f
+m_ScaleUniform_Mat4	tanto/m_math.c	/^void m_ScaleUniform_Mat4(const float s, Mat4 *m)$/;"	f
+m_Scale_Vec3	tanto/m_math.c	/^Vec3 m_Scale_Vec3(const float s, const Vec3* v)$/;"	f
+m_Sub_Vec3	tanto/m_math.c	/^Vec3 m_Sub_Vec3(const Vec3* a, const Vec3* b)$/;"	f
+m_Subtract	tanto/m_math.c	/^Vec2 m_Subtract(const Vec2 v1, const Vec2 v2)$/;"	f
+m_Translate	tanto/m_math.c	/^void m_Translate(const Vec2 t, Vec2* v)$/;"	f
+m_Translate_Mat4	tanto/m_math.c	/^Mat4 m_Translate_Mat4(const Vec3 t, const Mat4 *m)$/;"	f
+m_Transpose_Mat4	tanto/m_math.c	/^Mat4 m_Transpose_Mat4(const Mat4 *m)$/;"	f
+ma	tanto/thirdparty/stb_image.h	/^   unsigned int mr,mg,mb,ma, all_a;$/;"	m	struct:__anon55
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+mainRender	render.c	/^static void mainRender(const VkCommandBuffer* cmdBuf, const VkRenderPassBeginInfo* rpassInfo)$/;"	f	file:
+marker	tanto/thirdparty/stb_image.h	/^   unsigned char  marker;      \/\/ marker seen while filling entropy buffer$/;"	m	struct:__anon47
+matModel	render.h	/^    Mat4 matModel;$/;"	m	struct:__anon8
+matProj	render.h	/^    Mat4 matProj;$/;"	m	struct:__anon8
+matView	render.h	/^    Mat4 matView;$/;"	m	struct:__anon8
+max_x	tanto/thirdparty/stb_image.h	/^   int max_x, max_y;$/;"	m	struct:__anon58
+max_y	tanto/thirdparty/stb_image.h	/^   int max_x, max_y;$/;"	m	struct:__anon58
+maxcode	tanto/thirdparty/stb_image.h	/^   int maxcode[17];$/;"	m	struct:__anon50
+maxcode	tanto/thirdparty/stb_image.h	/^   unsigned int maxcode[18];$/;"	m	struct:__anon46
+mb	tanto/thirdparty/stb_image.h	/^   unsigned int mr,mg,mb,ma, all_a;$/;"	m	struct:__anon55
+memBlockId	tanto/v_memory.h	/^    Tanto_V_BlockId        memBlockId;$/;"	m	struct:__anon29
+memBlockId	tanto/v_memory.h	/^    Tanto_V_BlockId   memBlockId;$/;"	m	struct:__anon30
+memory	tanto/r_raytrace.c	/^    VkDeviceMemory  memory;$/;"	m	struct:__anon31	file:
+memory	tanto/v_memory.c	/^    VkDeviceMemory     memory;$/;"	m	struct:BlockChain	file:
+memoryBlas	tanto/r_raytrace.c	/^static VkDeviceMemory  memoryBlas; \/\/hacking this for now$/;"	v	file:
+memoryProperties	tanto/v_memory.c	/^static VkPhysicalDeviceMemoryProperties memoryProperties;$/;"	v	file:
+memoryTlas	tanto/r_raytrace.c	/^static VkDeviceMemory  memoryTlas; \/\/hacking this for now$/;"	v	file:
+mg	tanto/thirdparty/stb_image.h	/^   unsigned int mr,mg,mb,ma, all_a;$/;"	m	struct:__anon55
+missCount	tanto/r_pipeline.h	/^    uint8_t missCount;$/;"	m	struct:__anon25
+missShaders	tanto/r_pipeline.h	/^    char**  missShaders;$/;"	m	struct:__anon25
+mode	common.h	/^    ModeID mode;$/;"	m	struct:__anon2
+mode	common.h	/^    int   mode;$/;"	m	struct:__anon3
+mouseData	tanto/i_input.h	/^    Tanto_I_MouseData mouseData;$/;"	m	union:__anon61
+mousePos	game.c	/^static Vec2  mousePos;$/;"	v	file:
+mr	tanto/thirdparty/stb_image.h	/^   unsigned int mr,mg,mb,ma, all_a;$/;"	m	struct:__anon55
+name	tanto/v_memory.c	/^    char               name[16]; \/\/ for debugging$/;"	m	struct:BlockChain	file:
+nativeSurface	tanto/v_video.c	/^static VkSurfaceKHR      nativeSurface;$/;"	v	file:
+nextBlockId	tanto/v_memory.c	/^    uint32_t           nextBlockId;$/;"	m	struct:BlockChain	file:
+nomore	tanto/thirdparty/stb_image.h	/^   int            nomore;      \/\/ flag if we saw a marker so must stop$/;"	m	struct:__anon47
+norData	tanto/r_geo.h	/^    Tanto_R_Attribute* norData;$/;"	m	struct:__anon34
+norOffset	tanto/r_geo.h	/^    VkDeviceSize norOffset;$/;"	m	struct:__anon33
+normal	tanto/r_geo.h	/^    Vec3 normal;$/;"	m	struct:__anon35
+nsDelta	tanto/t_utils.h	/^    unsigned long nsDelta;$/;"	m	struct:Tanto_LoopStats
+nsTotal	tanto/t_utils.h	/^    uint64_t nsTotal;$/;"	m	struct:Tanto_LoopStats
+num_bits	tanto/thirdparty/stb_image.h	/^   int num_bits;$/;"	m	struct:__anon51
+num_channels	tanto/thirdparty/stb_image.h	/^   int num_channels;$/;"	m	struct:__anon44
+offscreenColorFormat	tanto/r_render.c	/^const VkFormat offscreenColorFormat = VK_FORMAT_R32G32B32A32_SFLOAT;$/;"	v
+offscreenFrameBuffer	render.c	/^static Tanto_R_FrameBuffer  offscreenFrameBuffer;$/;"	v	file:
+offscreenRenderPass	tanto/r_render.c	/^VkRenderPass   offscreenRenderPass;$/;"	v
+offset	tanto/thirdparty/stb_image.h	/^   int bpp, offset, hsz;$/;"	m	struct:__anon55
+offset	tanto/v_memory.c	/^    VkDeviceSize    offset;$/;"	m	struct:tanto_V_MemBlock	file:
+offset	tanto/v_memory.h	/^    VkDeviceSize           offset;$/;"	m	struct:__anon29
+order	tanto/thirdparty/stb_image.h	/^   int scan_n, order[4];$/;"	m	struct:__anon47
+orig	tanto/m_math.h	/^    Vec2 orig;$/;"	m	struct:__anon15
+out	tanto/thirdparty/stb_image.h	/^   stbi_uc *idata, *expanded, *out;$/;"	m	struct:__anon53
+out	tanto/thirdparty/stb_image.h	/^   stbi_uc *out;                 \/\/ output buffer (always 4 components)$/;"	m	struct:__anon58
+pChain	tanto/v_memory.h	/^    struct BlockChain*     pChain;$/;"	m	struct:__anon29	typeref:struct:__anon29::BlockChain
+pImage	tanto/r_render.h	/^    VkImage*        pImage;$/;"	m	struct:frame
+pRenderPass	tanto/r_render.h	/^    VkRenderPass*   pRenderPass;$/;"	m	struct:__anon18
+pShaderParms	game.c	/^struct ShaderParms* pShaderParms;$/;"	v	typeref:struct:ShaderParms
+pSurface	tanto/v_video.c	/^static VkSurfaceKHR*     pSurface;$/;"	v	file:
+pXcbKeySymbols	tanto/i_input.c	/^static xcb_key_symbols_t* pXcbKeySymbols;$/;"	v	file:
+pal	tanto/thirdparty/stb_image.h	/^   stbi_uc  pal[256][4];$/;"	m	struct:__anon58
+parms	game.c	/^Parms parms; $/;"	v
+parse	tanto/thirdparty/stb_image.h	/^   int parse, step;$/;"	m	struct:__anon58
+payload	tanto/r_pipeline.h	/^    union Tanto_R_PipelineInfoPayload payload;$/;"	m	struct:__anon26	typeref:union:__anon26::Tanto_R_PipelineInfoPayload
+pfn_vkBindAccelerationStructureMemoryKHR	tanto/v_def.c	/^static PFN_vkBindAccelerationStructureMemoryKHR            pfn_vkBindAccelerationStructureMemoryKHR;$/;"	v	file:
+pfn_vkCmdBuildAccelerationStructureKHR	tanto/v_def.c	/^static PFN_vkCmdBuildAccelerationStructureKHR              pfn_vkCmdBuildAccelerationStructureKHR;$/;"	v	file:
+pfn_vkCmdTraceRaysKHR	tanto/v_def.c	/^static PFN_vkCmdTraceRaysKHR                               pfn_vkCmdTraceRaysKHR;$/;"	v	file:
+pfn_vkCreateAccelerationStructureKHR	tanto/v_def.c	/^static PFN_vkCreateAccelerationStructureKHR                pfn_vkCreateAccelerationStructureKHR;$/;"	v	file:
+pfn_vkCreateRayTracingPipelinesKHR	tanto/v_def.c	/^static PFN_vkCreateRayTracingPipelinesKHR                  pfn_vkCreateRayTracingPipelinesKHR;$/;"	v	file:
+pfn_vkDestroyAccelerationStructureKHR	tanto/v_def.c	/^static PFN_vkDestroyAccelerationStructureKHR               pfn_vkDestroyAccelerationStructureKHR;$/;"	v	file:
+pfn_vkGetAccelerationStructureDeviceAddressKHR	tanto/v_def.c	/^static PFN_vkGetAccelerationStructureDeviceAddressKHR      pfn_vkGetAccelerationStructureDeviceAddressKHR;$/;"	v	file:
+pfn_vkGetAccelerationStructureMemoryRequirementsKHR	tanto/v_def.c	/^static PFN_vkGetAccelerationStructureMemoryRequirementsKHR pfn_vkGetAccelerationStructureMemoryRequirementsKHR;$/;"	v	file:
+pfn_vkGetRayTracingShaderGroupHandlesKHR	tanto/v_def.c	/^static PFN_vkGetRayTracingShaderGroupHandlesKHR            pfn_vkGetRayTracingShaderGroupHandlesKHR;$/;"	v	file:
+physicalDevice	tanto/v_video.c	/^VkPhysicalDevice  physicalDevice;$/;"	v
+pipelineLayouts	tanto/r_pipeline.c	/^VkPipelineLayout pipelineLayouts[TANTO_MAX_PIPELINES];$/;"	v
+pipelines	tanto/r_pipeline.c	/^VkPipeline       pipelines[TANTO_MAX_PIPELINES];$/;"	v
+pos	tanto/r_geo.h	/^    Vec3 pos;$/;"	m	struct:__anon35
+posData	tanto/r_geo.h	/^    Tanto_R_Attribute* posData;$/;"	m	struct:__anon34
+posOffset	tanto/r_geo.h	/^    VkDeviceSize posOffset;$/;"	m	struct:__anon33
+postEvent	tanto/i_input.c	/^static void postEvent(Tanto_I_Event event)$/;"	f	file:
+postProc	render.c	/^static void postProc(const VkCommandBuffer* cmdBuf, const VkRenderPassBeginInfo* rpassInfo)$/;"	f	file:
+prefix	tanto/thirdparty/stb_image.h	/^   stbi__int16 prefix;$/;"	m	struct:__anon57
+presentColorFormat	tanto/r_render.c	/^const VkFormat presentColorFormat = VK_FORMAT_R8G8B8A8_SRGB;$/;"	v
+presentQueue	tanto/v_video.c	/^VkQueue  presentQueue;$/;"	v
+prim	render.c	/^static Tanto_R_Primitive prim;$/;"	v	file:
+printBlockChainInfo	tanto/v_memory.c	/^static void printBlockChainInfo(const struct BlockChain* chain)$/;"	f	file:
+printBuffer	tanto/t_utils.h	9;"	d
+printBufferMemoryReqs	tanto/v_memory.c	/^static void printBufferMemoryReqs(const VkMemoryRequirements* reqs)$/;"	f	file:
+printMat4	tanto/t_utils.c	/^void printMat4(const Mat4 * m)$/;"	f
+printVec2	tanto/t_utils.c	/^void printVec2(const Vec2* vec)$/;"	f
+printVec3	tanto/t_utils.c	/^void printVec3(const Vec3* vec)$/;"	f
+progressive	tanto/thirdparty/stb_image.h	/^   int            progressive;$/;"	m	struct:__anon47
+pushConstantCount	tanto/r_pipeline.h	/^    size_t pushConstantCount;$/;"	m	struct:__anon21
+pushConstantsRanges	tanto/r_pipeline.h	/^    VkPushConstantRange pushConstantsRanges[TANTO_MAX_PUSH_CONSTANTS];$/;"	m	struct:__anon21
+queueFamily	tanto/v_command.h	/^    uint32_t        queueFamily;$/;"	m	struct:__anon17
+r	common.h	/^    float r;$/;"	m	struct:__anon3
+r_CleanUp	render.c	/^void r_CleanUp(void)$/;"	f
+r_InitRenderer	render.c	/^void r_InitRenderer()$/;"	f
+r_UpdateRenderCommands	render.c	/^void r_UpdateRenderCommands(void)$/;"	f
+radius	common.h	/^    float radius;$/;"	m	struct:__anon3
+rasterInfo	tanto/r_pipeline.h	/^    Tanto_R_PipelineRasterInfo   rasterInfo;$/;"	m	union:Tanto_R_PipelineInfoPayload
+ratio	tanto/thirdparty/stb_image.h	/^   int flags, bgindex, ratio, transparent, eflags;$/;"	m	struct:__anon58
+raw_coeff	tanto/thirdparty/stb_image.h	/^      void *raw_data, *raw_coeff;$/;"	m	struct:__anon47::__anon48
+raw_data	tanto/thirdparty/stb_image.h	/^      void *raw_data, *raw_coeff;$/;"	m	struct:__anon47::__anon48
+rayTraceEnabled	tanto/v_def.h	/^    bool rayTraceEnabled;$/;"	m	struct:__anon39
+rayTraceInfo	tanto/r_pipeline.h	/^    Tanto_R_PipelineRayTraceInfo rayTraceInfo;$/;"	m	union:Tanto_R_PipelineInfoPayload
+raygenCount	tanto/r_pipeline.h	/^    uint8_t raygenCount;$/;"	m	struct:__anon25
+raygenShaders	tanto/r_pipeline.h	/^    char**  raygenShaders;$/;"	m	struct:__anon25
+read	tanto/thirdparty/stb_image.h	/^   int      (*read)  (void *user,char *data,int size);   \/\/ fill 'data' with 'size' bytes.  return number of bytes actually read$/;"	m	struct:__anon41
+read_from_callbacks	tanto/thirdparty/stb_image.h	/^   int read_from_callbacks;$/;"	m	struct:__anon42
+reload	common.h	/^    bool   reload;$/;"	m	struct:__anon2
+renderNeedsUpdate	common.h	/^    bool   renderNeedsUpdate;$/;"	m	struct:__anon2
+renderPass	tanto/r_render.h	/^    VkRenderPass*   renderPass;$/;"	m	struct:frame
+renderPassType	tanto/r_pipeline.h	/^    Tanto_R_RenderPassType    renderPassType;$/;"	m	struct:__anon24
+requestBlock	tanto/v_memory.c	/^static Tanto_V_MemBlock* requestBlock(const uint32_t size, const uint32_t alignment, struct BlockChain* chain)$/;"	f	file:
+resample	tanto/thirdparty/stb_image.h	/^   resample_row_func resample;$/;"	m	struct:__anon49
+resample_row_1	tanto/thirdparty/stb_image.h	/^static stbi_uc *resample_row_1(stbi_uc *out, stbi_uc *in_near, stbi_uc *in_far, int w, int hs)$/;"	f
+resample_row_func	tanto/thirdparty/stb_image.h	/^typedef stbi_uc *(*resample_row_func)(stbi_uc *out, stbi_uc *in0, stbi_uc *in1,$/;"	t
+resample_row_hv_2_kernel	tanto/thirdparty/stb_image.h	/^   stbi_uc *(*resample_row_hv_2_kernel)(stbi_uc *out, stbi_uc *in_near, stbi_uc *in_far, int w, int hs);$/;"	m	struct:__anon47
+restart_interval	tanto/thirdparty/stb_image.h	/^   int restart_interval, todo;$/;"	m	struct:__anon47
+retrievePhysicalDevice	tanto/v_video.c	/^static VkPhysicalDevice retrievePhysicalDevice(void)$/;"	f	file:
+rgb	tanto/thirdparty/stb_image.h	/^   int            rgb;$/;"	m	struct:__anon47
+rtCmdBuffers	tanto/r_raytrace.c	/^static VkCommandBuffer rtCmdBuffers[1];$/;"	v	file:
+rtCmdPool	tanto/r_raytrace.c	/^static VkCommandPool   rtCmdPool;$/;"	v	file:
+rtProperties	tanto/v_video.c	/^static VkPhysicalDeviceRayTracingPropertiesKHR rtProperties;$/;"	v	file:
+s	tanto/thirdparty/stb_image.h	/^   stbi__context *s;$/;"	m	struct:__anon47
+s	tanto/thirdparty/stb_image.h	/^   stbi__context *s;$/;"	m	struct:__anon53
+sampler	tanto/v_memory.h	/^    VkSampler         sampler;$/;"	m	struct:__anon30
+scan_n	tanto/thirdparty/stb_image.h	/^   int scan_n, order[4];$/;"	m	struct:__anon47
+semaphore	tanto/r_render.h	/^    VkSemaphore     semaphore;$/;"	m	struct:frame
+shaderStageType	tanto/r_pipeline.c	/^enum shaderStageType { VERT, FRAG };$/;"	g	file:
+shortestFrame	tanto/t_utils.h	/^    uint32_t shortestFrame;$/;"	m	struct:Tanto_LoopStats
+shouldRun	common.h	/^    bool   shouldRun;$/;"	m	struct:__anon2
+shouldRun	game.h	/^    bool shouldRun;$/;"	m	struct:__anon63
+size	tanto/r_raytrace.c	/^    VkDeviceSize    size;$/;"	m	struct:__anon31	file:
+size	tanto/thirdparty/stb_image.h	/^   stbi_uc  size[257];$/;"	m	struct:__anon46
+size	tanto/thirdparty/stb_image.h	/^   stbi_uc  size[288];$/;"	m	struct:__anon50
+size	tanto/thirdparty/stb_image.h	/^   stbi_uc size,type,channel;$/;"	m	struct:__anon56
+size	tanto/v_memory.c	/^    VkDeviceSize    size;$/;"	m	struct:tanto_V_MemBlock	file:
+size	tanto/v_memory.h	/^    VkDeviceSize           size;$/;"	m	struct:__anon29
+size	tanto/v_memory.h	/^    VkDeviceSize      size; \/\/ size in bytes. taken from GetMemReqs$/;"	m	struct:__anon30
+skip	tanto/thirdparty/stb_image.h	/^   void     (*skip)  (void *user,int n);                 \/\/ skip the next 'n' bytes, or 'unget' the last -n bytes if negative$/;"	m	struct:__anon41
+spec_end	tanto/thirdparty/stb_image.h	/^   int            spec_end;$/;"	m	struct:__anon47
+spec_start	tanto/thirdparty/stb_image.h	/^   int            spec_start;$/;"	m	struct:__anon47
+stageFlags	tanto/r_pipeline.h	/^    VkShaderStageFlags stageFlags;$/;"	m	struct:__anon19
+startTime	tanto/t_utils.h	/^    struct timespec startTime;$/;"	m	struct:Tanto_Timer	typeref:struct:Tanto_Timer::timespec
+start_x	tanto/thirdparty/stb_image.h	/^   int start_x, start_y;$/;"	m	struct:__anon58
+start_y	tanto/thirdparty/stb_image.h	/^   int start_x, start_y;$/;"	m	struct:__anon58
+stb_image_write_test	tanto/thirdparty/stb_image_write.h	/^typedef int stb_image_write_test[sizeof(stbiw_uint32)==4 ? 1 : -1];$/;"	t
+stbi__DNL	tanto/thirdparty/stb_image.h	3275;"	d
+stbi__EOI	tanto/thirdparty/stb_image.h	3277;"	d
+stbi__SOF	tanto/thirdparty/stb_image.h	3278;"	d
+stbi__SOF_progressive	tanto/thirdparty/stb_image.h	3281;"	d
+stbi__SOI	tanto/thirdparty/stb_image.h	3276;"	d
+stbi__SOS	tanto/thirdparty/stb_image.h	3279;"	d
+stbi__YCbCr_to_RGB_row	tanto/thirdparty/stb_image.h	/^static void stbi__YCbCr_to_RGB_row(stbi_uc *out, const stbi_uc *y, const stbi_uc *pcb, const stbi_uc *pcr, int count, int step)$/;"	f
+stbi__YCbCr_to_RGB_simd	tanto/thirdparty/stb_image.h	/^static void stbi__YCbCr_to_RGB_simd(stbi_uc *out, stbi_uc const *y, stbi_uc const *pcb, stbi_uc const *pcr, int count, int step)$/;"	f
+stbi__addsizes_valid	tanto/thirdparty/stb_image.h	/^static int stbi__addsizes_valid(int a, int b)$/;"	f
+stbi__at_eof	tanto/thirdparty/stb_image.h	/^stbi_inline static int stbi__at_eof(stbi__context *s)$/;"	f
+stbi__bit_reverse	tanto/thirdparty/stb_image.h	/^stbi_inline static int stbi__bit_reverse(int v, int bits)$/;"	f
+stbi__bitcount	tanto/thirdparty/stb_image.h	/^static int stbi__bitcount(unsigned int a)$/;"	f
+stbi__bitreverse16	tanto/thirdparty/stb_image.h	/^stbi_inline static int stbi__bitreverse16(int n)$/;"	f
+stbi__blinn_8x8	tanto/thirdparty/stb_image.h	/^static stbi_uc stbi__blinn_8x8(stbi_uc x, stbi_uc y)$/;"	f
+stbi__bmask	tanto/thirdparty/stb_image.h	/^static const stbi__uint32 stbi__bmask[17]={0,1,3,7,15,31,63,127,255,511,1023,2047,4095,8191,16383,32767,65535};$/;"	v
+stbi__bmp_data	tanto/thirdparty/stb_image.h	/^} stbi__bmp_data;$/;"	t	typeref:struct:__anon55
+stbi__bmp_info	tanto/thirdparty/stb_image.h	/^static int stbi__bmp_info(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__bmp_load	tanto/thirdparty/stb_image.h	/^static void *stbi__bmp_load(stbi__context *s, int *x, int *y, int *comp, int req_comp, stbi__result_info *ri)$/;"	f
+stbi__bmp_parse_header	tanto/thirdparty/stb_image.h	/^static void *stbi__bmp_parse_header(stbi__context *s, stbi__bmp_data *info)$/;"	f
+stbi__bmp_test	tanto/thirdparty/stb_image.h	/^static int stbi__bmp_test(stbi__context *s)$/;"	f
+stbi__bmp_test_raw	tanto/thirdparty/stb_image.h	/^static int stbi__bmp_test_raw(stbi__context *s)$/;"	f
+stbi__build_fast_ac	tanto/thirdparty/stb_image.h	/^static void stbi__build_fast_ac(stbi__int16 *fast_ac, stbi__huffman *h)$/;"	f
+stbi__build_huffman	tanto/thirdparty/stb_image.h	/^static int stbi__build_huffman(stbi__huffman *h, int *count)$/;"	f
+stbi__check_png_header	tanto/thirdparty/stb_image.h	/^static int stbi__check_png_header(stbi__context *s)$/;"	f
+stbi__clamp	tanto/thirdparty/stb_image.h	/^stbi_inline static stbi_uc stbi__clamp(int x)$/;"	f
+stbi__cleanup_jpeg	tanto/thirdparty/stb_image.h	/^static void stbi__cleanup_jpeg(stbi__jpeg *j)$/;"	f
+stbi__compute_huffman_codes	tanto/thirdparty/stb_image.h	/^static int stbi__compute_huffman_codes(stbi__zbuf *a)$/;"	f
+stbi__compute_transparency	tanto/thirdparty/stb_image.h	/^static int stbi__compute_transparency(stbi__png *z, stbi_uc tc[3], int out_n)$/;"	f
+stbi__compute_transparency16	tanto/thirdparty/stb_image.h	/^static int stbi__compute_transparency16(stbi__png *z, stbi__uint16 tc[3], int out_n)$/;"	f
+stbi__compute_y	tanto/thirdparty/stb_image.h	/^static stbi_uc stbi__compute_y(int r, int g, int b)$/;"	f
+stbi__compute_y_16	tanto/thirdparty/stb_image.h	/^static stbi__uint16 stbi__compute_y_16(int r, int g, int b)$/;"	f
+stbi__context	tanto/thirdparty/stb_image.h	/^} stbi__context;$/;"	t	typeref:struct:__anon42
+stbi__convert_16_to_8	tanto/thirdparty/stb_image.h	/^static stbi_uc *stbi__convert_16_to_8(stbi__uint16 *orig, int w, int h, int channels)$/;"	f
+stbi__convert_8_to_16	tanto/thirdparty/stb_image.h	/^static stbi__uint16 *stbi__convert_8_to_16(stbi_uc *orig, int w, int h, int channels)$/;"	f
+stbi__convert_format	tanto/thirdparty/stb_image.h	/^static unsigned char *stbi__convert_format(unsigned char *data, int img_n, int req_comp, unsigned int x, unsigned int y)$/;"	f
+stbi__convert_format16	tanto/thirdparty/stb_image.h	/^static stbi__uint16 *stbi__convert_format16(stbi__uint16 *data, int img_n, int req_comp, unsigned int x, unsigned int y)$/;"	f
+stbi__copyval	tanto/thirdparty/stb_image.h	/^static void stbi__copyval(int channel,stbi_uc *dest,const stbi_uc *src)$/;"	f
+stbi__cpuid3	tanto/thirdparty/stb_image.h	/^static int stbi__cpuid3(void)$/;"	f
+stbi__create_png_image	tanto/thirdparty/stb_image.h	/^static int stbi__create_png_image(stbi__png *a, stbi_uc *image_data, stbi__uint32 image_data_len, int out_n, int depth, int color, int interlaced)$/;"	f
+stbi__create_png_image_raw	tanto/thirdparty/stb_image.h	/^static int stbi__create_png_image_raw(stbi__png *a, stbi_uc *raw, stbi__uint32 raw_len, int out_n, stbi__uint32 x, stbi__uint32 y, int depth, int color)$/;"	f
+stbi__de_iphone	tanto/thirdparty/stb_image.h	/^static void stbi__de_iphone(stbi__png *z)$/;"	f
+stbi__de_iphone_flag	tanto/thirdparty/stb_image.h	/^static int stbi__de_iphone_flag = 0;$/;"	v
+stbi__decode_jpeg_header	tanto/thirdparty/stb_image.h	/^static int stbi__decode_jpeg_header(stbi__jpeg *z, int scan)$/;"	f
+stbi__decode_jpeg_image	tanto/thirdparty/stb_image.h	/^static int stbi__decode_jpeg_image(stbi__jpeg *j)$/;"	f
+stbi__depth_scale_table	tanto/thirdparty/stb_image.h	/^static const stbi_uc stbi__depth_scale_table[9] = { 0, 0xff, 0x55, 0, 0x11, 0,0,0, 0x01 };$/;"	v
+stbi__div16	tanto/thirdparty/stb_image.h	3402;"	d
+stbi__div4	tanto/thirdparty/stb_image.h	3353;"	d
+stbi__do_png	tanto/thirdparty/stb_image.h	/^static void *stbi__do_png(stbi__png *p, int *x, int *y, int *n, int req_comp, stbi__result_info *ri)$/;"	f
+stbi__do_zlib	tanto/thirdparty/stb_image.h	/^static int stbi__do_zlib(stbi__zbuf *a, char *obuf, int olen, int exp, int parse_header)$/;"	f
+stbi__end_write_file	tanto/thirdparty/stb_image_write.h	/^static void stbi__end_write_file(stbi__write_context *s)$/;"	f
+stbi__err	tanto/thirdparty/stb_image.h	/^static int stbi__err(const char *str)$/;"	f
+stbi__err	tanto/thirdparty/stb_image.h	1037;"	d
+stbi__err	tanto/thirdparty/stb_image.h	1039;"	d
+stbi__err	tanto/thirdparty/stb_image.h	1041;"	d
+stbi__errpf	tanto/thirdparty/stb_image.h	1044;"	d
+stbi__errpuc	tanto/thirdparty/stb_image.h	1045;"	d
+stbi__expand_png_palette	tanto/thirdparty/stb_image.h	/^static int stbi__expand_png_palette(stbi__png *a, stbi_uc *palette, int len, int pal_img_n)$/;"	f
+stbi__extend_receive	tanto/thirdparty/stb_image.h	/^stbi_inline static int stbi__extend_receive(stbi__jpeg *j, int n)$/;"	f
+stbi__f2f	tanto/thirdparty/stb_image.h	2352;"	d
+stbi__fill_bits	tanto/thirdparty/stb_image.h	/^static void stbi__fill_bits(stbi__zbuf *z)$/;"	f
+stbi__flip_vertically_on_write	tanto/thirdparty/stb_image_write.h	/^static int stbi__flip_vertically_on_write = 0;$/;"	v
+stbi__float2fixed	tanto/thirdparty/stb_image.h	3558;"	d
+stbi__float2int	tanto/thirdparty/stb_image.h	1822;"	d
+stbi__float_postprocess	tanto/thirdparty/stb_image.h	/^static void stbi__float_postprocess(float *result, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi__fopen	tanto/thirdparty/stb_image.h	/^static FILE *stbi__fopen(char const *filename, char const *mode)$/;"	f
+stbi__free_jpeg_components	tanto/thirdparty/stb_image.h	/^static int stbi__free_jpeg_components(stbi__jpeg *z, int ncomp, int why)$/;"	f
+stbi__fsh	tanto/thirdparty/stb_image.h	2353;"	d
+stbi__g_failure_reason	tanto/thirdparty/stb_image.h	/^const char *stbi__g_failure_reason;$/;"	v
+stbi__get16be	tanto/thirdparty/stb_image.h	/^static int stbi__get16be(stbi__context *s)$/;"	f
+stbi__get16le	tanto/thirdparty/stb_image.h	/^static int stbi__get16le(stbi__context *s)$/;"	f
+stbi__get32be	tanto/thirdparty/stb_image.h	/^static stbi__uint32 stbi__get32be(stbi__context *s)$/;"	f
+stbi__get32le	tanto/thirdparty/stb_image.h	/^static stbi__uint32 stbi__get32le(stbi__context *s)$/;"	f
+stbi__get8	tanto/thirdparty/stb_image.h	/^stbi_inline static stbi_uc stbi__get8(stbi__context *s)$/;"	f
+stbi__get_chunk_header	tanto/thirdparty/stb_image.h	/^static stbi__pngchunk stbi__get_chunk_header(stbi__context *s)$/;"	f
+stbi__get_marker	tanto/thirdparty/stb_image.h	/^static stbi_uc stbi__get_marker(stbi__jpeg *j)$/;"	f
+stbi__getn	tanto/thirdparty/stb_image.h	/^static int stbi__getn(stbi__context *s, stbi_uc *buffer, int n)$/;"	f
+stbi__gif	tanto/thirdparty/stb_image.h	/^} stbi__gif;$/;"	t	typeref:struct:__anon58
+stbi__gif_header	tanto/thirdparty/stb_image.h	/^static int stbi__gif_header(stbi__context *s, stbi__gif *g, int *comp, int is_info)$/;"	f
+stbi__gif_info	tanto/thirdparty/stb_image.h	/^static int stbi__gif_info(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__gif_info_raw	tanto/thirdparty/stb_image.h	/^static int stbi__gif_info_raw(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__gif_load	tanto/thirdparty/stb_image.h	/^static void *stbi__gif_load(stbi__context *s, int *x, int *y, int *comp, int req_comp, stbi__result_info *ri)$/;"	f
+stbi__gif_load_next	tanto/thirdparty/stb_image.h	/^static stbi_uc *stbi__gif_load_next(stbi__context *s, stbi__gif *g, int *comp, int req_comp, stbi_uc *two_back)$/;"	f
+stbi__gif_lzw	tanto/thirdparty/stb_image.h	/^} stbi__gif_lzw;$/;"	t	typeref:struct:__anon57
+stbi__gif_parse_colortable	tanto/thirdparty/stb_image.h	/^static void stbi__gif_parse_colortable(stbi__context *s, stbi_uc pal[256][4], int num_entries, int transp)$/;"	f
+stbi__gif_test	tanto/thirdparty/stb_image.h	/^static int stbi__gif_test(stbi__context *s)$/;"	f
+stbi__gif_test_raw	tanto/thirdparty/stb_image.h	/^static int stbi__gif_test_raw(stbi__context *s)$/;"	f
+stbi__grow_buffer_unsafe	tanto/thirdparty/stb_image.h	/^static void stbi__grow_buffer_unsafe(stbi__jpeg *j)$/;"	f
+stbi__h2l_gamma_i	tanto/thirdparty/stb_image.h	/^static float stbi__h2l_gamma_i=1.0f\/2.2f, stbi__h2l_scale_i=1.0f;$/;"	v
+stbi__h2l_scale_i	tanto/thirdparty/stb_image.h	/^static float stbi__h2l_gamma_i=1.0f\/2.2f, stbi__h2l_scale_i=1.0f;$/;"	v
+stbi__hdr_convert	tanto/thirdparty/stb_image.h	/^static void stbi__hdr_convert(float *output, stbi_uc *input, int req_comp)$/;"	f
+stbi__hdr_gettoken	tanto/thirdparty/stb_image.h	/^static char *stbi__hdr_gettoken(stbi__context *z, char *buffer)$/;"	f
+stbi__hdr_info	tanto/thirdparty/stb_image.h	/^static int stbi__hdr_info(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__hdr_load	tanto/thirdparty/stb_image.h	/^static float *stbi__hdr_load(stbi__context *s, int *x, int *y, int *comp, int req_comp, stbi__result_info *ri)$/;"	f
+stbi__hdr_test	tanto/thirdparty/stb_image.h	/^static int stbi__hdr_test(stbi__context* s)$/;"	f
+stbi__hdr_test_core	tanto/thirdparty/stb_image.h	/^static int stbi__hdr_test_core(stbi__context *s, const char *signature)$/;"	f
+stbi__hdr_to_ldr	tanto/thirdparty/stb_image.h	/^static stbi_uc *stbi__hdr_to_ldr(float   *data, int x, int y, int comp)$/;"	f
+stbi__high_bit	tanto/thirdparty/stb_image.h	/^static int stbi__high_bit(unsigned int z)$/;"	f
+stbi__huffman	tanto/thirdparty/stb_image.h	/^} stbi__huffman;$/;"	t	typeref:struct:__anon46
+stbi__idct_block	tanto/thirdparty/stb_image.h	/^static void stbi__idct_block(stbi_uc *out, int out_stride, short data[64])$/;"	f
+stbi__idct_simd	tanto/thirdparty/stb_image.h	/^static void stbi__idct_simd(stbi_uc *out, int out_stride, short data[64])$/;"	f
+stbi__info_main	tanto/thirdparty/stb_image.h	/^static int stbi__info_main(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__int16	tanto/thirdparty/stb_image.h	/^typedef   signed short stbi__int16;$/;"	t
+stbi__int16	tanto/thirdparty/stb_image.h	/^typedef int16_t  stbi__int16;$/;"	t
+stbi__int32	tanto/thirdparty/stb_image.h	/^typedef   signed int   stbi__int32;$/;"	t
+stbi__int32	tanto/thirdparty/stb_image.h	/^typedef int32_t  stbi__int32;$/;"	t
+stbi__is_16_main	tanto/thirdparty/stb_image.h	/^static int stbi__is_16_main(stbi__context *s)$/;"	f
+stbi__jbias	tanto/thirdparty/stb_image.h	/^static const int stbi__jbias[16] = {0,-1,-3,-7,-15,-31,-63,-127,-255,-511,-1023,-2047,-4095,-8191,-16383,-32767};$/;"	v
+stbi__jpeg	tanto/thirdparty/stb_image.h	/^} stbi__jpeg;$/;"	t	typeref:struct:__anon47
+stbi__jpeg_decode_block	tanto/thirdparty/stb_image.h	/^static int stbi__jpeg_decode_block(stbi__jpeg *j, short data[64], stbi__huffman *hdc, stbi__huffman *hac, stbi__int16 *fac, int b, stbi__uint16 *dequant)$/;"	f
+stbi__jpeg_decode_block_prog_ac	tanto/thirdparty/stb_image.h	/^static int stbi__jpeg_decode_block_prog_ac(stbi__jpeg *j, short data[64], stbi__huffman *hac, stbi__int16 *fac)$/;"	f
+stbi__jpeg_decode_block_prog_dc	tanto/thirdparty/stb_image.h	/^static int stbi__jpeg_decode_block_prog_dc(stbi__jpeg *j, short data[64], stbi__huffman *hdc, int b)$/;"	f
+stbi__jpeg_dequantize	tanto/thirdparty/stb_image.h	/^static void stbi__jpeg_dequantize(short *data, stbi__uint16 *dequant)$/;"	f
+stbi__jpeg_dezigzag	tanto/thirdparty/stb_image.h	/^static const stbi_uc stbi__jpeg_dezigzag[64+15] =$/;"	v
+stbi__jpeg_finish	tanto/thirdparty/stb_image.h	/^static void stbi__jpeg_finish(stbi__jpeg *z)$/;"	f
+stbi__jpeg_get_bit	tanto/thirdparty/stb_image.h	/^stbi_inline static int stbi__jpeg_get_bit(stbi__jpeg *j)$/;"	f
+stbi__jpeg_get_bits	tanto/thirdparty/stb_image.h	/^stbi_inline static int stbi__jpeg_get_bits(stbi__jpeg *j, int n)$/;"	f
+stbi__jpeg_huff_decode	tanto/thirdparty/stb_image.h	/^stbi_inline static int stbi__jpeg_huff_decode(stbi__jpeg *j, stbi__huffman *h)$/;"	f
+stbi__jpeg_info	tanto/thirdparty/stb_image.h	/^static int stbi__jpeg_info(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__jpeg_info_raw	tanto/thirdparty/stb_image.h	/^static int stbi__jpeg_info_raw(stbi__jpeg *j, int *x, int *y, int *comp)$/;"	f
+stbi__jpeg_load	tanto/thirdparty/stb_image.h	/^static void *stbi__jpeg_load(stbi__context *s, int *x, int *y, int *comp, int req_comp, stbi__result_info *ri)$/;"	f
+stbi__jpeg_reset	tanto/thirdparty/stb_image.h	/^static void stbi__jpeg_reset(stbi__jpeg *j)$/;"	f
+stbi__jpeg_test	tanto/thirdparty/stb_image.h	/^static int stbi__jpeg_test(stbi__context *s)$/;"	f
+stbi__l2h_gamma	tanto/thirdparty/stb_image.h	/^static float stbi__l2h_gamma=2.2f, stbi__l2h_scale=1.0f;$/;"	v
+stbi__l2h_scale	tanto/thirdparty/stb_image.h	/^static float stbi__l2h_gamma=2.2f, stbi__l2h_scale=1.0f;$/;"	v
+stbi__ldr_to_hdr	tanto/thirdparty/stb_image.h	/^static float   *stbi__ldr_to_hdr(stbi_uc *data, int x, int y, int comp)$/;"	f
+stbi__load_and_postprocess_16bit	tanto/thirdparty/stb_image.h	/^static stbi__uint16 *stbi__load_and_postprocess_16bit(stbi__context *s, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi__load_and_postprocess_8bit	tanto/thirdparty/stb_image.h	/^static unsigned char *stbi__load_and_postprocess_8bit(stbi__context *s, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi__load_gif_main	tanto/thirdparty/stb_image.h	/^static void *stbi__load_gif_main(stbi__context *s, int **delays, int *x, int *y, int *z, int *comp, int req_comp)$/;"	f
+stbi__load_main	tanto/thirdparty/stb_image.h	/^static void *stbi__load_main(stbi__context *s, int *x, int *y, int *comp, int req_comp, stbi__result_info *ri, int bpc)$/;"	f
+stbi__loadf_main	tanto/thirdparty/stb_image.h	/^static float *stbi__loadf_main(stbi__context *s, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi__mad2sizes_valid	tanto/thirdparty/stb_image.h	/^static int stbi__mad2sizes_valid(int a, int b, int add)$/;"	f
+stbi__mad3sizes_valid	tanto/thirdparty/stb_image.h	/^static int stbi__mad3sizes_valid(int a, int b, int c, int add)$/;"	f
+stbi__mad4sizes_valid	tanto/thirdparty/stb_image.h	/^static int stbi__mad4sizes_valid(int a, int b, int c, int d, int add)$/;"	f
+stbi__malloc	tanto/thirdparty/stb_image.h	/^static void *stbi__malloc(size_t size)$/;"	f
+stbi__malloc_mad2	tanto/thirdparty/stb_image.h	/^static void *stbi__malloc_mad2(int a, int b, int add)$/;"	f
+stbi__malloc_mad3	tanto/thirdparty/stb_image.h	/^static void *stbi__malloc_mad3(int a, int b, int c, int add)$/;"	f
+stbi__malloc_mad4	tanto/thirdparty/stb_image.h	/^static void *stbi__malloc_mad4(int a, int b, int c, int d, int add)$/;"	f
+stbi__mul2sizes_valid	tanto/thirdparty/stb_image.h	/^static int stbi__mul2sizes_valid(int a, int b)$/;"	f
+stbi__out_gif_code	tanto/thirdparty/stb_image.h	/^static void stbi__out_gif_code(stbi__gif *g, stbi__uint16 code)$/;"	f
+stbi__paeth	tanto/thirdparty/stb_image.h	/^static int stbi__paeth(int a, int b, int c)$/;"	f
+stbi__parse_entropy_coded_data	tanto/thirdparty/stb_image.h	/^static int stbi__parse_entropy_coded_data(stbi__jpeg *z)$/;"	f
+stbi__parse_huffman_block	tanto/thirdparty/stb_image.h	/^static int stbi__parse_huffman_block(stbi__zbuf *a)$/;"	f
+stbi__parse_png_file	tanto/thirdparty/stb_image.h	/^static int stbi__parse_png_file(stbi__png *z, int scan, int req_comp)$/;"	f
+stbi__parse_uncompressed_block	tanto/thirdparty/stb_image.h	/^static int stbi__parse_uncompressed_block(stbi__zbuf *a)$/;"	f
+stbi__parse_zlib	tanto/thirdparty/stb_image.h	/^static int stbi__parse_zlib(stbi__zbuf *a, int parse_header)$/;"	f
+stbi__parse_zlib_header	tanto/thirdparty/stb_image.h	/^static int stbi__parse_zlib_header(stbi__zbuf *a)$/;"	f
+stbi__pic_info	tanto/thirdparty/stb_image.h	/^static int stbi__pic_info(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__pic_is4	tanto/thirdparty/stb_image.h	/^static int stbi__pic_is4(stbi__context *s,const char *str)$/;"	f
+stbi__pic_load	tanto/thirdparty/stb_image.h	/^static void *stbi__pic_load(stbi__context *s,int *px,int *py,int *comp,int req_comp, stbi__result_info *ri)$/;"	f
+stbi__pic_load_core	tanto/thirdparty/stb_image.h	/^static stbi_uc *stbi__pic_load_core(stbi__context *s,int width,int height,int *comp, stbi_uc *result)$/;"	f
+stbi__pic_packet	tanto/thirdparty/stb_image.h	/^} stbi__pic_packet;$/;"	t	typeref:struct:__anon56
+stbi__pic_test	tanto/thirdparty/stb_image.h	/^static int stbi__pic_test(stbi__context *s)$/;"	f
+stbi__pic_test_core	tanto/thirdparty/stb_image.h	/^static int stbi__pic_test_core(stbi__context *s)$/;"	f
+stbi__png	tanto/thirdparty/stb_image.h	/^} stbi__png;$/;"	t	typeref:struct:__anon53
+stbi__png_info	tanto/thirdparty/stb_image.h	/^static int stbi__png_info(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__png_info_raw	tanto/thirdparty/stb_image.h	/^static int stbi__png_info_raw(stbi__png *p, int *x, int *y, int *comp)$/;"	f
+stbi__png_is16	tanto/thirdparty/stb_image.h	/^static int stbi__png_is16(stbi__context *s)$/;"	f
+stbi__png_load	tanto/thirdparty/stb_image.h	/^static void *stbi__png_load(stbi__context *s, int *x, int *y, int *comp, int req_comp, stbi__result_info *ri)$/;"	f
+stbi__png_test	tanto/thirdparty/stb_image.h	/^static int stbi__png_test(stbi__context *s)$/;"	f
+stbi__pngchunk	tanto/thirdparty/stb_image.h	/^} stbi__pngchunk;$/;"	t	typeref:struct:__anon52
+stbi__pnm_getinteger	tanto/thirdparty/stb_image.h	/^static int      stbi__pnm_getinteger(stbi__context *s, char *c)$/;"	f
+stbi__pnm_info	tanto/thirdparty/stb_image.h	/^static int      stbi__pnm_info(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__pnm_isdigit	tanto/thirdparty/stb_image.h	/^static int      stbi__pnm_isdigit(char c)$/;"	f
+stbi__pnm_isspace	tanto/thirdparty/stb_image.h	/^static int      stbi__pnm_isspace(char c)$/;"	f
+stbi__pnm_load	tanto/thirdparty/stb_image.h	/^static void *stbi__pnm_load(stbi__context *s, int *x, int *y, int *comp, int req_comp, stbi__result_info *ri)$/;"	f
+stbi__pnm_skip_whitespace	tanto/thirdparty/stb_image.h	/^static void     stbi__pnm_skip_whitespace(stbi__context *s, char *c)$/;"	f
+stbi__pnm_test	tanto/thirdparty/stb_image.h	/^static int      stbi__pnm_test(stbi__context *s)$/;"	f
+stbi__process_frame_header	tanto/thirdparty/stb_image.h	/^static int stbi__process_frame_header(stbi__jpeg *z, int scan)$/;"	f
+stbi__process_gif_raster	tanto/thirdparty/stb_image.h	/^static stbi_uc *stbi__process_gif_raster(stbi__context *s, stbi__gif *g)$/;"	f
+stbi__process_marker	tanto/thirdparty/stb_image.h	/^static int stbi__process_marker(stbi__jpeg *z, int m)$/;"	f
+stbi__process_scan_header	tanto/thirdparty/stb_image.h	/^static int stbi__process_scan_header(stbi__jpeg *z)$/;"	f
+stbi__psd_decode_rle	tanto/thirdparty/stb_image.h	/^static int stbi__psd_decode_rle(stbi__context *s, stbi_uc *p, int pixelCount)$/;"	f
+stbi__psd_info	tanto/thirdparty/stb_image.h	/^static int stbi__psd_info(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__psd_is16	tanto/thirdparty/stb_image.h	/^static int stbi__psd_is16(stbi__context *s)$/;"	f
+stbi__psd_load	tanto/thirdparty/stb_image.h	/^static void *stbi__psd_load(stbi__context *s, int *x, int *y, int *comp, int req_comp, stbi__result_info *ri, int bpc)$/;"	f
+stbi__psd_test	tanto/thirdparty/stb_image.h	/^static int stbi__psd_test(stbi__context *s)$/;"	f
+stbi__readval	tanto/thirdparty/stb_image.h	/^static stbi_uc *stbi__readval(stbi__context *s, int channel, stbi_uc *dest)$/;"	f
+stbi__refill_buffer	tanto/thirdparty/stb_image.h	/^static void stbi__refill_buffer(stbi__context *s)$/;"	f
+stbi__resample	tanto/thirdparty/stb_image.h	/^} stbi__resample;$/;"	t	typeref:struct:__anon49
+stbi__resample_row_generic	tanto/thirdparty/stb_image.h	/^static stbi_uc *stbi__resample_row_generic(stbi_uc *out, stbi_uc *in_near, stbi_uc *in_far, int w, int hs)$/;"	f
+stbi__resample_row_h_2	tanto/thirdparty/stb_image.h	/^static stbi_uc*  stbi__resample_row_h_2(stbi_uc *out, stbi_uc *in_near, stbi_uc *in_far, int w, int hs)$/;"	f
+stbi__resample_row_hv_2	tanto/thirdparty/stb_image.h	/^static stbi_uc *stbi__resample_row_hv_2(stbi_uc *out, stbi_uc *in_near, stbi_uc *in_far, int w, int hs)$/;"	f
+stbi__resample_row_hv_2_simd	tanto/thirdparty/stb_image.h	/^static stbi_uc *stbi__resample_row_hv_2_simd(stbi_uc *out, stbi_uc *in_near, stbi_uc *in_far, int w, int hs)$/;"	f
+stbi__resample_row_v_2	tanto/thirdparty/stb_image.h	/^static stbi_uc* stbi__resample_row_v_2(stbi_uc *out, stbi_uc *in_near, stbi_uc *in_far, int w, int hs)$/;"	f
+stbi__result_info	tanto/thirdparty/stb_image.h	/^} stbi__result_info;$/;"	t	typeref:struct:__anon44
+stbi__rewind	tanto/thirdparty/stb_image.h	/^static void stbi__rewind(stbi__context *s)$/;"	f
+stbi__setup_jpeg	tanto/thirdparty/stb_image.h	/^static void stbi__setup_jpeg(stbi__jpeg *j)$/;"	f
+stbi__shiftsigned	tanto/thirdparty/stb_image.h	/^static int stbi__shiftsigned(unsigned int v, int shift, int bits)$/;"	f
+stbi__skip	tanto/thirdparty/stb_image.h	/^static void stbi__skip(stbi__context *s, int n)$/;"	f
+stbi__sse2_available	tanto/thirdparty/stb_image.h	/^static int stbi__sse2_available(void)$/;"	f
+stbi__start_callbacks	tanto/thirdparty/stb_image.h	/^static void stbi__start_callbacks(stbi__context *s, stbi_io_callbacks *c, void *user)$/;"	f
+stbi__start_file	tanto/thirdparty/stb_image.h	/^static void stbi__start_file(stbi__context *s, FILE *f)$/;"	f
+stbi__start_mem	tanto/thirdparty/stb_image.h	/^static void stbi__start_mem(stbi__context *s, stbi_uc const *buffer, int len)$/;"	f
+stbi__start_write_callbacks	tanto/thirdparty/stb_image_write.h	/^static void stbi__start_write_callbacks(stbi__write_context *s, stbi_write_func *c, void *context)$/;"	f
+stbi__start_write_file	tanto/thirdparty/stb_image_write.h	/^static int stbi__start_write_file(stbi__write_context *s, const char *filename)$/;"	f
+stbi__stdio_callbacks	tanto/thirdparty/stb_image.h	/^static stbi_io_callbacks stbi__stdio_callbacks =$/;"	v
+stbi__stdio_eof	tanto/thirdparty/stb_image.h	/^static int stbi__stdio_eof(void *user)$/;"	f
+stbi__stdio_read	tanto/thirdparty/stb_image.h	/^static int stbi__stdio_read(void *user, char *data, int size)$/;"	f
+stbi__stdio_skip	tanto/thirdparty/stb_image.h	/^static void stbi__stdio_skip(void *user, int n)$/;"	f
+stbi__stdio_write	tanto/thirdparty/stb_image_write.h	/^static void stbi__stdio_write(void *context, void *data, int size)$/;"	f
+stbi__tga_get_comp	tanto/thirdparty/stb_image.h	/^static int stbi__tga_get_comp(int bits_per_pixel, int is_grey, int* is_rgb16)$/;"	f
+stbi__tga_info	tanto/thirdparty/stb_image.h	/^static int stbi__tga_info(stbi__context *s, int *x, int *y, int *comp)$/;"	f
+stbi__tga_load	tanto/thirdparty/stb_image.h	/^static void *stbi__tga_load(stbi__context *s, int *x, int *y, int *comp, int req_comp, stbi__result_info *ri)$/;"	f
+stbi__tga_read_rgb16	tanto/thirdparty/stb_image.h	/^static void stbi__tga_read_rgb16(stbi__context *s, stbi_uc* out)$/;"	f
+stbi__tga_test	tanto/thirdparty/stb_image.h	/^static int stbi__tga_test(stbi__context *s)$/;"	f
+stbi__uint16	tanto/thirdparty/stb_image.h	/^typedef uint16_t stbi__uint16;$/;"	t
+stbi__uint16	tanto/thirdparty/stb_image.h	/^typedef unsigned short stbi__uint16;$/;"	t
+stbi__uint32	tanto/thirdparty/stb_image.h	/^typedef uint32_t stbi__uint32;$/;"	t
+stbi__uint32	tanto/thirdparty/stb_image.h	/^typedef unsigned int   stbi__uint32;$/;"	t
+stbi__unpremultiply_on_load	tanto/thirdparty/stb_image.h	/^static int stbi__unpremultiply_on_load = 0;$/;"	v
+stbi__vertical_flip	tanto/thirdparty/stb_image.h	/^static void stbi__vertical_flip(void *image, int w, int h, int bytes_per_pixel)$/;"	f
+stbi__vertical_flip_slices	tanto/thirdparty/stb_image.h	/^static void stbi__vertical_flip_slices(void *image, int w, int h, int z, int bytes_per_pixel)$/;"	f
+stbi__vertically_flip_on_load	tanto/thirdparty/stb_image.h	1068;"	d
+stbi__vertically_flip_on_load	tanto/thirdparty/stb_image.h	1078;"	d
+stbi__vertically_flip_on_load_global	tanto/thirdparty/stb_image.h	/^static int stbi__vertically_flip_on_load_global = 0;$/;"	v
+stbi__vertically_flip_on_load_local	tanto/thirdparty/stb_image.h	/^static STBI_THREAD_LOCAL int stbi__vertically_flip_on_load_local, stbi__vertically_flip_on_load_set;$/;"	v
+stbi__vertically_flip_on_load_set	tanto/thirdparty/stb_image.h	/^static STBI_THREAD_LOCAL int stbi__vertically_flip_on_load_local, stbi__vertically_flip_on_load_set;$/;"	v
+stbi__write_context	tanto/thirdparty/stb_image_write.h	/^} stbi__write_context;$/;"	t	typeref:struct:__anon59
+stbi__zbuf	tanto/thirdparty/stb_image.h	/^} stbi__zbuf;$/;"	t	typeref:struct:__anon51
+stbi__zbuild_huffman	tanto/thirdparty/stb_image.h	/^static int stbi__zbuild_huffman(stbi__zhuffman *z, const stbi_uc *sizelist, int num)$/;"	f
+stbi__zdefault_distance	tanto/thirdparty/stb_image.h	/^static const stbi_uc stbi__zdefault_distance[32] =$/;"	v
+stbi__zdefault_length	tanto/thirdparty/stb_image.h	/^static const stbi_uc stbi__zdefault_length[288] =$/;"	v
+stbi__zdist_base	tanto/thirdparty/stb_image.h	/^static const int stbi__zdist_base[32] = { 1,2,3,4,5,7,9,13,17,25,33,49,65,97,129,193,$/;"	v
+stbi__zdist_extra	tanto/thirdparty/stb_image.h	/^static const int stbi__zdist_extra[32] =$/;"	v
+stbi__zeof	tanto/thirdparty/stb_image.h	/^stbi_inline static int stbi__zeof(stbi__zbuf *z)$/;"	f
+stbi__zexpand	tanto/thirdparty/stb_image.h	/^static int stbi__zexpand(stbi__zbuf *z, char *zout, int n)  \/\/ need to make room for n bytes$/;"	f
+stbi__zget8	tanto/thirdparty/stb_image.h	/^stbi_inline static stbi_uc stbi__zget8(stbi__zbuf *z)$/;"	f
+stbi__zhuffman	tanto/thirdparty/stb_image.h	/^} stbi__zhuffman;$/;"	t	typeref:struct:__anon50
+stbi__zhuffman_decode	tanto/thirdparty/stb_image.h	/^stbi_inline static int stbi__zhuffman_decode(stbi__zbuf *a, stbi__zhuffman *z)$/;"	f
+stbi__zhuffman_decode_slowpath	tanto/thirdparty/stb_image.h	/^static int stbi__zhuffman_decode_slowpath(stbi__zbuf *a, stbi__zhuffman *z)$/;"	f
+stbi__zlength_base	tanto/thirdparty/stb_image.h	/^static const int stbi__zlength_base[31] = {$/;"	v
+stbi__zlength_extra	tanto/thirdparty/stb_image.h	/^static const int stbi__zlength_extra[31]=$/;"	v
+stbi__zreceive	tanto/thirdparty/stb_image.h	/^stbi_inline static unsigned int stbi__zreceive(stbi__zbuf *z, int n)$/;"	f
+stbi_convert_iphone_png_to_rgb	tanto/thirdparty/stb_image.h	/^STBIDEF void stbi_convert_iphone_png_to_rgb(int flag_true_if_should_convert)$/;"	f
+stbi_convert_wchar_to_utf8	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_convert_wchar_to_utf8(char *buffer, size_t bufferlen, const wchar_t* input)$/;"	f
+stbi_failure_reason	tanto/thirdparty/stb_image.h	/^STBIDEF const char *stbi_failure_reason(void)$/;"	f
+stbi_flip_vertically_on_write	tanto/thirdparty/stb_image_write.h	/^STBIWDEF void stbi_flip_vertically_on_write(int flag)$/;"	f
+stbi_hdr_to_ldr_gamma	tanto/thirdparty/stb_image.h	/^STBIDEF void   stbi_hdr_to_ldr_gamma(float gamma) { stbi__h2l_gamma_i = 1\/gamma; }$/;"	f
+stbi_hdr_to_ldr_scale	tanto/thirdparty/stb_image.h	/^STBIDEF void   stbi_hdr_to_ldr_scale(float scale) { stbi__h2l_scale_i = 1\/scale; }$/;"	f
+stbi_image_free	tanto/thirdparty/stb_image.h	/^STBIDEF void stbi_image_free(void *retval_from_stbi_load)$/;"	f
+stbi_info	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_info(char const *filename, int *x, int *y, int *comp)$/;"	f
+stbi_info_from_callbacks	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_info_from_callbacks(stbi_io_callbacks const *c, void *user, int *x, int *y, int *comp)$/;"	f
+stbi_info_from_file	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_info_from_file(FILE *f, int *x, int *y, int *comp)$/;"	f
+stbi_info_from_memory	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_info_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp)$/;"	f
+stbi_inline	tanto/thirdparty/stb_image.h	582;"	d
+stbi_inline	tanto/thirdparty/stb_image.h	584;"	d
+stbi_inline	tanto/thirdparty/stb_image.h	587;"	d
+stbi_io_callbacks	tanto/thirdparty/stb_image.h	/^} stbi_io_callbacks;$/;"	t	typeref:struct:__anon41
+stbi_is_16_bit	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_is_16_bit(char const *filename)$/;"	f
+stbi_is_16_bit_from_callbacks	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_is_16_bit_from_callbacks(stbi_io_callbacks const *c, void *user)$/;"	f
+stbi_is_16_bit_from_file	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_is_16_bit_from_file(FILE *f)$/;"	f
+stbi_is_16_bit_from_memory	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_is_16_bit_from_memory(stbi_uc const *buffer, int len)$/;"	f
+stbi_is_hdr	tanto/thirdparty/stb_image.h	/^STBIDEF int      stbi_is_hdr          (char const *filename)$/;"	f
+stbi_is_hdr_from_callbacks	tanto/thirdparty/stb_image.h	/^STBIDEF int      stbi_is_hdr_from_callbacks(stbi_io_callbacks const *clbk, void *user)$/;"	f
+stbi_is_hdr_from_file	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_is_hdr_from_file(FILE *f)$/;"	f
+stbi_is_hdr_from_memory	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_is_hdr_from_memory(stbi_uc const *buffer, int len)$/;"	f
+stbi_ldr_to_hdr_gamma	tanto/thirdparty/stb_image.h	/^STBIDEF void   stbi_ldr_to_hdr_gamma(float gamma) { stbi__l2h_gamma = gamma; }$/;"	f
+stbi_ldr_to_hdr_scale	tanto/thirdparty/stb_image.h	/^STBIDEF void   stbi_ldr_to_hdr_scale(float scale) { stbi__l2h_scale = scale; }$/;"	f
+stbi_load	tanto/thirdparty/stb_image.h	/^STBIDEF stbi_uc *stbi_load(char const *filename, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi_load_16	tanto/thirdparty/stb_image.h	/^STBIDEF stbi_us *stbi_load_16(char const *filename, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi_load_16_from_callbacks	tanto/thirdparty/stb_image.h	/^STBIDEF stbi_us *stbi_load_16_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *channels_in_file, int desired_channels)$/;"	f
+stbi_load_16_from_memory	tanto/thirdparty/stb_image.h	/^STBIDEF stbi_us *stbi_load_16_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *channels_in_file, int desired_channels)$/;"	f
+stbi_load_from_callbacks	tanto/thirdparty/stb_image.h	/^STBIDEF stbi_uc *stbi_load_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi_load_from_file	tanto/thirdparty/stb_image.h	/^STBIDEF stbi_uc *stbi_load_from_file(FILE *f, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi_load_from_file_16	tanto/thirdparty/stb_image.h	/^STBIDEF stbi__uint16 *stbi_load_from_file_16(FILE *f, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi_load_from_memory	tanto/thirdparty/stb_image.h	/^STBIDEF stbi_uc *stbi_load_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi_load_gif_from_memory	tanto/thirdparty/stb_image.h	/^STBIDEF stbi_uc *stbi_load_gif_from_memory(stbi_uc const *buffer, int len, int **delays, int *x, int *y, int *z, int *comp, int req_comp)$/;"	f
+stbi_loadf	tanto/thirdparty/stb_image.h	/^STBIDEF float *stbi_loadf(char const *filename, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi_loadf_from_callbacks	tanto/thirdparty/stb_image.h	/^STBIDEF float *stbi_loadf_from_callbacks(stbi_io_callbacks const *clbk, void *user, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi_loadf_from_file	tanto/thirdparty/stb_image.h	/^STBIDEF float *stbi_loadf_from_file(FILE *f, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi_loadf_from_memory	tanto/thirdparty/stb_image.h	/^STBIDEF float *stbi_loadf_from_memory(stbi_uc const *buffer, int len, int *x, int *y, int *comp, int req_comp)$/;"	f
+stbi_lrot	tanto/thirdparty/stb_image.h	635;"	d
+stbi_lrot	tanto/thirdparty/stb_image.h	637;"	d
+stbi_set_flip_vertically_on_load	tanto/thirdparty/stb_image.h	/^STBIDEF void stbi_set_flip_vertically_on_load(int flag_true_if_should_flip)$/;"	f
+stbi_set_flip_vertically_on_load_thread	tanto/thirdparty/stb_image.h	/^STBIDEF void stbi_set_flip_vertically_on_load_thread(int flag_true_if_should_flip)$/;"	f
+stbi_set_unpremultiply_on_load	tanto/thirdparty/stb_image.h	/^STBIDEF void stbi_set_unpremultiply_on_load(int flag_true_if_should_unpremultiply)$/;"	f
+stbi_uc	tanto/thirdparty/stb_image.h	/^typedef unsigned char stbi_uc;$/;"	t
+stbi_us	tanto/thirdparty/stb_image.h	/^typedef unsigned short stbi_us;$/;"	t
+stbi_write_bmp	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbi_write_bmp(char const *filename, int x, int y, int comp, const void *data)$/;"	f
+stbi_write_bmp_core	tanto/thirdparty/stb_image_write.h	/^static int stbi_write_bmp_core(stbi__write_context *s, int x, int y, int comp, const void *data)$/;"	f
+stbi_write_bmp_to_func	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbi_write_bmp_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data)$/;"	f
+stbi_write_force_png_filter	tanto/thirdparty/stb_image_write.h	/^int stbi_write_force_png_filter = -1;$/;"	v
+stbi_write_force_png_filter	tanto/thirdparty/stb_image_write.h	/^static int stbi_write_force_png_filter = -1;$/;"	v
+stbi_write_func	tanto/thirdparty/stb_image_write.h	/^typedef void stbi_write_func(void *context, void *data, int size);$/;"	t
+stbi_write_hdr	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbi_write_hdr(char const *filename, int x, int y, int comp, const float *data)$/;"	f
+stbi_write_hdr_core	tanto/thirdparty/stb_image_write.h	/^static int stbi_write_hdr_core(stbi__write_context *s, int x, int y, int comp, float *data)$/;"	f
+stbi_write_hdr_to_func	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbi_write_hdr_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const float *data)$/;"	f
+stbi_write_jpg	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbi_write_jpg(char const *filename, int x, int y, int comp, const void *data, int quality)$/;"	f
+stbi_write_jpg_core	tanto/thirdparty/stb_image_write.h	/^static int stbi_write_jpg_core(stbi__write_context *s, int width, int height, int comp, const void* data, int quality) {$/;"	f
+stbi_write_jpg_to_func	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbi_write_jpg_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data, int quality)$/;"	f
+stbi_write_png	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbi_write_png(char const *filename, int x, int y, int comp, const void *data, int stride_bytes)$/;"	f
+stbi_write_png_compression_level	tanto/thirdparty/stb_image_write.h	/^int stbi_write_png_compression_level = 8;$/;"	v
+stbi_write_png_compression_level	tanto/thirdparty/stb_image_write.h	/^static int stbi_write_png_compression_level = 8;$/;"	v
+stbi_write_png_to_func	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbi_write_png_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data, int stride_bytes)$/;"	f
+stbi_write_png_to_mem	tanto/thirdparty/stb_image_write.h	/^STBIWDEF unsigned char *stbi_write_png_to_mem(const unsigned char *pixels, int stride_bytes, int x, int y, int n, int *out_len)$/;"	f
+stbi_write_tga	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbi_write_tga(char const *filename, int x, int y, int comp, const void *data)$/;"	f
+stbi_write_tga_core	tanto/thirdparty/stb_image_write.h	/^static int stbi_write_tga_core(stbi__write_context *s, int x, int y, int comp, void *data)$/;"	f
+stbi_write_tga_to_func	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbi_write_tga_to_func(stbi_write_func *func, void *context, int x, int y, int comp, const void *data)$/;"	f
+stbi_write_tga_with_rle	tanto/thirdparty/stb_image_write.h	/^int stbi_write_tga_with_rle = 1;$/;"	v
+stbi_write_tga_with_rle	tanto/thirdparty/stb_image_write.h	/^static int stbi_write_tga_with_rle = 1;$/;"	v
+stbi_zlib_compress	tanto/thirdparty/stb_image_write.h	/^STBIWDEF unsigned char * stbi_zlib_compress(unsigned char *data, int data_len, int *out_len, int quality)$/;"	f
+stbi_zlib_decode_buffer	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_zlib_decode_buffer(char *obuffer, int olen, char const *ibuffer, int ilen)$/;"	f
+stbi_zlib_decode_malloc	tanto/thirdparty/stb_image.h	/^STBIDEF char *stbi_zlib_decode_malloc(char const *buffer, int len, int *outlen)$/;"	f
+stbi_zlib_decode_malloc_guesssize	tanto/thirdparty/stb_image.h	/^STBIDEF char *stbi_zlib_decode_malloc_guesssize(const char *buffer, int len, int initial_size, int *outlen)$/;"	f
+stbi_zlib_decode_malloc_guesssize_headerflag	tanto/thirdparty/stb_image.h	/^STBIDEF char *stbi_zlib_decode_malloc_guesssize_headerflag(const char *buffer, int len, int initial_size, int *outlen, int parse_header)$/;"	f
+stbi_zlib_decode_noheader_buffer	tanto/thirdparty/stb_image.h	/^STBIDEF int stbi_zlib_decode_noheader_buffer(char *obuffer, int olen, const char *ibuffer, int ilen)$/;"	f
+stbi_zlib_decode_noheader_malloc	tanto/thirdparty/stb_image.h	/^STBIDEF char *stbi_zlib_decode_noheader_malloc(char const *buffer, int len, int *outlen)$/;"	f
+stbiw__ZHASH	tanto/thirdparty/stb_image_write.h	878;"	d
+stbiw__crc32	tanto/thirdparty/stb_image_write.h	/^static unsigned int stbiw__crc32(unsigned char *buffer, int len)$/;"	f
+stbiw__encode_png_line	tanto/thirdparty/stb_image_write.h	/^static void stbiw__encode_png_line(unsigned char *pixels, int stride_bytes, int width, int height, int y, int n, int filter_type, signed char *line_buffer)$/;"	f
+stbiw__fopen	tanto/thirdparty/stb_image_write.h	/^static FILE *stbiw__fopen(char const *filename, char const *mode)$/;"	f
+stbiw__jpg_DCT	tanto/thirdparty/stb_image_write.h	/^static void stbiw__jpg_DCT(float *d0p, float *d1p, float *d2p, float *d3p, float *d4p, float *d5p, float *d6p, float *d7p) {$/;"	f
+stbiw__jpg_ZigZag	tanto/thirdparty/stb_image_write.h	/^static const unsigned char stbiw__jpg_ZigZag[] = { 0,1,5,6,14,15,27,28,2,4,7,13,16,26,29,42,3,8,12,17,25,30,41,43,9,11,18,$/;"	v
+stbiw__jpg_calcBits	tanto/thirdparty/stb_image_write.h	/^static void stbiw__jpg_calcBits(int val, unsigned short bits[2]) {$/;"	f
+stbiw__jpg_processDU	tanto/thirdparty/stb_image_write.h	/^static int stbiw__jpg_processDU(stbi__write_context *s, int *bitBuf, int *bitCnt, float *CDU, int du_stride, float *fdtbl, int DC, const unsigned short HTDC[256][2], const unsigned short HTAC[256][2]) {$/;"	f
+stbiw__jpg_writeBits	tanto/thirdparty/stb_image_write.h	/^static void stbiw__jpg_writeBits(stbi__write_context *s, int *bitBufP, int *bitCntP, const unsigned short *bs) {$/;"	f
+stbiw__linear_to_rgbe	tanto/thirdparty/stb_image_write.h	/^static void stbiw__linear_to_rgbe(unsigned char *rgbe, float *linear)$/;"	f
+stbiw__max	tanto/thirdparty/stb_image_write.h	623;"	d
+stbiw__outfile	tanto/thirdparty/stb_image_write.h	/^static int stbiw__outfile(stbi__write_context *s, int rgb_dir, int vdir, int x, int y, int comp, int expand_mono, void *data, int alpha, int pad, const char *fmt, ...)$/;"	f
+stbiw__paeth	tanto/thirdparty/stb_image_write.h	/^static unsigned char stbiw__paeth(int a, int b, int c)$/;"	f
+stbiw__putc	tanto/thirdparty/stb_image_write.h	/^static void stbiw__putc(stbi__write_context *s, unsigned char c)$/;"	f
+stbiw__sbcount	tanto/thirdparty/stb_image_write.h	810;"	d
+stbiw__sbfree	tanto/thirdparty/stb_image_write.h	811;"	d
+stbiw__sbgrow	tanto/thirdparty/stb_image_write.h	807;"	d
+stbiw__sbgrowf	tanto/thirdparty/stb_image_write.h	/^static void *stbiw__sbgrowf(void **arr, int increment, int itemsize)$/;"	f
+stbiw__sbm	tanto/thirdparty/stb_image_write.h	802;"	d
+stbiw__sbmaybegrow	tanto/thirdparty/stb_image_write.h	806;"	d
+stbiw__sbn	tanto/thirdparty/stb_image_write.h	803;"	d
+stbiw__sbneedgrow	tanto/thirdparty/stb_image_write.h	805;"	d
+stbiw__sbpush	tanto/thirdparty/stb_image_write.h	809;"	d
+stbiw__sbraw	tanto/thirdparty/stb_image_write.h	801;"	d
+stbiw__wp32	tanto/thirdparty/stb_image_write.h	1044;"	d
+stbiw__wpcrc	tanto/thirdparty/stb_image_write.h	/^static void stbiw__wpcrc(unsigned char **data, int len)$/;"	f
+stbiw__wpng4	tanto/thirdparty/stb_image_write.h	1043;"	d
+stbiw__wptag	tanto/thirdparty/stb_image_write.h	1045;"	d
+stbiw__write1	tanto/thirdparty/stb_image_write.h	/^static void stbiw__write1(stbi__write_context *s, unsigned char a)$/;"	f
+stbiw__write3	tanto/thirdparty/stb_image_write.h	/^static void stbiw__write3(stbi__write_context *s, unsigned char a, unsigned char b, unsigned char c)$/;"	f
+stbiw__write_dump_data	tanto/thirdparty/stb_image_write.h	/^static void stbiw__write_dump_data(stbi__write_context *s, int length, unsigned char *data)$/;"	f
+stbiw__write_flush	tanto/thirdparty/stb_image_write.h	/^static void stbiw__write_flush(stbi__write_context *s)$/;"	f
+stbiw__write_hdr_scanline	tanto/thirdparty/stb_image_write.h	/^static void stbiw__write_hdr_scanline(stbi__write_context *s, int width, int ncomp, unsigned char *scratch, float *scanline)$/;"	f
+stbiw__write_pixel	tanto/thirdparty/stb_image_write.h	/^static void stbiw__write_pixel(stbi__write_context *s, int rgb_dir, int comp, int write_alpha, int expand_mono, unsigned char *d)$/;"	f
+stbiw__write_pixels	tanto/thirdparty/stb_image_write.h	/^static void stbiw__write_pixels(stbi__write_context *s, int rgb_dir, int vdir, int x, int y, int comp, void *data, int write_alpha, int scanline_pad, int expand_mono)$/;"	f
+stbiw__write_run_data	tanto/thirdparty/stb_image_write.h	/^static void stbiw__write_run_data(stbi__write_context *s, int length, unsigned char databyte)$/;"	f
+stbiw__writef	tanto/thirdparty/stb_image_write.h	/^static void stbiw__writef(stbi__write_context *s, const char *fmt, ...)$/;"	f
+stbiw__writefv	tanto/thirdparty/stb_image_write.h	/^static void stbiw__writefv(stbi__write_context *s, const char *fmt, va_list v)$/;"	f
+stbiw__zhash	tanto/thirdparty/stb_image_write.h	/^static unsigned int stbiw__zhash(unsigned char *data)$/;"	f
+stbiw__zlib_add	tanto/thirdparty/stb_image_write.h	867;"	d
+stbiw__zlib_bitrev	tanto/thirdparty/stb_image_write.h	/^static int stbiw__zlib_bitrev(int code, int codebits)$/;"	f
+stbiw__zlib_countm	tanto/thirdparty/stb_image_write.h	/^static unsigned int stbiw__zlib_countm(unsigned char *a, unsigned char *b, int limit)$/;"	f
+stbiw__zlib_flush	tanto/thirdparty/stb_image_write.h	866;"	d
+stbiw__zlib_flushf	tanto/thirdparty/stb_image_write.h	/^static unsigned char *stbiw__zlib_flushf(unsigned char *data, unsigned int *bitbuffer, int *bitcount)$/;"	f
+stbiw__zlib_huff	tanto/thirdparty/stb_image_write.h	875;"	d
+stbiw__zlib_huff1	tanto/thirdparty/stb_image_write.h	871;"	d
+stbiw__zlib_huff2	tanto/thirdparty/stb_image_write.h	872;"	d
+stbiw__zlib_huff3	tanto/thirdparty/stb_image_write.h	873;"	d
+stbiw__zlib_huff4	tanto/thirdparty/stb_image_write.h	874;"	d
+stbiw__zlib_huffa	tanto/thirdparty/stb_image_write.h	869;"	d
+stbiw__zlib_huffb	tanto/thirdparty/stb_image_write.h	876;"	d
+stbiw_convert_wchar_to_utf8	tanto/thirdparty/stb_image_write.h	/^STBIWDEF int stbiw_convert_wchar_to_utf8(char *buffer, size_t bufferlen, const wchar_t* input)$/;"	f
+stbiw_uint32	tanto/thirdparty/stb_image_write.h	/^typedef unsigned int stbiw_uint32;$/;"	t
+step	tanto/thirdparty/stb_image.h	/^   int parse, step;$/;"	m	struct:__anon58
+subscriberCount	tanto/i_input.c	/^static int subscriberCount;$/;"	v	file:
+subscribers	tanto/i_input.c	/^static Tanto_I_SubscriberFn subscribers[MAX_SUBSCRIBERS];$/;"	v	file:
+succ_high	tanto/thirdparty/stb_image.h	/^   int            succ_high;$/;"	m	struct:__anon47
+succ_low	tanto/thirdparty/stb_image.h	/^   int            succ_low;$/;"	m	struct:__anon47
+suffix	tanto/thirdparty/stb_image.h	/^   stbi_uc suffix;$/;"	m	struct:__anon57
+swapFormat	tanto/v_video.c	/^const VkFormat swapFormat = VK_FORMAT_B8G8R8A8_SRGB;$/;"	v
+swapchain	tanto/v_video.c	/^VkSwapchainKHR   swapchain;$/;"	v
+swapchainImages	tanto/v_video.c	/^VkImage        swapchainImages[TANTO_FRAME_COUNT];$/;"	v
+swapchainRenderPass	tanto/r_render.c	/^VkRenderPass   swapchainRenderPass;$/;"	v
+t	game.c	/^static float t;$/;"	v	file:
+tanto_LoopSleep	tanto/t_utils.c	/^void tanto_LoopSleep(const Tanto_LoopStats* s, const uint32_t nsTarget)$/;"	f
+tanto_LoopStatsInit	tanto/t_utils.c	/^void tanto_LoopStatsInit(Tanto_LoopStats* stats)$/;"	f
+tanto_LoopStatsUpdate	tanto/t_utils.c	/^void tanto_LoopStatsUpdate(const Tanto_Timer* t, Tanto_LoopStats* s)$/;"	f
+tanto_TimerInit	tanto/t_utils.c	/^void tanto_TimerInit(Tanto_Timer* t)$/;"	f
+tanto_TimerStart	tanto/t_utils.c	/^void tanto_TimerStart(Tanto_Timer* t)$/;"	f
+tanto_TimerStop	tanto/t_utils.c	/^void tanto_TimerStop(Tanto_Timer* t)$/;"	f
+tanto_V_MemBlock	tanto/v_memory.c	/^typedef struct tanto_V_MemBlock {$/;"	s	file:
+tanto_d_CleanUp	tanto/d_display.c	/^void tanto_d_CleanUp(void)$/;"	f
+tanto_d_Init	tanto/d_display.c	/^void tanto_d_Init(void)$/;"	f
+tanto_i_CleanUp	tanto/i_input.c	/^void tanto_i_CleanUp(void)$/;"	f
+tanto_i_GetEvents	tanto/i_input.c	/^void tanto_i_GetEvents(void)$/;"	f
+tanto_i_Init	tanto/i_input.c	/^void tanto_i_Init(void)$/;"	f
+tanto_i_ProcessEvents	tanto/i_input.c	/^void tanto_i_ProcessEvents(void)$/;"	f
+tanto_i_Subscribe	tanto/i_input.c	/^void tanto_i_Subscribe(Tanto_I_SubscriberFn fn)$/;"	f
+tanto_r_BuildBlas	tanto/r_raytrace.c	/^void tanto_r_BuildBlas(const Tanto_R_Mesh* mesh)$/;"	f
+tanto_r_BuildTlas	tanto/r_raytrace.c	/^void tanto_r_BuildTlas(void)$/;"	f
+tanto_r_CleanUp	tanto/r_render.c	/^void tanto_r_CleanUp(void)$/;"	f
+tanto_r_CleanUpPipelines	tanto/r_pipeline.c	/^void tanto_r_CleanUpPipelines()$/;"	f
+tanto_r_CreateCube	tanto/r_geo.c	/^Tanto_R_Mesh tanto_r_CreateCube(void)$/;"	f
+tanto_r_CreateMesh	tanto/r_geo.c	/^Tanto_R_Mesh tanto_r_CreateMesh(uint32_t vertexCount, uint32_t indexCount)$/;"	f
+tanto_r_CreateTriangle	tanto/r_geo.c	/^Tanto_R_Primitive tanto_r_CreateTriangle(void)$/;"	f
+tanto_r_FreeMesh	tanto/r_geo.c	/^void tanto_r_FreeMesh(Tanto_R_Mesh mesh)$/;"	f
+tanto_r_GetVertexDescription3D_Default	tanto/r_geo.c	/^Tanto_R_VertexDescription tanto_r_GetVertexDescription3D_Default(void)$/;"	f
+tanto_r_GetVertexDescription3D_Simple	tanto/r_geo.c	/^Tanto_R_VertexDescription tanto_r_GetVertexDescription3D_Simple(void)$/;"	f
+tanto_r_Init	tanto/r_render.c	/^void tanto_r_Init(void)$/;"	f
+tanto_r_InitDescriptorSets	tanto/r_pipeline.c	/^void tanto_r_InitDescriptorSets(const Tanto_R_DescriptorSet* const sets, const int count)$/;"	f
+tanto_r_InitPipelineLayouts	tanto/r_pipeline.c	/^void tanto_r_InitPipelineLayouts(const Tanto_R_PipelineLayout *const layouts, const int count)$/;"	f
+tanto_r_InitPipelines	tanto/r_pipeline.c	/^void tanto_r_InitPipelines(const Tanto_R_PipelineInfo *const pipelineInfos, const int count)$/;"	f
+tanto_r_InitRayTracing	tanto/r_raytrace.c	/^void tanto_r_InitRayTracing(void)$/;"	f
+tanto_r_PreMeshToMesh	tanto/r_geo.c	/^Tanto_R_Mesh tanto_r_PreMeshToMesh(const Tanto_R_PreMesh pm)$/;"	f
+tanto_r_PresentFrame	tanto/r_render.c	/^void tanto_r_PresentFrame(void)$/;"	f
+tanto_r_RayTraceCleanUp	tanto/r_raytrace.c	/^void tanto_r_RayTraceCleanUp(void)$/;"	f
+tanto_r_RayTraceDestroyAccelStructs	tanto/r_raytrace.c	/^void tanto_r_RayTraceDestroyAccelStructs(void)$/;"	f
+tanto_r_RequestFrame	tanto/r_render.c	/^Tanto_R_Frame* tanto_r_RequestFrame(void)$/;"	f
+tanto_r_WaitOnQueueSubmit	tanto/r_render.c	/^void tanto_r_WaitOnQueueSubmit(void)$/;"	f
+tanto_v_CleanUp	tanto/v_video.c	/^void tanto_v_CleanUp(void)$/;"	f
+tanto_v_CleanUpMemory	tanto/v_memory.c	/^void tanto_v_CleanUpMemory()$/;"	f
+tanto_v_ClearColorImage	tanto/v_image.c	/^void tanto_v_ClearColorImage(Tanto_V_Image* image)$/;"	f
+tanto_v_CreateImage	tanto/v_memory.c	/^Tanto_V_Image tanto_v_CreateImage($/;"	f
+tanto_v_CreateImageAndSampler	tanto/v_image.c	/^Tanto_V_Image tanto_v_CreateImageAndSampler($/;"	f
+tanto_v_DestroyImage	tanto/v_memory.c	/^void tanto_v_DestroyImage(Tanto_V_Image image)$/;"	f
+tanto_v_FreeBufferRegion	tanto/v_memory.c	/^void tanto_v_FreeBufferRegion(Tanto_V_BufferRegion* pRegion)$/;"	f
+tanto_v_GetMemoryType	tanto/v_memory.c	/^uint32_t tanto_v_GetMemoryType(uint32_t typeBits, const VkMemoryPropertyFlags properties)$/;"	f
+tanto_v_GetPhysicalDeviceRayTracingProperties	tanto/v_video.c	/^VkPhysicalDeviceRayTracingPropertiesKHR tanto_v_GetPhysicalDeviceRayTracingProperties(void)$/;"	f
+tanto_v_Init	tanto/v_video.c	/^const VkInstance* tanto_v_Init(void)$/;"	f
+tanto_v_InitMemory	tanto/v_memory.c	/^void tanto_v_InitMemory(void)$/;"	f
+tanto_v_InitSurfaceXcb	tanto/v_video.c	/^void tanto_v_InitSurfaceXcb(xcb_connection_t* connection, xcb_window_t window) $/;"	f
+tanto_v_InitSwapchain	tanto/v_video.c	/^void tanto_v_InitSwapchain(VkSurfaceKHR* psurface)$/;"	f
+tanto_v_LoadFunctions	tanto/v_def.c	/^void tanto_v_LoadFunctions(const VkDevice* device)$/;"	f
+tanto_v_RequestBufferRegion	tanto/v_memory.c	/^Tanto_V_BufferRegion tanto_v_RequestBufferRegion(const size_t size, $/;"	f
+tanto_v_RequestBufferRegionAligned	tanto/v_memory.c	/^Tanto_V_BufferRegion tanto_v_RequestBufferRegionAligned($/;"	f
+tanto_v_RequestOneTimeUseCommand	tanto/v_command.c	/^Tanto_V_CommandPool tanto_v_RequestOneTimeUseCommand()$/;"	f
+tanto_v_SaveImage	tanto/v_image.c	/^void tanto_v_SaveImage(Tanto_V_Image* image, Tanto_V_ImageFileType fileType)$/;"	f
+tanto_v_SubmitOneTimeCommandAndWait	tanto/v_command.c	/^void tanto_v_SubmitOneTimeCommandAndWait(Tanto_V_CommandPool* pool, const uint32_t queueIndex)$/;"	f
+tanto_v_SubmitToQueue	tanto/v_video.c	/^void tanto_v_SubmitToQueue(const VkCommandBuffer* cmdBuf, const Tanto_V_QueueType queueType, const uint32_t index)$/;"	f
+tanto_v_SubmitToQueueWait	tanto/v_video.c	/^void tanto_v_SubmitToQueueWait(const VkCommandBuffer* buffer, const Tanto_V_QueueType type, const uint32_t queueIndex)$/;"	f
+tanto_v_TransferToDevice	tanto/v_memory.c	/^void tanto_v_TransferToDevice(Tanto_V_BufferRegion* pRegion)$/;"	f
+tanto_v_TransitionImageLayout	tanto/v_image.c	/^void tanto_v_TransitionImageLayout(const VkImageLayout oldLayout, const VkImageLayout newLayout, Tanto_V_Image* image)$/;"	f
+tanto_v_config	tanto/v_def.c	/^Tanto_V_Config tanto_v_config;$/;"	v
+template_Init	template.c	/^void template_Init(void)$/;"	f
+template_StartLoop	template.c	/^void template_StartLoop(void)$/;"	f
+todo	tanto/thirdparty/stb_image.h	/^   int restart_interval, todo;$/;"	m	struct:__anon47
+topLevelAS	tanto/r_raytrace.c	/^VkAccelerationStructureKHR topLevelAS;$/;"	v
+totalSize	tanto/v_memory.c	/^    VkDeviceSize       totalSize;$/;"	m	struct:BlockChain	file:
+tq	tanto/thirdparty/stb_image.h	/^      int tq;$/;"	m	struct:__anon47::__anon48
+transparent	tanto/thirdparty/stb_image.h	/^   int flags, bgindex, ratio, transparent, eflags;$/;"	m	struct:__anon58
+type	tanto/i_input.h	/^    Tanto_I_EventType type;$/;"	m	struct:Tanto_I_Event
+type	tanto/r_pipeline.h	/^    Tanto_R_PipelineType type;$/;"	m	struct:__anon26
+type	tanto/r_pipeline.h	/^    VkDescriptorType   type;$/;"	m	struct:__anon19
+type	tanto/thirdparty/stb_image.h	/^   stbi__uint32 type;$/;"	m	struct:__anon52
+type	tanto/thirdparty/stb_image.h	/^   stbi_uc size,type,channel;$/;"	m	struct:__anon56
+uniformBufferRegion	render.c	/^static Tanto_V_BufferRegion uniformBufferRegion;$/;"	v	file:
+updateDynamicDescriptors	render.c	/^static void updateDynamicDescriptors(void)$/;"	f	file:
+updateStaticDescriptors	render.c	/^static void updateStaticDescriptors(void)$/;"	f	file:
+uvw	tanto/r_geo.h	/^    Vec3 uvw;$/;"	m	struct:__anon35
+uvwData	tanto/r_geo.h	/^    Tanto_R_Attribute* uvwData;$/;"	m	struct:__anon34
+uvwOffset	tanto/r_geo.h	/^    VkDeviceSize uvwOffset;$/;"	m	struct:__anon33
+v	tanto/thirdparty/stb_image.h	/^      int h,v;$/;"	m	struct:__anon47::__anon48
+validate_uint32	tanto/thirdparty/stb_image.h	/^typedef unsigned char validate_uint32[sizeof(stbi__uint32)==4 ? 1 : -1];$/;"	t
+validationEnabled	tanto/v_def.h	/^    bool validationEnabled;$/;"	m	struct:__anon39
+value	tanto/thirdparty/stb_image.h	/^   stbi__uint16 value[288];$/;"	m	struct:__anon50
+values	tanto/thirdparty/stb_image.h	/^   stbi_uc  values[256];$/;"	m	struct:__anon46
+vertShader	tanto/r_pipeline.h	/^    char* vertShader;$/;"	m	struct:__anon24
+vertexBlock	tanto/r_geo.h	/^    Tanto_V_BufferRegion vertexBlock;$/;"	m	struct:__anon33
+vertexCount	tanto/r_geo.h	/^    uint32_t     vertexCount;$/;"	m	struct:__anon36
+vertexCount	tanto/r_geo.h	/^    uint32_t   vertexCount;$/;"	m	struct:__anon34
+vertexCount	tanto/r_geo.h	/^    uint32_t  vertexCount;$/;"	m	struct:__anon33
+vertexDescription	tanto/r_pipeline.h	/^    Tanto_R_VertexDescription vertexDescription;$/;"	m	struct:__anon24
+vertexRegion	tanto/r_geo.h	/^    Tanto_V_BufferRegion vertexRegion;$/;"	m	struct:__anon36
+view	tanto/v_memory.h	/^    VkImageView       view;$/;"	m	struct:__anon30
+vkBindAccelerationStructureMemoryKHR	tanto/v_def.c	/^VKAPI_ATTR VkResult VKAPI_CALL vkBindAccelerationStructureMemoryKHR($/;"	f
+vkCmdBuildAccelerationStructureKHR	tanto/v_def.c	/^VKAPI_ATTR void VKAPI_CALL vkCmdBuildAccelerationStructureKHR($/;"	f
+vkCmdTraceRaysKHR	tanto/v_def.c	/^VKAPI_ATTR void VKAPI_CALL vkCmdTraceRaysKHR($/;"	f
+vkCreateAccelerationStructureKHR	tanto/v_def.c	/^VKAPI_ATTR VkResult VKAPI_CALL vkCreateAccelerationStructureKHR($/;"	f
+vkCreateRayTracingPipelinesKHR	tanto/v_def.c	/^VKAPI_ATTR VkResult VKAPI_CALL vkCreateRayTracingPipelinesKHR($/;"	f
+vkDestroyAccelerationStructureKHR	tanto/v_def.c	/^VKAPI_ATTR void VKAPI_CALL vkDestroyAccelerationStructureKHR($/;"	f
+vkGetAccelerationStructureDeviceAddressKHR	tanto/v_def.c	/^VKAPI_ATTR VkDeviceAddress VKAPI_CALL vkGetAccelerationStructureDeviceAddressKHR($/;"	f
+vkGetAccelerationStructureMemoryRequirementsKHR	tanto/v_def.c	/^VKAPI_ATTR void VKAPI_CALL vkGetAccelerationStructureMemoryRequirementsKHR($/;"	f
+vkGetRayTracingShaderGroupHandlesKHR	tanto/v_def.c	/^VKAPI_ATTR VkResult VKAPI_CALL vkGetRayTracingShaderGroupHandlesKHR($/;"	f
+vs	tanto/thirdparty/stb_image.h	/^   int hs,vs;   \/\/ expansion factor in each axis$/;"	m	struct:__anon49
+w	tanto/thirdparty/stb_image.h	/^   int w,h;$/;"	m	struct:__anon58
+w2	tanto/thirdparty/stb_image.h	/^      int x,y,w2,h2;$/;"	m	struct:__anon47::__anon48
+w_lores	tanto/thirdparty/stb_image.h	/^   int w_lores; \/\/ horizontal pixels pre-expansion$/;"	m	struct:__anon49
+window	tanto/d_display.h	/^    xcb_window_t      window;$/;"	m	struct:__anon38
+windowName	tanto/d_display.c	/^static const char* windowName = "floating";$/;"	v	file:
+x	common.h	/^    float x;$/;"	m	struct:__anon3
+x	tanto/i_input.h	/^    int16_t  x;$/;"	m	struct:__anon60
+x	tanto/m_math.h	/^    float x;$/;"	m	struct:__anon9
+x	tanto/m_math.h	/^    float x[3];$/;"	m	struct:__anon10
+x	tanto/m_math.h	/^    float x[3][3];$/;"	m	struct:__anon13
+x	tanto/m_math.h	/^    float x[4];$/;"	m	struct:__anon11
+x	tanto/m_math.h	/^    float x[4][4];$/;"	m	struct:__anon14
+x	tanto/thirdparty/stb_image.h	/^      int x,y,w2,h2;$/;"	m	struct:__anon47::__anon48
+x00	tanto/m_math.h	/^    float x00, x01, $/;"	m	struct:__anon12
+x01	tanto/m_math.h	/^    float x00, x01, $/;"	m	struct:__anon12
+x10	tanto/m_math.h	/^          x10, x11;$/;"	m	struct:__anon12
+x11	tanto/m_math.h	/^          x10, x11;$/;"	m	struct:__anon12
+y	common.h	/^    float y;$/;"	m	struct:__anon3
+y	tanto/i_input.h	/^    int16_t  y;$/;"	m	struct:__anon60
+y	tanto/m_math.h	/^    float y;$/;"	m	struct:__anon9
+y	tanto/thirdparty/stb_image.h	/^      int x,y,w2,h2;$/;"	m	struct:__anon47::__anon48
+ypos	tanto/thirdparty/stb_image.h	/^   int ypos;    \/\/ which pre-expansion row we're on$/;"	m	struct:__anon49
+ystep	tanto/thirdparty/stb_image.h	/^   int ystep;   \/\/ how far through vertical expansion we are$/;"	m	struct:__anon49
+z_distance	tanto/thirdparty/stb_image.h	/^   stbi__zhuffman z_length, z_distance;$/;"	m	struct:__anon51
+z_expandable	tanto/thirdparty/stb_image.h	/^   int   z_expandable;$/;"	m	struct:__anon51
+z_length	tanto/thirdparty/stb_image.h	/^   stbi__zhuffman z_length, z_distance;$/;"	m	struct:__anon51
+zbuffer	tanto/thirdparty/stb_image.h	/^   stbi_uc *zbuffer, *zbuffer_end;$/;"	m	struct:__anon51
+zbuffer_end	tanto/thirdparty/stb_image.h	/^   stbi_uc *zbuffer, *zbuffer_end;$/;"	m	struct:__anon51
+zout	tanto/thirdparty/stb_image.h	/^   char *zout;$/;"	m	struct:__anon51
+zout_end	tanto/thirdparty/stb_image.h	/^   char *zout_end;$/;"	m	struct:__anon51
+zout_start	tanto/thirdparty/stb_image.h	/^   char *zout_start;$/;"	m	struct:__anon51
