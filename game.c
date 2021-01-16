@@ -12,7 +12,6 @@
 #include <tanto/u_ui.h>
 #include <tanto/s_scene.h>
 
-
 static Vec2  mousePos;
 static int   iMouseX;
 static int   iMouseY;
@@ -41,10 +40,13 @@ void g_Init(void)
     parms.shouldRun = true;
     t = 0.0;
     slider0 = tanto_u_CreateSlider(0, 40, NULL);
-    tanto_s_CreateSimpleScene3(&scene);
+    tanto_s_CreateEmptyScene(&scene);
+    Mat4 m = m_Ident_Mat4();
+    m_ScaleUniform_Mat4(0.4, &m);
+    tanto_s_LoadPrim(&scene, "data/pighead.tnt", &m);
+    tanto_s_CreateDirectionLight(&scene, (Vec3){-1, -1, -2});
     r_BindScene(&scene);
     tanto_s_UpdateLight(&scene, 0, 1);
-    tanto_s_UpdateLight(&scene, 1, 1);
     tanto_s_UpdateCamera(&scene, 0.16, 0, 0, 0, 0, 0, true);
 }
 

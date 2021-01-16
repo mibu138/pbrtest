@@ -199,7 +199,8 @@ static void initPipelines(void)
         .layout     = pipelineLayout,
         .sampleCount = VK_SAMPLE_COUNT_1_BIT,
         //.polygonMode = VK_POLYGON_MODE_LINE,
-        .frontFace   = VK_FRONT_FACE_COUNTER_CLOCKWISE,
+        .frontFace   = VK_FRONT_FACE_CLOCKWISE,
+        //.cullMode = VK_CULL_MODE_NONE,
         .vertexDescription = tanto_r_GetVertexDescription3D_3Vec3(),
         .vertShader = SPVDIR"/template-vert.spv",
         .fragShader = SPVDIR"/template-frag.spv"
@@ -346,10 +347,6 @@ static void updateCamera(uint32_t index)
     const Mat4 proj = m_BuildPerspective(0.001, 100);
     const Mat4 view = m_Invert4x4(&scene->camera.xform);
     Camera* uboCam = (Camera*)cameraBuffers[index].hostData;
-    printf("Camera\n");
-    coal_PrintMat4(&scene->camera.xform);
-    printf("View\n");
-    coal_PrintMat4(&view);
     uboCam->view = view;
     uboCam->proj = proj;
     uboCam->camera = scene->camera.xform;
