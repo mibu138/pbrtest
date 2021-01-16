@@ -20,8 +20,7 @@ DEPS =  \
 		game.h \
 		render.h \
 		pbrtest.h \
-		common.h \
-		arcball_camera.h 
+		common.h 
 
 OBJS =  \
 		$(O)/game.o \

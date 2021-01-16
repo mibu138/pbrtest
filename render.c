@@ -34,10 +34,18 @@ static VkPipeline    mainPipeline;
 
 static Tanto_V_BufferRegion cameraBuffers[TANTO_FRAME_COUNT];
 static Tanto_V_BufferRegion xformsBuffers[TANTO_FRAME_COUNT];
+static Tanto_V_BufferRegion lightsBuffers[TANTO_FRAME_COUNT];
 
 static uint8_t cameraNeedUpdate;
 static uint8_t framesNeedUpdate;
 static uint8_t xformsNeedUpdate;
+static uint8_t lightsNeedUpdate;
+
+typedef Tanto_S_Light Light;
+
+typedef struct {
+    Light light[TANTO_S_MAX_LIGHTS];
+} Lights;
 
 typedef struct {
     Mat4 xform[MAX_PRIM_COUNT];
@@ -86,7 +94,6 @@ static void updateCamera(uint32_t index);
 static void updateXform(uint32_t frameIndex, uint32_t primIndex);
 static void syncScene(const uint32_t frameIndex);
 
-// TODO: we should implement a way to specify the offscreen renderpass format at initialization
 static void initAttachments(void)
 {
     renderTargetDepth = tanto_v_CreateImage(
@@ -135,15 +142,19 @@ static void initFramebuffers(void)
 static void initDescriptorSetsAndPipelineLayouts(void)
 {
     const Tanto_R_DescriptorSetInfo descriptorSets[] = {{
-        .bindingCount = 2,
-        .bindings = {{
+        .bindingCount = 3,
+        .bindings = {{ // camera
+            .descriptorCount = 1,
+            .type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,
+            .stageFlags = VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT,
+        },{ // xforms
             .descriptorCount = 1,
             .type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,
             .stageFlags = VK_SHADER_STAGE_VERTEX_BIT
-        },{
+        },{ // lights
             .descriptorCount = 1,
             .type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,
-            .stageFlags = VK_SHADER_STAGE_VERTEX_BIT
+            .stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT
         }}
     }};
 
@@ -163,7 +174,7 @@ static void initDescriptorSetsAndPipelineLayouts(void)
 
     const VkPushConstantRange pcRangeFrag = {
         .offset = sizeof(Vec4),
-        .size = sizeof(Vec4),
+        .size = sizeof(uint32_t),
         .stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT
     };
 
@@ -220,6 +231,10 @@ static void updateDescriptors(void)
             modelXform->xform[i] = m_Ident_Mat4();
         }
 
+        // lights creation 
+        lightsBuffers[i] = tanto_v_RequestBufferRegion(sizeof(Lights), 
+                VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, TANTO_V_MEMORY_HOST_GRAPHICS_TYPE);
+
         VkDescriptorBufferInfo camInfo = {
             .buffer = cameraBuffers[i].buffer,
             .offset = cameraBuffers[i].offset,
@@ -230,6 +245,12 @@ static void updateDescriptors(void)
             .buffer = xformsBuffers[i].buffer,
             .offset = xformsBuffers[i].offset,
             .range  = xformsBuffers[i].size
+        };
+
+        VkDescriptorBufferInfo lightInfo = {
+            .buffer = lightsBuffers[i].buffer,
+            .offset = lightsBuffers[i].offset,
+            .range  = lightsBuffers[i].size
         };
 
         VkWriteDescriptorSet writes[] = {{
@@ -248,6 +269,14 @@ static void updateDescriptors(void)
             .descriptorCount = 1,
             .descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,
             .pBufferInfo = &xformInfo
+        },{
+            .sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET,
+            .dstArrayElement = 0,
+            .dstSet = description[i].descriptorSets[DESC_SET_MAIN],
+            .dstBinding = 2,
+            .descriptorCount = 1,
+            .descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,
+            .pBufferInfo = &lightInfo
         }};
 
         vkUpdateDescriptorSets(device, TANTO_ARRAY_SIZE(writes), writes, 0, NULL);
@@ -285,9 +314,8 @@ static void mainRender(const VkCommandBuffer cmdBuf, const uint32_t frameIndex)
     vkCmdPushConstants(cmdBuf, pipelineLayout, 
             VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(Vec4), &debugColor);
 
-    assert(scene->lightCount > 0);
-
-    vkCmdPushConstants(cmdBuf, pipelineLayout, VK_SHADER_STAGE_FRAGMENT_BIT, sizeof(Vec4), sizeof(Vec4), &scene->lights[0]); 
+    vkCmdPushConstants(cmdBuf, pipelineLayout, 
+            VK_SHADER_STAGE_FRAGMENT_BIT, sizeof(Vec4), sizeof(uint32_t), &scene->lightCount);
 
     assert(sizeof(Vec4) == sizeof(Tanto_S_Matrial));
     assert(scene->primCount < MAX_PRIM_COUNT);
@@ -313,7 +341,6 @@ static void updateRenderCommands(const uint32_t frameIndex)
     mainRender(cmdBuf, frameIndex);
 
     tanto_v_EndCommandBuffer(cmdBuf);
-
 }
 
 static void onSwapchainRecreate(void)
@@ -327,12 +354,12 @@ static void onSwapchainRecreate(void)
 
 static void updateCamera(uint32_t index)
 {
-    //printf("Updating Camera: index %d\n", index);
-    //printf("camera\n");
-    //coal_PrintMat4(&scene->camera.xform);
     const Mat4 proj = m_BuildPerspective(0.001, 100);
     const Mat4 view = m_Invert4x4(&scene->camera.xform);
     Camera* uboCam = (Camera*)cameraBuffers[index].hostData;
+    printf("%s\n");
+    coal_PrintMat4(&scene->camera.xform);
+    coal_PrintMat4(&view);
     uboCam->view = view;
     uboCam->proj = proj;
 }
@@ -343,40 +370,33 @@ static void updateXform(uint32_t frameIndex, uint32_t primIndex)
     xforms->xform[primIndex] = scene->xforms[primIndex];
 }
 
+static void updateLight(uint32_t frameIndex, uint32_t lightIndex)
+{
+    Lights* lights = (Lights*)lightsBuffers[frameIndex].hostData;
+    lights->light[lightIndex] = scene->lights[lightIndex];
+}
+
 static void syncScene(const uint32_t frameIndex)
 {
     if (scene->dirt)
     {
         if (scene->dirt & TANTO_S_CAMERA_BIT)
-        {
             cameraNeedUpdate = TANTO_FRAME_COUNT;
-        }
         if (scene->dirt & TANTO_S_LIGHTS_BIT)
-        {
-            framesNeedUpdate = TANTO_FRAME_COUNT;
-        }
+            lightsNeedUpdate = TANTO_FRAME_COUNT;
         if (scene->dirt & TANTO_S_XFORMS_BIT)
             xformsNeedUpdate = TANTO_FRAME_COUNT;
     }
-    if (cameraNeedUpdate)
-    {
+    if (cameraNeedUpdate--)
         updateCamera(frameIndex);
-        cameraNeedUpdate--;
-    }
-    if (xformsNeedUpdate)
-    {
+    if (xformsNeedUpdate--)
         for (int i = 0; i < scene->primCount; i++) 
-        {
-            printf("Updating xform for frame %d prim %d\n", frameIndex, i);
             updateXform(frameIndex, i);
-        }
-        xformsNeedUpdate--;
-    }
-    if (framesNeedUpdate)
-    {
+    if (lightsNeedUpdate--)
+        for (int i = 0; i < scene->lightCount; i++) 
+            updateLight(frameIndex, i);
+    if (framesNeedUpdate--)
         updateRenderCommands(frameIndex);
-        framesNeedUpdate--;
-    }
 }
 
 void r_InitRenderer(void)
