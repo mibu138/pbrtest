@@ -17,6 +17,7 @@ struct Light {
 layout(set = 0, binding = 0) uniform Camera {
     mat4 view;
     mat4 proj;
+    mat4 xform;
 } camera;
 
 layout(set = 0, binding = 2) uniform Lights {
@@ -34,7 +35,7 @@ float calcIllume(const vec3 N, const vec3 dir)
 
 void main()
 {
-    vec3  campos = vec3(-1 * camera.view[3][0], -1 * camera.view[3][1], -1 * camera.view[3][2]);
+    vec3  campos = vec3(camera.xform[3][0], camera.xform[3][1], camera.xform[3][2]);
     float ambient = 0.05;
     float illume = 0;
     for (int i = 0; i < push.lightCount; i++)

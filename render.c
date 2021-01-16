@@ -54,6 +54,7 @@ typedef struct {
 typedef struct {
     Mat4 view;
     Mat4 proj;
+    Mat4 camera;
 } Camera;
 
 typedef struct {
@@ -90,6 +91,7 @@ static void updateDescriptors(void);
 static void mainRender(const VkCommandBuffer cmdBuf, const uint32_t frameIndex);
 static void updateRenderCommands(const uint32_t frameIndex);
 static void onSwapchainRecreate(void);
+static void updateLight(uint32_t frameIndex, uint32_t lightIndex);
 static void updateCamera(uint32_t index);
 static void updateXform(uint32_t frameIndex, uint32_t primIndex);
 static void syncScene(const uint32_t frameIndex);
@@ -213,23 +215,10 @@ static void updateDescriptors(void)
         // camera creation
         cameraBuffers[i] = tanto_v_RequestBufferRegion(sizeof(Camera),
                 VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, TANTO_V_MEMORY_HOST_GRAPHICS_TYPE);
-        Camera* camera = (Camera*)(cameraBuffers[i].hostData);
-
-        Mat4 view = m_Ident_Mat4();
-
-        camera->view = m_Translate_Mat4((Vec3){0, 0, -1}, &view);
-        camera->proj = m_BuildPerspective(0.001, 100);
 
         // xforms creation
         xformsBuffers[i] = tanto_v_RequestBufferRegion(sizeof(Xforms), 
                 VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, TANTO_V_MEMORY_HOST_GRAPHICS_TYPE);
-
-        Xforms* modelXform = (Xforms*)(xformsBuffers[i].hostData);
-
-        for (int i = 0; i < MAX_PRIM_COUNT; i++) 
-        {
-            modelXform->xform[i] = m_Ident_Mat4();
-        }
 
         // lights creation 
         lightsBuffers[i] = tanto_v_RequestBufferRegion(sizeof(Lights), 
@@ -357,11 +346,13 @@ static void updateCamera(uint32_t index)
     const Mat4 proj = m_BuildPerspective(0.001, 100);
     const Mat4 view = m_Invert4x4(&scene->camera.xform);
     Camera* uboCam = (Camera*)cameraBuffers[index].hostData;
-    printf("%s\n");
+    printf("Camera\n");
     coal_PrintMat4(&scene->camera.xform);
+    printf("View\n");
     coal_PrintMat4(&view);
     uboCam->view = view;
     uboCam->proj = proj;
+    uboCam->camera = scene->camera.xform;
 }
 
 static void updateXform(uint32_t frameIndex, uint32_t primIndex)

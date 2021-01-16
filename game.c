@@ -56,10 +56,16 @@ bool g_Responder(const Tanto_I_Event *event)
         {
             case TANTO_KEY_ESC: parms.shouldRun = false; break;
             case TANTO_KEY_H: homeCamera = true; break;
+            case TANTO_KEY_A: mouseFlags |= LMB_BIT; break;
+            case TANTO_KEY_S: mouseFlags |= RMB_BIT; break;
+            case TANTO_KEY_D: mouseFlags |= MMB_BIT; break;
             default: return true;
         } break;
         case TANTO_I_KEYUP:   switch (event->data.keyCode)
         {
+            case TANTO_KEY_A: mouseFlags &= ~LMB_BIT; break;
+            case TANTO_KEY_S: mouseFlags &= ~RMB_BIT; break;
+            case TANTO_KEY_D: mouseFlags &= ~MMB_BIT; break;
             default: return true;
         } break;
         case TANTO_I_MOTION: 
