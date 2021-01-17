@@ -1,4 +1,7 @@
 #version 460
+#extension GL_GOOGLE_include_directive : enable
+
+#include "common.glsl"
 
 layout(location = 0) in  vec3 worldPos;
 layout(location = 1) in  vec3 color;
@@ -28,17 +31,6 @@ layout(set = 0, binding = 2) uniform Lights {
 layout(push_constant) uniform PushConstant {
     layout(offset = 16) uint lightCount;
 } push;
-
-float calcDiffuse(const vec3 N, const vec3 dir)
-{
-    return max(dot(-1 * dir, N), 0);
-}
-
-float calcSpecular(const vec3 N, const vec3 dir, const vec3 eyeDir)
-{
-    vec3 R = reflect(dir, N);
-    return pow(max(dot(R, eyeDir), 0), 32);
-}
 
 void main()
 {

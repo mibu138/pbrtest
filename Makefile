@@ -20,7 +20,10 @@ DEPS =  \
 		game.h \
 		render.h \
 		pbrtest.h \
-		common.h 
+		common.h \
+
+SHDEPS = \
+		shaders/common.glsl
 
 OBJS =  \
 		$(O)/game.o \
@@ -66,17 +69,17 @@ staticlib: $(OBJS) $(DEPS) shaders
 $(O)/%.o:  %.c $(DEPS)
 	$(CC) $(CFLAGS) $(INFLAGS) -c $< -o $@
 
-$(SPV)/%-vert.spv: $(GLSL)/%.vert $(DEPS)
+$(SPV)/%-vert.spv: $(GLSL)/%.vert $(SHDEPS)
 	$(GLC) $(GLFLAGS) $< -o $@
 
-$(SPV)/%-frag.spv: $(GLSL)/%.frag
+$(SPV)/%-frag.spv: $(GLSL)/%.frag $(SHDEPS)
 	$(GLC) $(GLFLAGS) $< -o $@
 
-$(SPV)/%-rchit.spv: $(GLSL)/%.rchit
+$(SPV)/%-rchit.spv: $(GLSL)/%.rchit $(SHDEPS)
 	$(GLC) $(GLFLAGS) $< -o $@
 
-$(SPV)/%-rgen.spv: $(GLSL)/%.rgen
+$(SPV)/%-rgen.spv: $(GLSL)/%.rgen $(SHDEPS)
 	$(GLC) $(GLFLAGS) $< -o $@
 
-$(SPV)/%-rmiss.spv: $(GLSL)/%.rmiss
+$(SPV)/%-rmiss.spv: $(GLSL)/%.rmiss $(SHDEPS)
 	$(GLC) $(GLFLAGS) $< -o $@
