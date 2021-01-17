@@ -145,7 +145,8 @@ static void initDescriptorSetsAndPipelineLayouts(void)
 {
     const Tanto_R_DescriptorSetInfo descriptorSets[] = {{
         .bindingCount = 4,
-        .bindings = {{ // camera
+        .bindings = {{ 
+            // camera
             .descriptorCount = 1,
             .type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,
             .stageFlags = VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT,
@@ -172,19 +173,19 @@ static void initDescriptorSetsAndPipelineLayouts(void)
         tanto_r_CreateDescriptorSets(descSetCount, descriptorSets, descriptorSetLayouts, &description[i]);
     }
 
-    const VkPushConstantRange pcRangeVert = {
+    const VkPushConstantRange pcPrimId = {
         .offset = 0,
         .size = sizeof(uint32_t),
         .stageFlags = VK_SHADER_STAGE_VERTEX_BIT
     };
 
-    const VkPushConstantRange pcRangeFrag = {
+    const VkPushConstantRange pcFrag = {
         .offset = sizeof(uint32_t),
-        .size = sizeof(uint32_t),
+        .size = sizeof(uint32_t) * 3 + sizeof(Tanto_S_Material), // we have 12 bytes between the light count and material as padding
         .stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT
     };
 
-    const VkPushConstantRange ranges[] = {pcRangeVert, pcRangeFrag};
+    const VkPushConstantRange ranges[] = {pcPrimId, pcFrag};
 
     const Tanto_R_PipelineLayoutInfo pipeLayoutInfos[] = {{
         .descriptorSetCount = 1, 
@@ -314,6 +315,8 @@ static void mainRender(const VkCommandBuffer cmdBuf, const uint32_t frameIndex)
     {
         vkCmdPushConstants(cmdBuf, pipelineLayout, 
                 VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(uint32_t), &p);
+        vkCmdPushConstants(cmdBuf, pipelineLayout, 
+                VK_SHADER_STAGE_FRAGMENT_BIT, 16, sizeof(Tanto_S_Material), &scene->materials[p]);
         tanto_r_DrawPrim(cmdBuf, &scene->prims[p]);
     }
 

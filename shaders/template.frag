@@ -17,6 +17,13 @@ struct Light {
     int   type;
 };
 
+struct Material {
+    vec3  color;
+    float roughness;
+    uint  textureAlbedo;
+    uint  textureRoughness;
+};
+
 layout(set = 0, binding = 0) uniform Camera {
     mat4 view;
     mat4 proj;
@@ -28,14 +35,15 @@ layout(set = 0, binding = 2) uniform Lights {
 } lights;
 
 layout(push_constant) uniform PushConstant {
-    layout(offset = 4) uint lightCount;
+    layout(offset = 4) uint     lightCount;
+    layout(offset = 16) Material material;
 } push;
 
 void main()
 {
-    vec3 campos  = vec3(camera.xform[3][0], camera.xform[3][1], camera.xform[3][2]);
-    vec3 ambient = vec3(0.01);
-    vec3 diffuse = vec3(0);
+    vec3 campos   = vec3(camera.xform[3][0], camera.xform[3][1], camera.xform[3][2]);
+    vec3 ambient  = vec3(0.01);
+    vec3 diffuse  = vec3(0);
     vec3 specular = vec3(0);
     for (int i = 0; i < push.lightCount; i++)
     {
@@ -54,5 +62,5 @@ void main()
         }
     }
     vec3 illume = diffuse + specular * 4;
-    outColor = vec4(1, 1, 1, 1) * vec4(illume + ambient, 1);
+    outColor = vec4(push.material.color, 1) * vec4(illume + ambient, 1);
 }
