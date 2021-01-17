@@ -1,3 +1,5 @@
 .clangd
 bin/
 shaders/spv/
+data/
+build/
