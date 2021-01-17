@@ -1,7 +1,8 @@
 #version 460
 
-layout(location = 0) in  vec3 inColor;
-layout(location = 1) in  vec3 inNormal;
+layout(location = 0) in  vec3 worldPos;
+layout(location = 1) in  vec3 color;
+layout(location = 2) in  vec3 normal;
 
 layout(location = 0) out vec4 outColor;
 
@@ -28,19 +29,39 @@ layout(push_constant) uniform PushConstant {
     layout(offset = 16) uint lightCount;
 } push;
 
-float calcIllume(const vec3 N, const vec3 dir)
+float calcDiffuse(const vec3 N, const vec3 dir)
 {
     return max(dot(-1 * dir, N), 0);
 }
 
+float calcSpecular(const vec3 N, const vec3 dir, const vec3 eyeDir)
+{
+    vec3 R = reflect(dir, N);
+    return pow(max(dot(R, eyeDir), 0), 32);
+}
+
 void main()
 {
-    vec3  campos = vec3(camera.xform[3][0], camera.xform[3][1], camera.xform[3][2]);
-    float ambient = 0.05;
-    float illume = 0;
+    vec3 campos  = vec3(camera.xform[3][0], camera.xform[3][1], camera.xform[3][2]);
+    vec3 ambient = vec3(0.01);
+    vec3 diffuse = vec3(0);
+    vec3 specular = vec3(0);
     for (int i = 0; i < push.lightCount; i++)
     {
-        illume += calcIllume(inNormal, lights.light[i].vector) * lights.light[i].intensity;
+        vec3 eyeDir = normalize(campos - worldPos);
+        if (lights.light[i].type == 1)
+        {
+            diffuse += lights.light[i].color * calcDiffuse(normal, lights.light[i].vector) * lights.light[i].intensity;
+            specular += lights.light[i].color * calcSpecular(normal, lights.light[i].vector, eyeDir) * lights.light[i].intensity;
+        }
+        else
+        {
+            vec3 dir      = normalize(worldPos - lights.light[i].vector);
+            float falloff =  1.0f / max(length(worldPos - lights.light[i].vector), 0.001); // to prevent div by 0
+            diffuse += lights.light[i].color * calcDiffuse(normal, dir) * lights.light[i].intensity * falloff;
+            specular += lights.light[i].color * calcSpecular(normal, dir, eyeDir) * lights.light[i].intensity * falloff;
+        }
     }
-    outColor = vec4(campos, 1) * max(illume + ambient, 0);
+    vec3 illume = diffuse + specular * 4;
+    outColor = vec4(color, 1) * vec4(illume + ambient, 1);
 }
