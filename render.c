@@ -144,7 +144,7 @@ static void initFramebuffers(void)
 static void initDescriptorSetsAndPipelineLayouts(void)
 {
     const Tanto_R_DescriptorSetInfo descriptorSets[] = {{
-        .bindingCount = 3,
+        .bindingCount = 4,
         .bindings = {{ // camera
             .descriptorCount = 1,
             .type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,
@@ -156,6 +156,10 @@ static void initDescriptorSetsAndPipelineLayouts(void)
         },{ // lights
             .descriptorCount = 1,
             .type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,
+            .stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT
+        },{ // textures
+            .descriptorCount = 1,
+            .type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER,
             .stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT
         }}
     }};
@@ -170,12 +174,12 @@ static void initDescriptorSetsAndPipelineLayouts(void)
 
     const VkPushConstantRange pcRangeVert = {
         .offset = 0,
-        .size = sizeof(Vec4),
+        .size = sizeof(uint32_t),
         .stageFlags = VK_SHADER_STAGE_VERTEX_BIT
     };
 
     const VkPushConstantRange pcRangeFrag = {
-        .offset = sizeof(Vec4),
+        .offset = sizeof(uint32_t),
         .size = sizeof(uint32_t),
         .stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT
     };
@@ -300,20 +304,16 @@ static void mainRender(const VkCommandBuffer cmdBuf, const uint32_t frameIndex)
 
     vkCmdBeginRenderPass(cmdBuf, &rpassInfo, VK_SUBPASS_CONTENTS_INLINE);
 
-    Vec4 debugColor = (Vec4){1, 0, 0.5};
     vkCmdPushConstants(cmdBuf, pipelineLayout, 
-            VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(Vec4), &debugColor);
+            VK_SHADER_STAGE_FRAGMENT_BIT, sizeof(uint32_t), sizeof(uint32_t), &scene->lightCount);
 
-    vkCmdPushConstants(cmdBuf, pipelineLayout, 
-            VK_SHADER_STAGE_FRAGMENT_BIT, sizeof(Vec4), sizeof(uint32_t), &scene->lightCount);
-
-    assert(sizeof(Vec4) == sizeof(Tanto_S_Matrial));
+    //assert(sizeof(Vec4) == sizeof(Tanto_S_Material));
     assert(scene->primCount < MAX_PRIM_COUNT);
 
-    for (int p = 0; p < scene->primCount; p++) 
+    for (uint32_t p = 0; p < scene->primCount; p++) 
     {
         vkCmdPushConstants(cmdBuf, pipelineLayout, 
-                VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(Vec4), &scene->materials[p]);
+                VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(uint32_t), &p);
         tanto_r_DrawPrim(cmdBuf, &scene->prims[p]);
     }
 

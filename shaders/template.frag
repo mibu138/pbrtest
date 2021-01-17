@@ -4,8 +4,7 @@
 #include "common.glsl"
 
 layout(location = 0) in  vec3 worldPos;
-layout(location = 1) in  vec3 color;
-layout(location = 2) in  vec3 normal;
+layout(location = 1) in  vec3 normal;
 
 layout(location = 0) out vec4 outColor;
 
@@ -29,7 +28,7 @@ layout(set = 0, binding = 2) uniform Lights {
 } lights;
 
 layout(push_constant) uniform PushConstant {
-    layout(offset = 16) uint lightCount;
+    layout(offset = 4) uint lightCount;
 } push;
 
 void main()
@@ -55,5 +54,5 @@ void main()
         }
     }
     vec3 illume = diffuse + specular * 4;
-    outColor = vec4(color, 1) * vec4(illume + ambient, 1);
+    outColor = vec4(1, 1, 1, 1) * vec4(illume + ambient, 1);
 }
