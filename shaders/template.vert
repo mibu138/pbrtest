@@ -6,6 +6,7 @@ layout(location = 2) in vec3 uvw;
 
 layout(location = 0) out vec3 outWorldPos;
 layout(location = 1) out vec3 outNormal;
+layout(location = 2) out vec2 outUv;
 
 layout(set = 0, binding = 0) uniform Camera {
     mat4 view;
@@ -27,4 +28,5 @@ void main()
     gl_Position = camera.proj * camera.view * worldPos;
     outWorldPos = worldPos.xyz; 
     outNormal = (model.xform[push.primId] * vec4(norm, 1.0)).xyz; // this is fine as long as we only allow uniform scales
+    outUv = uvw.st;
 }

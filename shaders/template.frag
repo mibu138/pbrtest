@@ -1,10 +1,12 @@
 #version 460
 #extension GL_GOOGLE_include_directive : enable
+#extension GL_EXT_nonuniform_qualifier : enable
 
 #include "common.glsl"
 
 layout(location = 0) in  vec3 worldPos;
 layout(location = 1) in  vec3 normal;
+layout(location = 2) in  vec2 uv;
 
 layout(location = 0) out vec4 outColor;
 
@@ -34,6 +36,8 @@ layout(set = 0, binding = 2) uniform Lights {
     Light light[MAX_LIGHTS]; 
 } lights;
 
+layout(set = 0, binding = 3) uniform sampler2D textures[]; 
+
 layout(push_constant) uniform PushConstant {
     layout(offset = 4) uint     lightCount;
     layout(offset = 16) Material material;
@@ -62,5 +66,7 @@ void main()
         }
     }
     vec3 illume = diffuse + specular * 4;
-    outColor = vec4(push.material.color, 1) * vec4(illume + ambient, 1);
+    vec2 st = vec2(uv.x, uv.y * -1 + 1);
+    vec4 albedo = texture(textures[push.material.textureAlbedo], st);
+    outColor = vec4(albedo.rgb * push.material.color, 1) * vec4(illume + ambient, 1);
 }

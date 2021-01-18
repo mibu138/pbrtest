@@ -118,6 +118,7 @@ void g_Update(void)
     {
         tanto_s_UpdateLight(&scene, 0, curVal);
     }
+    lastVal = curVal;
     tanto_s_UpdateCamera(&scene, 0.016, iMouseX, iMouseY, 
             mouseFlags & MMB_BIT, mouseFlags & LMB_BIT, mouseFlags & RMB_BIT, homeCamera);
     homeCamera = false;

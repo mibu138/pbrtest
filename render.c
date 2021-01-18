@@ -40,6 +40,7 @@ static uint8_t cameraNeedUpdate;
 static uint8_t framesNeedUpdate;
 static uint8_t xformsNeedUpdate;
 static uint8_t lightsNeedUpdate;
+static uint8_t texturesNeedUpdate;
 
 typedef Tanto_S_Light Light;
 
@@ -278,6 +279,30 @@ static void updateDescriptors(void)
     }
 }
 
+static void updateTexture(const uint32_t frameIndex, const Tanto_V_Image* img, const uint32_t texId)
+{
+    VkDescriptorImageInfo textureInfo = {
+        .imageLayout = img->layout,
+        .imageView   = img->view,
+        .sampler     = img->sampler
+    };
+
+    VkWriteDescriptorSet write = {
+        .sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET,
+        .pNext = NULL,
+        .dstSet = description[frameIndex].descriptorSets[DESC_SET_MAIN],
+        .dstBinding = 3,
+        .dstArrayElement = texId,
+        .descriptorCount = 1,
+        .descriptorType = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER,
+        .pImageInfo = &textureInfo
+    };
+
+    vkUpdateDescriptorSets(device, 1, &write, 0, NULL);
+
+    printf("Updated Texture!\n");
+}
+
 static void mainRender(const VkCommandBuffer cmdBuf, const uint32_t frameIndex)
 {
     VkClearValue clearValueColor = {0.002f, 0.001f, 0.009f, 1.0f};
@@ -378,17 +403,39 @@ static void syncScene(const uint32_t frameIndex)
             lightsNeedUpdate = TANTO_FRAME_COUNT;
         if (scene->dirt & TANTO_S_XFORMS_BIT)
             xformsNeedUpdate = TANTO_FRAME_COUNT;
+        if (scene->dirt & TANTO_S_TEXTURES_BIT)
+            texturesNeedUpdate = framesNeedUpdate = TANTO_FRAME_COUNT;
     }
-    if (cameraNeedUpdate--)
+    if (cameraNeedUpdate)
+    {
         updateCamera(frameIndex);
-    if (xformsNeedUpdate--)
+        cameraNeedUpdate--;
+    }
+    if (xformsNeedUpdate)
+    {
         for (int i = 0; i < scene->primCount; i++) 
             updateXform(frameIndex, i);
-    if (lightsNeedUpdate--)
+        xformsNeedUpdate--;
+    }
+    if (lightsNeedUpdate)
+    {
         for (int i = 0; i < scene->lightCount; i++) 
             updateLight(frameIndex, i);
-    if (framesNeedUpdate--)
+        lightsNeedUpdate--;
+    }
+    if (texturesNeedUpdate) // TODO update all tex
+    {
+        for (int i = 0; i < scene->textureCount; i++) 
+        {
+            updateTexture(frameIndex, &scene->textures[i].devImage, i);
+        }
+        texturesNeedUpdate--;
+    }
+    if (framesNeedUpdate)
+    {
         updateRenderCommands(frameIndex);
+        framesNeedUpdate--;
+    }
 }
 
 void r_InitRenderer(void)
@@ -396,6 +443,7 @@ void r_InitRenderer(void)
     cameraNeedUpdate = TANTO_FRAME_COUNT;
     xformsNeedUpdate = TANTO_FRAME_COUNT;
     framesNeedUpdate = TANTO_FRAME_COUNT;
+    texturesNeedUpdate = TANTO_FRAME_COUNT;
 
     for (int i = 0; i < TANTO_FRAME_COUNT; i++) 
     {
