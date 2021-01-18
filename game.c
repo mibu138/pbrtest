@@ -11,6 +11,7 @@
 #include <tanto/i_input.h>
 #include <tanto/u_ui.h>
 #include <tanto/s_scene.h>
+#include <stdlib.h>
 
 static Vec2  mousePos;
 static int   iMouseX;
@@ -44,6 +45,8 @@ void g_Init(void)
     Mat4 m = m_Ident_Mat4();
     m_ScaleUniform_Mat4(0.4, &m);
     tanto_s_LoadPrim(&scene, "data/hydrant.tnt", &m);
+    tanto_s_LoadTexture(&scene, "data/hydrant-albedo.jpg");
+    //exit(0);
     tanto_s_CreateDirectionLight(&scene, (Vec3){0.9, 0.7, 0.4}, (Vec3){-1, -2, -2});
     tanto_s_CreateDirectionLight(&scene, (Vec3){0.5, 0.6, 0.8}, (Vec3){1, -1, 2});
     tanto_s_CreatePointLight(&scene, (Vec3){0.1, 0.1, 1}, (Vec3){-3, 0, 0});

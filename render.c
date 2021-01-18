@@ -313,11 +313,12 @@ static void mainRender(const VkCommandBuffer cmdBuf, const uint32_t frameIndex)
 
     for (uint32_t p = 0; p < scene->primCount; p++) 
     {
+        const Tanto_S_MaterialId matId = scene->prims[p].materialId;
         vkCmdPushConstants(cmdBuf, pipelineLayout, 
                 VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(uint32_t), &p);
         vkCmdPushConstants(cmdBuf, pipelineLayout, 
-                VK_SHADER_STAGE_FRAGMENT_BIT, 16, sizeof(Tanto_S_Material), &scene->materials[p]);
-        tanto_r_DrawPrim(cmdBuf, &scene->prims[p]);
+                VK_SHADER_STAGE_FRAGMENT_BIT, 16, sizeof(Tanto_S_Material), &scene->materials[matId]);
+        tanto_r_DrawPrim(cmdBuf, &scene->prims[p].rprim);
     }
 
     vkCmdEndRenderPass(cmdBuf);
