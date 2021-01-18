@@ -44,9 +44,10 @@ void g_Init(void)
     tanto_s_CreateEmptyScene(&scene);
     Mat4 m = m_Ident_Mat4();
     m_ScaleUniform_Mat4(0.4, &m);
-    tanto_s_LoadPrim(&scene, "data/hydrant.tnt", &m);
-    tanto_s_LoadTexture(&scene, "data/hydrant-albedo.jpg");
-    //exit(0);
+    Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/hydrant.tnt", &m);
+    Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/hydrant-albedo.jpg");
+    Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, TANTO_S_NONE);
+    tanto_s_BindPrimToMaterial(&scene, prim, material);
     tanto_s_CreateDirectionLight(&scene, (Vec3){0.9, 0.7, 0.4}, (Vec3){-1, -2, -2});
     tanto_s_CreateDirectionLight(&scene, (Vec3){0.5, 0.6, 0.8}, (Vec3){1, -1, 2});
     tanto_s_CreatePointLight(&scene, (Vec3){0.1, 0.1, 1}, (Vec3){-3, 0, 0});
