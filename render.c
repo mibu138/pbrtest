@@ -106,6 +106,7 @@ static void initAttachments(void)
         VK_IMAGE_USAGE_SAMPLED_BIT,
         VK_IMAGE_ASPECT_DEPTH_BIT,
         VK_SAMPLE_COUNT_1_BIT,
+        1,
         graphicsQueueFamilyIndex);
 }
 
