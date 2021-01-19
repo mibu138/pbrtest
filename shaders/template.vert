@@ -27,6 +27,6 @@ void main()
     vec4 worldPos = model.xform[push.primId] * vec4(pos, 1.0);
     gl_Position = camera.proj * camera.view * worldPos;
     outWorldPos = worldPos.xyz; 
-    outNormal = (model.xform[push.primId] * vec4(norm, 1.0)).xyz; // this is fine as long as we only allow uniform scales
+    outNormal = normalize((model.xform[push.primId] * vec4(norm, 1.0)).xyz); // this is fine as long as we only allow uniform scales
     outUv = uvw.st;
 }

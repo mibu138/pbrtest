@@ -160,9 +160,10 @@ static void initDescriptorSetsAndPipelineLayouts(void)
             .type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,
             .stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT
         },{ // textures
-            .descriptorCount = 1,
+            .descriptorCount = TANTO_S_MAX_TEXTURES, // because this is an array of samplers. others are structs of arrays.
             .type = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER,
-            .stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT
+            .stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT,
+            .bindingFlags = VK_DESCRIPTOR_BINDING_PARTIALLY_BOUND_BIT
         }}
     }};
 
@@ -300,7 +301,7 @@ static void updateTexture(const uint32_t frameIndex, const Tanto_V_Image* img, c
 
     vkUpdateDescriptorSets(device, 1, &write, 0, NULL);
 
-    printf("Updated Texture!\n");
+    printf("Updated Texture %d frame %d\n", texId, frameIndex);
 }
 
 static void mainRender(const VkCommandBuffer cmdBuf, const uint32_t frameIndex)
@@ -339,6 +340,8 @@ static void mainRender(const VkCommandBuffer cmdBuf, const uint32_t frameIndex)
     for (uint32_t p = 0; p < scene->primCount; p++) 
     {
         const Tanto_S_MaterialId matId = scene->prims[p].materialId;
+        assert(scene->materials[matId].textureAlbedo != TANTO_S_NONE); // we should hanlde materials without textures with a different pipeline. and possibly sort the prims by pipeline.
+        assert(scene->materials[matId].textureRoughness != TANTO_S_NONE); 
         vkCmdPushConstants(cmdBuf, pipelineLayout, 
                 VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(uint32_t), &p);
         vkCmdPushConstants(cmdBuf, pipelineLayout, 
@@ -404,7 +407,9 @@ static void syncScene(const uint32_t frameIndex)
         if (scene->dirt & TANTO_S_XFORMS_BIT)
             xformsNeedUpdate = TANTO_FRAME_COUNT;
         if (scene->dirt & TANTO_S_TEXTURES_BIT)
+        {
             texturesNeedUpdate = framesNeedUpdate = TANTO_FRAME_COUNT;
+        }
     }
     if (cameraNeedUpdate)
     {
@@ -425,6 +430,7 @@ static void syncScene(const uint32_t frameIndex)
     }
     if (texturesNeedUpdate) // TODO update all tex
     {
+        printf("texturesNeedUpdate %d\n", texturesNeedUpdate);
         for (int i = 0; i < scene->textureCount; i++) 
         {
             updateTexture(frameIndex, &scene->textures[i].devImage, i);

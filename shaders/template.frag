@@ -43,10 +43,15 @@ layout(push_constant) uniform PushConstant {
     layout(offset = 16) Material material;
 } push;
 
+#define SPEC_EXP 128
+
 void main()
 {
-    vec3 campos   = vec3(camera.xform[3][0], camera.xform[3][1], camera.xform[3][2]);
-    vec3 ambient  = vec3(0.01);
+    const vec2 st = vec2(uv.x, uv.y * -1 + 1);
+    const vec4 albedo     = texture(textures[push.material.textureAlbedo], st);
+    const float roughness = texture(textures[push.material.textureRoughness], st).r * push.material.roughness;
+    const vec3 campos   = vec3(camera.xform[3][0], camera.xform[3][1], camera.xform[3][2]);
+    const vec3 ambient  = vec3(0.01);
     vec3 diffuse  = vec3(0);
     vec3 specular = vec3(0);
     for (int i = 0; i < push.lightCount; i++)
@@ -55,18 +60,17 @@ void main()
         if (lights.light[i].type == 1)
         {
             diffuse += lights.light[i].color * calcDiffuse(normal, lights.light[i].vector) * lights.light[i].intensity;
-            specular += lights.light[i].color * calcSpecular(normal, lights.light[i].vector, eyeDir) * lights.light[i].intensity;
+            specular += lights.light[i].color * calcSpecular(normal, lights.light[i].vector, eyeDir, SPEC_EXP) * lights.light[i].intensity;
         }
         else
         {
             vec3 dir      = normalize(worldPos - lights.light[i].vector);
             float falloff =  1.0f / max(length(worldPos - lights.light[i].vector), 0.001); // to prevent div by 0
             diffuse += lights.light[i].color * calcDiffuse(normal, dir) * lights.light[i].intensity * falloff;
-            specular += lights.light[i].color * calcSpecular(normal, dir, eyeDir) * lights.light[i].intensity * falloff;
+            specular += lights.light[i].color * calcSpecular(normal, dir, eyeDir, SPEC_EXP) * lights.light[i].intensity * falloff;
         }
     }
+    specular = specular * (1 - roughness);
     vec3 illume = diffuse + specular * 4;
-    vec2 st = vec2(uv.x, uv.y * -1 + 1);
-    vec4 albedo = texture(textures[push.material.textureAlbedo], st);
     outColor = vec4(albedo.rgb * push.material.color, 1) * vec4(illume + ambient, 1);
 }
