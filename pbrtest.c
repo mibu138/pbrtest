@@ -40,7 +40,7 @@ void pbrtest_Init(void)
 
 void pbrtest_StartLoop(void)
 {
-    Tanto_LoopData loopData = tanto_CreateLoopData(NS_TARGET, 1, 0);
+    Tanto_LoopData loopData = tanto_CreateLoopData(NS_TARGET, 0, 1);
 
     parms.shouldRun = true;
 
