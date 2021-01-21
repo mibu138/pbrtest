@@ -7,6 +7,7 @@
 #include <coal/coal.h>
 #include <assert.h>
 #include <string.h>
+#include <tanto/r_geo.h>
 #include <tanto/t_def.h>
 #include <tanto/i_input.h>
 #include <tanto/u_ui.h>
@@ -42,34 +43,36 @@ void g_Init(void)
     t = 0.0;
     slider0 = tanto_u_CreateSlider(0, 40, NULL);
     tanto_s_CreateEmptyScene(&scene);
-    {
-        Mat4 m = m_Ident_Mat4();
-        m_ScaleUniform_Mat4(0.5, &m);
-        Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/hydrant.tnt", &m);
-        Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/hydrant-albedo.jpg", 4);
-        Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/hydrant-roughness.jpg", 1);
-        Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness);
-        tanto_s_BindPrimToMaterial(&scene, prim, material);
-    }
-    {
-        Mat4 m = m_Ident_Mat4();
-        m = m_RotateY_Mat4(M_PI/2, &m);
-        m = m_RotateZ_Mat4(M_PI/2, &m);
-        m = m_Translate_Mat4((Vec3){1, .1, 1}, &m);
-        Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/log.tnt", &m);
-        Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/log-albedo.jpg", 4);
-        Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/log-roughness.jpg", 1);
-        Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness);
-        tanto_s_BindPrimToMaterial(&scene, prim, material);
-    }
-    {
-        Mat4 m = m_Ident_Mat4();
-        Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/sidewalk.tnt", &m);
-        Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/sidewalk-albedo.jpg", 4);
-        Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/sidewalk-roughness.jpg", 1);
-        Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness);
-        tanto_s_BindPrimToMaterial(&scene, prim, material);
-    }
+    Tanto_R_Primitive cube = tanto_r_CreateCubePrim(true);
+    tanto_s_AddRPrim(&scene, cube, NULL);
+    //{
+    //    Mat4 m = m_Ident_Mat4();
+    //    m_ScaleUniform_Mat4(0.5, &m);
+    //    Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/hydrant.tnt", &m);
+    //    Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/hydrant-albedo.jpg", 4);
+    //    Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/hydrant-roughness.jpg", 1);
+    //    Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness);
+    //    tanto_s_BindPrimToMaterial(&scene, prim, material);
+    //}
+    //{
+    //    Mat4 m = m_Ident_Mat4();
+    //    m = m_RotateY_Mat4(M_PI/2, &m);
+    //    m = m_RotateZ_Mat4(M_PI/2, &m);
+    //    m = m_Translate_Mat4((Vec3){1, .1, 1}, &m);
+    //    Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/log.tnt", &m);
+    //    Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/log-albedo.jpg", 4);
+    //    Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/log-roughness.jpg", 1);
+    //    Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness);
+    //    tanto_s_BindPrimToMaterial(&scene, prim, material);
+    //}
+    //{
+    //    Mat4 m = m_Ident_Mat4();
+    //    Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/sidewalk.tnt", &m);
+    //    Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/sidewalk-albedo.jpg", 4);
+    //    Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/sidewalk-roughness.jpg", 1);
+    //    Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness);
+    //    tanto_s_BindPrimToMaterial(&scene, prim, material);
+    //}
     tanto_s_CreateDirectionLight(&scene, (Vec3){0.9, 0.7, 0.4}, (Vec3){-1, -2, -2});
     tanto_s_CreateDirectionLight(&scene, (Vec3){0.5, 0.6, 0.8}, (Vec3){1, -1, 2});
     tanto_s_CreatePointLight(&scene, (Vec3){0.1, 0.1, 1}, (Vec3){-3, 0, 0});
