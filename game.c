@@ -7,6 +7,7 @@
 #include <coal/coal.h>
 #include <assert.h>
 #include <string.h>
+#include <tanto/f_file.h>
 #include <tanto/r_geo.h>
 #include <tanto/t_def.h>
 #include <tanto/i_input.h>
@@ -44,6 +45,14 @@ void g_Init(void)
     slider0 = tanto_u_CreateSlider(0, 40, NULL);
     tanto_s_CreateEmptyScene(&scene);
     Tanto_R_Primitive cube = tanto_r_CreateCubePrim(true);
+    //Tanto_F_Primitive fcube = tanto_f_CreateFPrimFromRPrim(&cube);
+    //tanto_f_WritePrimitive("data/cube.tnt", &fcube);
+    //tanto_f_FreePrimitive(&fcube);
+    //Tanto_F_Primitive fcube;
+    //tanto_f_ReadPrimitive("data/cube.tnt", &fcube);
+    //Tanto_R_Primitive cube = tanto_f_CreateRPrimFromFPrim(&fcube);
+    //tanto_f_FreePrimitive(&fcube);
+    //exit(0);
     tanto_s_AddRPrim(&scene, cube, NULL);
     //{
     //    Mat4 m = m_Ident_Mat4();
@@ -78,7 +87,7 @@ void g_Init(void)
     tanto_s_CreatePointLight(&scene, (Vec3){0.1, 0.1, 1}, (Vec3){-3, 0, 0});
     r_BindScene(&scene);
     tanto_s_UpdateLight(&scene, 0, 1);
-    tanto_s_UpdateCamera(&scene, 0.16, 0, 0, 0, 0, 0, true);
+    //tanto_s_UpdateCamera_(&scene, 0.16, 0, 0, 0, 0, 0, true);
 }
 
 bool g_Responder(const Tanto_I_Event *event)
@@ -144,8 +153,11 @@ void g_Update(void)
         tanto_s_UpdateLight(&scene, 0, curVal);
     }
     lastVal = curVal;
-    tanto_s_UpdateCamera(&scene, 0.016, iMouseX, iMouseY, 
-            mouseFlags & MMB_BIT, mouseFlags & LMB_BIT, mouseFlags & RMB_BIT, homeCamera);
+    static Vec3 campos;
+    campos = (Vec3){2 * cos(t), 0.7, 2 * sin(t)};
+    tanto_s_UpdateCamera_LookAt(&scene, campos, (Vec3){0, 0, 0}, (Vec3){0, 1, 0});
+    //tanto_s_UpdateCamera(&scene, 0.016, iMouseX, iMouseY, 
+    //        mouseFlags & MMB_BIT, mouseFlags & LMB_BIT, mouseFlags & RMB_BIT, homeCamera);
     homeCamera = false;
 }
 

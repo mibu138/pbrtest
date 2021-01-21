@@ -27,7 +27,7 @@ void pbrtest_Init(void)
 #else
     tanto_v_config.validationEnabled = false;
 #endif
-    tanto_d_Init(NULL);
+    tanto_d_Init(2000, 2000, NULL);
     tanto_v_Init();
     tanto_v_InitSurfaceXcb(d_XcbWindow.connection, d_XcbWindow.window);
     tanto_r_Init();
@@ -40,7 +40,7 @@ void pbrtest_Init(void)
 
 void pbrtest_StartLoop(void)
 {
-    Tanto_LoopData loopData = tanto_CreateLoopData(NS_TARGET, 0, 1);
+    Tanto_LoopData loopData = tanto_CreateLoopData(NS_TARGET, 0, 0);
 
     parms.shouldRun = true;
 
