@@ -44,15 +44,20 @@ void g_Init(void)
     t = 0.0;
     slider0 = tanto_u_CreateSlider(0, 40, NULL);
     tanto_s_CreateEmptyScene(&scene);
-    Tanto_R_Primitive cube = tanto_r_CreateCubePrim(true);
-    //Tanto_F_Primitive fcube = tanto_f_CreateFPrimFromRPrim(&cube);
+    Tanto_R_Primitive cube;
+    Tanto_F_Primitive fcube;
+    //cube = tanto_r_CreateCubePrim(true);
+    //tanto_r_PrintPrim(&cube);
+    //fcube = tanto_f_CreateFPrimFromRPrim(&cube);
+    //tanto_r_FreePrim(&cube);
     //tanto_f_WritePrimitive("data/cube.tnt", &fcube);
     //tanto_f_FreePrimitive(&fcube);
-    //Tanto_F_Primitive fcube;
-    //tanto_f_ReadPrimitive("data/cube.tnt", &fcube);
-    //Tanto_R_Primitive cube = tanto_f_CreateRPrimFromFPrim(&fcube);
-    //tanto_f_FreePrimitive(&fcube);
-    //exit(0);
+    tanto_f_ReadPrimitive("data/cube.tnt", &fcube);
+    tanto_f_PrintPrim(&fcube);
+    cube = tanto_f_CreateRPrimFromFPrim(&fcube);
+    printf("=== PRINTING R PRIM===\n");
+    tanto_f_FreePrimitive(&fcube);
+    tanto_r_PrintPrim(&cube);
     tanto_s_AddRPrim(&scene, cube, NULL);
     //{
     //    Mat4 m = m_Ident_Mat4();
