@@ -46,12 +46,12 @@ void g_Init(void)
     tanto_s_CreateEmptyScene(&scene);
     Tanto_R_Primitive cube;
     Tanto_F_Primitive fcube;
-    //cube = tanto_r_CreateCubePrim(true);
-    //tanto_r_PrintPrim(&cube);
-    //fcube = tanto_f_CreateFPrimFromRPrim(&cube);
-    //tanto_r_FreePrim(&cube);
-    //tanto_f_WritePrimitive("data/cube.tnt", &fcube);
-    //tanto_f_FreePrimitive(&fcube);
+    cube = tanto_r_CreateCubePrim(true);
+    tanto_r_PrintPrim(&cube);
+    fcube = tanto_f_CreateFPrimFromRPrim(&cube);
+    tanto_r_FreePrim(&cube);
+    tanto_f_WritePrimitive("data/cube.tnt", &fcube);
+    tanto_f_FreePrimitive(&fcube);
     tanto_f_ReadPrimitive("data/cube.tnt", &fcube);
     tanto_f_PrintPrim(&fcube);
     cube = tanto_f_CreateRPrimFromFPrim(&fcube);
