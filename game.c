@@ -44,21 +44,14 @@ void g_Init(void)
     t = 0.0;
     slider0 = tanto_u_CreateSlider(0, 40, NULL);
     tanto_s_CreateEmptyScene(&scene);
-    Tanto_R_Primitive cube;
-    Tanto_F_Primitive fcube;
-    cube = tanto_r_CreateCubePrim(true);
-    tanto_r_PrintPrim(&cube);
-    fcube = tanto_f_CreateFPrimFromRPrim(&cube);
-    tanto_r_FreePrim(&cube);
-    tanto_f_WritePrimitive("data/cube.tnt", &fcube);
-    tanto_f_FreePrimitive(&fcube);
-    tanto_f_ReadPrimitive("data/cube.tnt", &fcube);
-    tanto_f_PrintPrim(&fcube);
-    cube = tanto_f_CreateRPrimFromFPrim(&fcube);
-    printf("=== PRINTING R PRIM===\n");
-    tanto_f_FreePrimitive(&fcube);
-    tanto_r_PrintPrim(&cube);
-    tanto_s_AddRPrim(&scene, cube, NULL);
+    //cube = tanto_r_CreateCubePrimUV(true);
+    //tanto_r_PrintPrim(&cube);
+    //fcube = tanto_f_CreateFPrimFromRPrim(&cube);
+    //tanto_r_FreePrim(&cube);
+    //tanto_f_WritePrimitive("data/cube.tnt", &fcube);
+    //tanto_f_FreePrimitive(&fcube);
+    Tanto_R_Primitive prim = tanto_f_LoadRPrim("data/squab.tnt", true);
+    tanto_s_AddRPrim(&scene, prim, NULL);
     //{
     //    Mat4 m = m_Ident_Mat4();
     //    m_ScaleUniform_Mat4(0.5, &m);
@@ -160,9 +153,9 @@ void g_Update(void)
     lastVal = curVal;
     static Vec3 campos;
     campos = (Vec3){2 * cos(t), 0.7, 2 * sin(t)};
-    tanto_s_UpdateCamera_LookAt(&scene, campos, (Vec3){0, 0, 0}, (Vec3){0, 1, 0});
-    //tanto_s_UpdateCamera(&scene, 0.016, iMouseX, iMouseY, 
-    //        mouseFlags & MMB_BIT, mouseFlags & LMB_BIT, mouseFlags & RMB_BIT, homeCamera);
+    //tanto_s_UpdateCamera_LookAt(&scene, campos, (Vec3){0, 0, 0}, (Vec3){0, 1, 0});
+    tanto_s_UpdateCamera_ArcBall(&scene, 0.016, iMouseX, iMouseY, 
+            mouseFlags & MMB_BIT, mouseFlags & LMB_BIT, mouseFlags & RMB_BIT, homeCamera);
     homeCamera = false;
 }
 

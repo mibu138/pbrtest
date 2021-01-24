@@ -209,7 +209,7 @@ static void initPipelines(void)
         //.polygonMode = VK_POLYGON_MODE_LINE,
         .frontFace   = VK_FRONT_FACE_CLOCKWISE,
         //.cullMode = VK_CULL_MODE_NONE,
-        .vertexDescription = tanto_r_GetVertexDescription3D_3Vec3(),
+        .vertexDescription = tanto_r_GetVertexDescription(&scene->prims[0].rprim),
         .vertShader = SPVDIR"/template-vert.spv",
         .fragShader = SPVDIR"/template-frag.spv"
     };
@@ -461,7 +461,6 @@ void r_InitRenderer(void)
     initRenderPass();
     initFramebuffers();
     initDescriptorSetsAndPipelineLayouts();
-    initPipelines();
     updateDescriptors();
 
     tanto_r_RegisterSwapchainRecreationFn(onSwapchainRecreate);
@@ -483,6 +482,7 @@ void r_BindScene(const Tanto_S_Scene* pScene)
 {
     printf("Renderer: Scene bound.\n");
     scene = pScene;
+    initPipelines();
 }
 
 void r_CleanUp(void)
