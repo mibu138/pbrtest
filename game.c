@@ -55,10 +55,12 @@ void g_Init(void)
     {
         Mat4 m = m_Ident_Mat4();
         m_ScaleUniform_Mat4(0.5, &m);
-        Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/hydrant-tan.tnt", &m);
-        Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/hydrant-albedo.jpg", 4);
-        Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/hydrant-roughness.jpg", 1);
+        Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/hydrant-subdiv.tnt", &m);
+        Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/hydrant-albedo-8k.jpg", 4);
+        Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/hydrant-roughness-8k.jpg", 1);
+        Tanto_S_TextureId normal    = tanto_s_LoadTexture(&scene, "data/hydrant-normal-8k.jpg", 4);
         Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness);
+        scene.materials[material].textureNormal = normal;
         tanto_s_BindPrimToMaterial(&scene, prim, material);
     }
     //{

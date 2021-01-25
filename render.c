@@ -210,8 +210,8 @@ static void initPipelines(void)
         .frontFace   = VK_FRONT_FACE_CLOCKWISE,
         //.cullMode = VK_CULL_MODE_NONE,
         .vertexDescription = tanto_r_GetVertexDescription(&scene->prims[0].rprim),
-        .vertShader = SPVDIR"/template-vert.spv",
-        .fragShader = SPVDIR"/template-frag.spv"
+        .vertShader = SPVDIR"/normal-vert.spv",
+        .fragShader = SPVDIR"/normal-frag.spv"
     };
 
     tanto_r_CreateGraphicsPipelines(1, &graphPipeInfo, &mainPipeline);
