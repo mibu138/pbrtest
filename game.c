@@ -36,6 +36,8 @@ enum {
 
 MouseFlags mouseFlags;
 
+Tanto_S_PrimId sidewalk;
+
 static bool homeCamera = false;
 
 void g_Init(void)
@@ -54,34 +56,40 @@ void g_Init(void)
     //tanto_s_AddRPrim(&scene, prim, NULL);
     {
         Mat4 m = m_Ident_Mat4();
-        m_ScaleUniform_Mat4(0.5, &m);
-        Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/hydrant-subdiv.tnt", &m);
+        //m_ScaleUniform_Mat4(0.5, &m);
+        Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/hydrant.tnt", &m);
         Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/hydrant-albedo-8k.jpg", 4);
         Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/hydrant-roughness-8k.jpg", 1);
         Tanto_S_TextureId normal    = tanto_s_LoadTexture(&scene, "data/hydrant-normal-8k.jpg", 4);
-        Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness);
-        scene.materials[material].textureNormal = normal;
+        Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness, normal);
         tanto_s_BindPrimToMaterial(&scene, prim, material);
     }
-    //{
-    //    Mat4 m = m_Ident_Mat4();
-    //    m = m_RotateY_Mat4(M_PI/2, &m);
-    //    m = m_RotateZ_Mat4(M_PI/2, &m);
-    //    m = m_Translate_Mat4((Vec3){1, .1, 1}, &m);
-    //    Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/log.tnt", &m);
-    //    Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/log-albedo.jpg", 4);
-    //    Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/log-roughness.jpg", 1);
-    //    Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness);
-    //    tanto_s_BindPrimToMaterial(&scene, prim, material);
-    //}
-    //{
-    //    Mat4 m = m_Ident_Mat4();
-    //    Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/sidewalk.tnt", &m);
-    //    Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/sidewalk-albedo.jpg", 4);
-    //    Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/sidewalk-roughness.jpg", 1);
-    //    Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness);
-    //    tanto_s_BindPrimToMaterial(&scene, prim, material);
-    //}
+    {
+        Mat4 m = m_Ident_Mat4();
+        Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/log.tnt", &m);
+        Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/log-albedo.jpg", 4);
+        Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/log-roughness.jpg", 1);
+        Tanto_S_TextureId normal    = tanto_s_LoadTexture(&scene, "data/log-normal.jpg", 4);
+        Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness, normal);
+        tanto_s_BindPrimToMaterial(&scene, prim, material);
+    }
+    {
+        Mat4 m = m_Ident_Mat4();
+        m_ScaleUniform_Mat4(0.5, &m);
+        Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/sidewalk.tnt", &m);
+        Tanto_S_TextureId albedo    = tanto_s_LoadTexture(&scene, "data/sidewalk-albedo.jpg", 4);
+        Tanto_S_TextureId roughness = tanto_s_LoadTexture(&scene, "data/sidewalk-roughness.jpg", 1);
+        Tanto_S_TextureId normal    = tanto_s_LoadTexture(&scene, "data/sidewalk-normal.jpg", 4);
+        Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, albedo, roughness, normal);
+        tanto_s_BindPrimToMaterial(&scene, prim, material);
+        sidewalk = prim;
+    }
+    {
+        Mat4 m = m_Ident_Mat4();
+        Tanto_S_PrimId prim         = tanto_s_LoadPrim(&scene, "data/squab.tnt", &m);
+        Tanto_S_MaterialId material = tanto_s_CreateMaterial(&scene, (Vec3){1, 1, 1}, 1, 0, 0, 0);
+        tanto_s_BindPrimToMaterial(&scene, prim, material);
+    }
     tanto_s_CreateDirectionLight(&scene, (Vec3){0.9, 0.7, 0.4}, (Vec3){-1, -2, -2});
     tanto_s_CreateDirectionLight(&scene, (Vec3){0.5, 0.6, 0.8}, (Vec3){1, -1, 2});
     tanto_s_CreatePointLight(&scene, (Vec3){0.1, 0.1, 1}, (Vec3){-3, 0, 0});
@@ -158,6 +166,9 @@ void g_Update(void)
     //tanto_s_UpdateCamera_LookAt(&scene, campos, (Vec3){0, 0, 0}, (Vec3){0, 1, 0});
     tanto_s_UpdateCamera_ArcBall(&scene, 0.016, iMouseX, iMouseY, 
             mouseFlags & MMB_BIT, mouseFlags & LMB_BIT, mouseFlags & RMB_BIT, homeCamera);
+    //Mat4 rot = m_Ident_Mat4();
+    //rot = m_RotateY_Mat4(0.01, &rot);
+    //tanto_s_UpdatePrimXform(&scene, sidewalk, &rot);
     homeCamera = false;
 }
 

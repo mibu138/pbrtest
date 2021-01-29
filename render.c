@@ -209,7 +209,7 @@ static void initPipelines(void)
         //.polygonMode = VK_POLYGON_MODE_LINE,
         .frontFace   = VK_FRONT_FACE_CLOCKWISE,
         //.cullMode = VK_CULL_MODE_NONE,
-        .vertexDescription = tanto_r_GetVertexDescription(&scene->prims[0].rprim),
+        .vertexDescription = tanto_r_GetVertexDescription(scene->prims[0].rprim.attrCount, scene->prims[0].rprim.attrSizes),
         .vertShader = SPVDIR"/normal-vert.spv",
         .fragShader = SPVDIR"/normal-frag.spv"
     };

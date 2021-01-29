@@ -24,6 +24,7 @@ struct Material {
     float roughness;
     uint  textureAlbedo;
     uint  textureRoughness;
+    uint  textureNormal;
 };
 
 layout(set = 0, binding = 0) uniform Camera {
@@ -50,7 +51,7 @@ void main()
     const vec2 st = vec2(uv.x, uv.y * -1 + 1);
     const vec4 albedo     = texture(textures[push.material.textureAlbedo], st);
     const float roughness = texture(textures[push.material.textureRoughness], st).r * push.material.roughness;
-    vec3 normal           = texture(textures[3], st).rgb;
+    vec3 normal           = texture(textures[push.material.textureNormal], st).rgb;
     normal = normal * 2.0 - 1.0;
     normal = normalize(TBN * normal);
     const vec3 campos   = vec3(camera.xform[3][0], camera.xform[3][1], camera.xform[3][2]);
